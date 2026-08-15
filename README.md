@@ -201,3 +201,16 @@ Kasutatud murdepunktid: **1024 px** (kolm veergu läheb kaheks, kõrvuti plokid 
 **860 px** (menüü läheb hamburgeri alla), **720 px** (ruudustikud ühte veergu, vormi väljad ühte
 veergu, jalus ühte veergu), **520 px** (galerii kaks veergu, nupud täislaiuses).
 Kontrollitud on ka `prefers-reduced-motion`, mille korral animatsioonid on välja lülitatud.
+
+---
+
+## 11. Vahemälu
+
+`vercel.json` annab kaustale `fondid/` aastapikkuse vahemälu koos `immutable`-iga, sest
+fondifailid ei muutu kunagi. Kaust `pildid/` saab tunnise vahemälu ja `stale-while-revalidate`
+päeva jagu, sest galerii skript kirjutab failid **sama nimega** üle. Kui `pildid/` oleks
+`immutable`, näeksid tagasitulevad külastajad pärast fotode vahetust aasta jagu vana pilti.
+
+Sama päis läheb Vercelis kaasa ka 404-vastustega. Kui avad lehe hetkel, mil deploy alles
+käib, jääb puuduv pilt sinu brauseri vahemällu. Lahendus on kõva uuestilaadimine,
+Cmd + Shift + R, või inkognito-aken. Päris külastajaid see ei puuduta.
