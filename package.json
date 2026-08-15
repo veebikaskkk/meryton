@@ -1,0 +1,12 @@
+{
+  "name": "meryton-koduleht",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MERYTON GROUP OÜ koduleht. Puhas HTML, CSS ja JavaScript, hinnapäringu vorm Resendiga.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "resend": "^4.0.1"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "kommentaar": "Galerii allikas. Kategooriate järjekord siin on ka järjekord lehel tood.html. Pildid lisab siia skript tooriistad/pildid.js, alt-tekstid kirjuta käsitsi. Pärast muudatust jooksuta: node tooriistad/pildid.js",
+  "kategooriad": [
+    {
+      "kaust": "porandatood",
+      "nimi": "Põrandatööd",
+      "kirjeldus": "Vaip, LVT, parkett ja muud pinnakatted eramutes ning alltöövõtu korras ka suurematel objektidel.",
+      "pildid": []
+    },
+    {
+      "kaust": "vannitoad",
+      "nimi": "Vannitoad",
+      "kirjeldus": "Vannitoa renoveerimine lammutusest valmis ruumini: torustik, hüdroisolatsioon, plaatimine ja sanitaartehnika.",
+      "pildid": []
+    },
+    {
+      "kaust": "eramu-ehitus",
+      "nimi": "Eramu ehitus ja renoveerimine",
+      "kirjeldus": "Uued eramud ja vanade majade kordategemine, terve objekt või selle osa.",
+      "pildid": []
+    },
+    {
+      "kaust": "siseviimistlus",
+      "nimi": "Siseviimistlus ja plaatimine",
+      "kirjeldus": "Seinad, laed ja plaaditud pinnad, mis jäävad lõpuks silma alla.",
+      "pildid": []
+    },
+    {
+      "kaust": "vesi-ja-kanalisatsioon",
+      "nimi": "Vesi ja kanalisatsioon",
+      "kirjeldus": "Eramute vee- ja kanalisatsioonitorustik, nii uus kui ka vana väljavahetamine.",
+      "pildid": []
+    },
+    {
+      "kaust": "kute-ja-ventilatsioon",
+      "nimi": "Küte ja ventilatsioon",
+      "kirjeldus": "Kütte- ja ventilatsioonisüsteemide paigaldus eramutes vastavalt projektile.",
+      "pildid": []
+    },
+    {
+      "kaust": "puittood",
+      "nimi": "Saunad, terrassid ja varjualused",
+      "kirjeldus": "Puittööd õue ja majja, enamasti kohapeal mõõtude järgi paika pandud.",
+      "pildid": []
+    },
+    {
+      "kaust": "valitood",
+      "nimi": "Välitööd ja vundament",
+      "kirjeldus": "Vundament, betoon, katus, aed ja tänavakivi, ehk kõik see, mis jääb maja seintest väljapoole.",
+      "pildid": []
+    }
+  ]
+}

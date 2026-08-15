@@ -1,0 +1,18 @@
+Siia kausta käivad TOORFOTOD otse telefonist või kaamerast.
+
+Iga tööliik oma alamkausta:
+  porandatood/            vaip, LVT, parkett, muud pinnakatted
+  vannitoad/              vannitoa ehitus ja renoveerimine
+  eramu-ehitus/           uued majad ja renoveerimine
+  siseviimistlus/         seinad, laed, plaatimine
+  vesi-ja-kanalisatsioon/ torutööd
+  kute-ja-ventilatsioon/  küte ja ventilatsioon
+  puittood/               saunad, terrassid, varjualused
+  valitood/               vundament, betoon, katus, aed, tänavakivi
+
+Faile ei pea ümber nimetama ega vähendama. Skript tooriistad/pildid.js
+pöörab need õigetpidi, eemaldab EXIF-i koos GPS-koordinaatidega, teeb
+WebP-d ja kirjutab galerii lehe uuesti.
+
+Selle kausta sisu veebi ei lähe, veebi jõuavad ainult töödeldud failid
+kaustast pildid/galerii/.
