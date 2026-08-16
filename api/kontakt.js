@@ -57,6 +57,26 @@ function html(t) {
 
 const EPOST = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+// Vormil olevad teenused. Serverisse tulnud väärtused peavad olema sellest
+// nimekirjast, muidu saaks kirja saata suvalist teksti.
+const TEENUSED = [
+  'Eramu ehitus ja renoveerimine',
+  'Põrandakatete paigaldus',
+  'Vannitoa ehitus ja renoveerimine',
+  'Vee- ja kanalisatsioonitööd',
+  'Kütte- ja ventilatsioonitööd',
+  'Saunad, terrassid ja varjualused',
+  'Muu'
+];
+
+function valiTeenused(vaartus) {
+  const loend = Array.isArray(vaartus) ? vaartus : [vaartus];
+  const valitud = loend
+    .map((v) => puhasta(v, 60))
+    .filter((v) => TEENUSED.indexOf(v) !== -1);
+  return Array.from(new Set(valitud)).join(', ');
+}
+
 module.exports = async function handler(req, res) {
   const tahabJson = String(req.headers.accept || '').includes('application/json');
 
@@ -97,7 +117,7 @@ module.exports = async function handler(req, res) {
     const telefon = puhasta(keha.telefon, 40);
     const ettevote = puhasta(keha.ettevote, 120);
     const objekt = puhasta(keha.objekt, 180);
-    const laad = puhasta(keha.laad, 60) === 'Olemasoleva uuendus' ? 'Olemasoleva uuendus' : 'Uus töö';
+    const laad = valiTeenused(keha.laad);
     const nousolek = keha.nousolek === true || keha.nousolek === 'on' || keha.nousolek === 'true';
 
     if (!nimi || !EPOST.test(epost) || !sonum || !nousolek) {
@@ -116,7 +136,7 @@ module.exports = async function handler(req, res) {
       ['Ettevõte', ettevote],
       ['E-post', epost],
       ['Telefon', telefon],
-      ['Töö laad', laad],
+      ['Teenused', laad],
       ['Objekt', objekt]
     ].filter(([, v]) => v);
 

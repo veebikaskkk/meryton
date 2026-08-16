@@ -145,21 +145,42 @@
               <div class="vali vali--lai">
                 <fieldset>
                   <legend>Mis laadi töö see on?</legend>
-                  <div class="raadiod">
+                  <p class="abi" id="laad-abi">Vali kõik, mis sobivad.</p>
+                  <div class="raadiod" aria-describedby="laad-abi">
                     <label class="raadio">
-                      <input type="radio" name="laad" value="Uus töö" checked>
-                      <span>Uus ehitus</span>
+                      <input type="checkbox" name="laad" value="Eramu ehitus ja renoveerimine">
+                      <span>Eramu ehitus ja renoveerimine</span>
                     </label>
                     <label class="raadio">
-                      <input type="radio" name="laad" value="Olemasoleva uuendus">
-                      <span>Olemasoleva objekti uuendus</span>
+                      <input type="checkbox" name="laad" value="Põrandakatete paigaldus">
+                      <span>Põrandakatete paigaldus</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Vannitoa ehitus ja renoveerimine">
+                      <span>Vannitoa ehitus ja renoveerimine</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Vee- ja kanalisatsioonitööd">
+                      <span>Vesi ja kanalisatsioon</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Kütte- ja ventilatsioonitööd">
+                      <span>Küte ja ventilatsioon</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Saunad, terrassid ja varjualused">
+                      <span>Saunad, terrassid, varjualused</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Muu">
+                      <span>Muu</span>
                     </label>
                   </div>
                 </fieldset>
               </div>
 
-              <div class="vali vali--lai" id="objekti-plokk" hidden>
-                <label for="objekt">Olemasoleva objekti aadress või asukoht</label>
+              <div class="vali vali--lai" id="objekti-plokk">
+                <label for="objekt">Objekti aadress või asukoht</label>
                 <input type="text" id="objekt" name="objekt" maxlength="180">
                 <p class="abi">Piisab külast ja vallast, täpset aadressi ei pea kirja panema.</p>
               </div>

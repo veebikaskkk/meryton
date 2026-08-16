@@ -38,7 +38,7 @@ const TOOD = path.join(JUUR, 'tood.html');
 const SITEMAP = path.join(JUUR, 'sitemap.xml');
 
 const SAIT = 'https://www.meryton.ee';
-const EELVAADE = 3;             // mitu pilti on kategooria all kohe näha
+const EELVAADE = 4;             // mitu pilti on kohe näha, mobiilis kaks rida
 const SUUR = { laius: 1400, kvaliteet: 78 };
 const PISI = { laius: 600, kvaliteet: 75 };
 const LUBATUD = ['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic', '.heif'];
@@ -163,11 +163,14 @@ function galeriiMarkup() {
       }).join('\n');
     }
 
-    const nuppOn = arv > EELVAADE;
+    // Mobiilis on näha EELVAADE pilti, laiemal ekraanil kolm, sest neljanda
+    // peidab CSS. Nupp peab tekkima ka siis, kui pilte on täpselt neli.
+    const LAUAARVUTIS = 3;
+    const nuppOn = arv > LAUAARVUTIS;
     const nupp = nuppOn
       ? `      <div class="veel">\n` +
         `        <button class="nupp nupp--vaikne" type="button" data-veel="${ankur}"` +
-        ` aria-expanded="false" aria-controls="ruudustik-${ankur}">Vaata veel (${arv - EELVAADE})</button>\n` +
+        ` aria-expanded="false" aria-controls="ruudustik-${ankur}">Vaata veel (${arv - LAUAARVUTIS})</button>\n` +
         `      </div>`
       : '';
 

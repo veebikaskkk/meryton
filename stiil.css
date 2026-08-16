@@ -147,6 +147,9 @@ h4 {
   letter-spacing: -0.02em;
   margin: 0 0 var(--v2);
   text-wrap: balance;
+  /* eesti liitsõnad on pikad, näiteks ventilatsioonisüsteemide */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h1 {
@@ -486,6 +489,7 @@ ul {
 
 .hero__faktid strong {
   display: block;
+  text-transform: none;
   font-family: var(--pealkiri);
   font-size: clamp(1.35rem, 2.4vw, 1.85rem);
   font-weight: 600;
@@ -498,6 +502,24 @@ ul {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--hall);
+}
+
+.hero__faktid li.hero__sert {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.hero__sert-tekst {
+  display: block;
+}
+
+.hero__sert img {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  background: #fff;
+  border-radius: 50%;
 }
 
 /* --- Ruudustikud --------------------------------------------------------- */
@@ -573,6 +595,12 @@ ul {
 .teenus:first-of-type {
   border-top: 0;
   padding-top: 0;
+}
+
+/* Teenuse pealkiri on kitsas veerus ja mõni liitsõna on väga pikk,
+   näiteks ventilatsioonisüsteemide, seega siin väiksem aste. */
+.teenus h2 {
+  font-size: clamp(1.4rem, 2.5vw, 1.95rem);
 }
 
 .teenus__nr {
@@ -771,6 +799,15 @@ ul {
   word-break: break-all;
 }
 
+/* HTML-is on neli pilti nähtaval, mis sobib mobiili kahele veerule.
+   Laiemal ekraanil on ruudustik kolmeveeruline, seega neljas läheb peitu,
+   kuni Vaata veel kogu kausta avab. */
+@media (min-width: 521px) {
+  .pildid:not([data-avatud='jah']) > .pilt:nth-of-type(4) {
+    display: none;
+  }
+}
+
 .veel {
   margin-top: var(--v3);
 }
@@ -782,48 +819,68 @@ ul {
   inset: 0;
   z-index: 90;
   display: none;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(1rem, 4vw, 3rem);
-  background: rgba(6, 6, 7, 0.96);
+  padding: clamp(0.75rem, 3vw, 2rem);
+  background: rgba(6, 6, 7, 0.975);
+  overflow-y: auto;
 }
 
 .suurendus[open] {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.suurendus img {
-  max-width: 100%;
-  max-height: 78vh;
-  width: auto;
-  border-radius: var(--raadius);
-}
-
+/* Kogu sisu on tavavoos, mitte absoluutselt paigutatud, sest kerivas
+   konteineris absoluutne element kerib puuteekraanil sisuga kaasa. */
 .suurendus__sisu {
-  max-width: 1100px;
   width: 100%;
+  max-width: 1120px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--v2);
   text-align: center;
 }
 
+.suurendus img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 76vh;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: var(--raadius);
+  background: var(--pind);
+}
+
 .suurendus__tekst {
-  margin: var(--v2) auto 0;
+  margin: 0 auto;
   font-size: 0.9rem;
   color: var(--hall);
   max-width: 70ch;
 }
 
+.suurendus__riba {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--v2);
+}
+
 .suurendus__nupud {
-  position: absolute;
-  inset: auto 0 clamp(1rem, 3vw, 2rem);
   display: flex;
   justify-content: center;
   gap: var(--v2);
 }
 
-.suurendus__sulge {
-  position: absolute;
-  top: clamp(1rem, 3vw, 2rem);
-  right: clamp(1rem, 3vw, 2rem);
+@media (max-width: 520px) {
+  .suurendus img {
+    max-height: 62vh;
+  }
+
+  .suurendus__nupud .nupp {
+    flex: 1;
+  }
 }
 
 /* --- Leivapuru ----------------------------------------------------------- */

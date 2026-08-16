@@ -34,29 +34,72 @@
 
   /* --- Galerii: vaata veel ----------------------------------------------- */
 
+  var EELVAADE = 4;
   var veelNupud = document.querySelectorAll('[data-veel]');
 
+  // Mitu pilti on hetkel peidus. Osa peidab hidden-atribuut, neljanda pildi
+  // peidab laiadel ekraanidel CSS, seega loeme tegeliku display väärtuse.
+  function peidetuid(ruudustik) {
+    var koik = ruudustik.querySelectorAll('.pilt');
+    var arv = 0;
+    Array.prototype.forEach.call(koik, function (p) {
+      if (window.getComputedStyle(p).display === 'none') arv += 1;
+    });
+    return arv;
+  }
+
+  function pane(nupp, ruudustik) {
+    var arv = peidetuid(ruudustik);
+    nupp.setAttribute('aria-expanded', 'false');
+    nupp.textContent = 'Vaata veel (' + arv + ')';
+    nupp.hidden = arv === 0;
+  }
+
+  var paarid = [];
+
   Array.prototype.forEach.call(veelNupud, function (nupp) {
+    var ruudustik = document.getElementById(nupp.getAttribute('aria-controls'));
+    if (!ruudustik) return;
+
+    paarid.push([nupp, ruudustik]);
+    pane(nupp, ruudustik);
+
     nupp.addEventListener('click', function () {
-      var ruudustik = document.getElementById(nupp.getAttribute('aria-controls'));
-      if (!ruudustik) return;
-      var peidetud = ruudustik.querySelectorAll('.pilt[hidden]');
-      if (peidetud.length) {
-        Array.prototype.forEach.call(peidetud, function (p) { p.removeAttribute('hidden'); });
-        nupp.setAttribute('aria-expanded', 'true');
-        nupp.textContent = 'Näita vähem';
-      } else {
+      if (nupp.getAttribute('aria-expanded') === 'true') {
         var koik = ruudustik.querySelectorAll('.pilt');
-        var arv = 0;
         Array.prototype.forEach.call(koik, function (p, i) {
-          if (i >= 3) { p.setAttribute('hidden', ''); arv += 1; }
+          if (i >= EELVAADE) p.setAttribute('hidden', '');
         });
-        nupp.setAttribute('aria-expanded', 'false');
-        nupp.textContent = 'Vaata veel (' + arv + ')';
+        ruudustik.removeAttribute('data-avatud');
+        pane(nupp, ruudustik);
         ruudustik.parentNode.scrollIntoView({ block: 'start' });
+        return;
       }
+
+      var peidetud = ruudustik.querySelectorAll('.pilt[hidden]');
+      Array.prototype.forEach.call(peidetud, function (p) { p.removeAttribute('hidden'); });
+      ruudustik.setAttribute('data-avatud', 'jah');
+      nupp.setAttribute('aria-expanded', 'true');
+      nupp.textContent = 'Näita vähem';
     });
   });
+
+  // Number tuleb üle lugeda pärast lehe täielikku laadimist ja akna suuruse
+  // muutumisel, sest neljanda pildi peidab murdepunktiga seotud CSS.
+  function loeUuesti() {
+    paarid.forEach(function (paar) {
+      if (paar[0].getAttribute('aria-expanded') !== 'true') pane(paar[0], paar[1]);
+    });
+  }
+
+  if (paarid.length) {
+    window.addEventListener('load', loeUuesti);
+    var ootel;
+    window.addEventListener('resize', function () {
+      clearTimeout(ootel);
+      ootel = setTimeout(loeUuesti, 200);
+    });
+  }
 
   /* --- Galerii: suurendus ------------------------------------------------ */
 
@@ -122,24 +165,8 @@
   var vorm = document.getElementById('paring');
 
   if (vorm) {
-    var objektiPlokk = document.getElementById('objekti-plokk');
-    var laadid = vorm.querySelectorAll('input[name="laad"]');
     var teade = document.getElementById('vormi-teade');
     var saatmisel = false;
-
-    function uuendaObjekt() {
-      var valitud = vorm.querySelector('input[name="laad"]:checked');
-      var uuendus = valitud && valitud.value === 'Olemasoleva uuendus';
-      if (objektiPlokk) {
-        if (uuendus) objektiPlokk.removeAttribute('hidden');
-        else objektiPlokk.setAttribute('hidden', '');
-      }
-    }
-
-    Array.prototype.forEach.call(laadid, function (r) {
-      r.addEventListener('change', uuendaObjekt);
-    });
-    uuendaObjekt();
 
     vorm.addEventListener('submit', function (e) {
       if (saatmisel) { e.preventDefault(); return; }
@@ -163,7 +190,14 @@
       if (nupp) nupp.disabled = true;
 
       var andmed = {};
-      new FormData(vorm).forEach(function (v, k) { andmed[k] = v; });
+      new FormData(vorm).forEach(function (v, k) {
+        if (k in andmed) {
+          if (!Array.isArray(andmed[k])) andmed[k] = [andmed[k]];
+          andmed[k].push(v);
+        } else {
+          andmed[k] = v;
+        }
+      });
 
       fetch('/api/kontakt', {
         method: 'POST',
