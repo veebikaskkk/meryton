@@ -37,7 +37,7 @@
   var kastid = Array.prototype.slice.call(document.querySelectorAll('.lint__kast'));
 
   if (kastid.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var VAHE = 2000;          // kui tihti üks kast pilti vahetab
+    var VAHE = 3500;          // kui tihti üks kast pilti vahetab
     var TUHMUMINE = 450;      // peab kokku langema CSS-i üleminekuga
     var kellad = [];
 
