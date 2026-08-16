@@ -777,6 +777,11 @@ ul {
   display: none;
 }
 
+/* Kui suurendus on välja lülitatud, ei tohi pilt klõpsatavat muljet jätta */
+.pilt--vaikne {
+  cursor: default;
+}
+
 /* Kohatäide puuduva foto asemel: triibustik ja failinimi */
 .pilt--tyhi {
   cursor: default;

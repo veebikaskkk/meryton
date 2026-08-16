@@ -39,6 +39,12 @@ const SITEMAP = path.join(JUUR, 'sitemap.xml');
 
 const SAIT = 'https://www.meryton.ee';
 const EELVAADE = 4;             // mitu pilti on kohe näha, mobiilis kaks rida
+
+// Klõpsuga avanev suurendus. Praegu välja lülitatud, sest galeriis on
+// hange.ee 300x200 pisipildid ja suurendus teeb neist pudru. Kui kliendi
+// originaalfotod on kaustas pildid/toorpildid/, pane siia true ja jooksuta
+// skript uuesti, siis tulevad klõpsatavad pildid tagasi.
+const SUURENDUS = false;
 const SUUR = { laius: 1400, kvaliteet: 78 };
 const PISI = { laius: 600, kvaliteet: 75 };
 const LUBATUD = ['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic', '.heif'];
@@ -154,12 +160,16 @@ function galeriiMarkup() {
       ruudud = pildid.map((p, i) => {
         const peidus = i >= EELVAADE ? ' hidden' : '';
         const alt = p.alt || `${kat.nimi}, Meryton Group tehtud töö`;
+        const pilt = `          <img src="pildid/galerii/${kat.kaust}/pisi/${p.fail}" width="600" height="450"` +
+          ` loading="lazy" decoding="async" alt="${esc(alt)}">`;
+
+        if (!SUURENDUS) {
+          return `        <div class="pilt pilt--vaikne"${peidus}>\n${pilt}\n        </div>`;
+        }
+
         return `        <button class="pilt" type="button"${peidus}` +
           ` data-suur="pildid/galerii/${kat.kaust}/${p.fail}"` +
-          ` data-alt="${esc(alt)}">\n` +
-          `          <img src="pildid/galerii/${kat.kaust}/pisi/${p.fail}" width="600" height="450"` +
-          ` loading="lazy" decoding="async" alt="${esc(alt)}">\n` +
-          `        </button>`;
+          ` data-alt="${esc(alt)}">\n${pilt}\n        </button>`;
       }).join('\n');
     }
 
