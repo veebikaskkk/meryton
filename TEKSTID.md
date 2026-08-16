@@ -146,28 +146,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi, iga kategooria all on näha kolm pilti ja soovi korral saab avada kogu kausta.
 
 [index.html:li:4]
-> Eramu ehitus
+> Põrandatööd 50 fotot
 
 [index.html:li:5]
-> Põrandatööd
+> Vannitoad 50 fotot
 
 [index.html:li:6]
-> Vannitoad
+> Eramu ehitus ja renoveerimine 38 fotot
 
 [index.html:li:7]
-> Siseviimistlus ja plaatimine
+> Siseviimistlus ja plaatimine 20 fotot
 
 [index.html:li:8]
-> Vesi ja kanalisatsioon
+> Vesi ja kanalisatsioon 18 fotot
 
 [index.html:li:9]
-> Küte ja ventilatsioon
+> Küte ja ventilatsioon 30 fotot
 
 [index.html:li:10]
-> Terrassid ja varjualused
+> Terrassid ja varjualused 4 fotot
 
 [index.html:li:11]
-> Välitööd ja vundament
+> Välitööd ja vundament 50 fotot
 
 [index.html:a:10]
 > Ava galerii

@@ -48,8 +48,6 @@ const EELVAADE = 4;             // mitu pilti on kohe näha, mobiilis kaks rida
 const SUURENDUS = false;
 const SUUR = { laius: 1400, kvaliteet: 78 };
 const PISI = { laius: 600, kvaliteet: 75 };
-const LINDI_RUUTE = 6;          // mitu pilti on avalehel korraga näha
-const LINDI_VARU = 20;          // kui suurest hulgast neid vahetatakse
 const LUBATUD = ['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic', '.heif'];
 
 const andmed = JSON.parse(fs.readFileSync(ANDMED, 'utf8'));
@@ -63,6 +61,14 @@ function slugi(t) {
     .replace(/š/g, 's').replace(/ž/g, 'z')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+// Lõika slug sõna pealt, et failinimi ei lõppeks poole sõnaga
+function lyhenda(slug, maks) {
+  if (slug.length <= maks) return slug;
+  const l = slug.slice(0, maks);
+  const i = l.lastIndexOf('-');
+  return i > 20 ? l.slice(0, i) : l;
 }
 
 function esc(t) {
@@ -97,6 +103,7 @@ async function tootleKategooria(kat) {
     .sort((a, b) => a.localeCompare(b, 'et'));
 
   const vanad = new Map((kat.pildid || []).map((p) => [p.allikas || p.fail, p]));
+  const uuedFailid = new Set();
   const uued = [];
   let nr = 0;
 
@@ -104,9 +111,15 @@ async function tootleKategooria(kat) {
     nr += 1;
     const tee = path.join(toorKaust, failinimi);
     const olemas = vanad.get(failinimi);
-    const nimi = (olemas && olemas.nimi) || `${kat.kaust}-${String(nr).padStart(2, '0')}`;
-    const valjundNimi = `${slugi(nimi)}.webp`;
+    // Failinimi tuleb alt-tekstist, sest Google Images loeb ka failinime.
+    // porandatood-07.webp ei ütle otsingumootorile midagi,
+    // kalasabamustris-hele-puitparkett-valminud-ruumis-07.webp ütleb.
+    const nimi = (olemas && olemas.nimi)
+      || (olemas && olemas.alt ? lyhenda(slugi(olemas.alt), 58) : '')
+      || kat.kaust;
+    const valjundNimi = `${slugi(nimi)}-${String(nr).padStart(2, '0')}.webp`;
 
+    uuedFailid.add(valjundNimi);
     const suurTee = path.join(valjundKaust, valjundNimi);
     const pisiTee = path.join(pisiKaust, valjundNimi);
 
@@ -138,6 +151,14 @@ async function tootleKategooria(kat) {
     });
   }
 
+  // Nimi võib muutuda, kui alt-tekst muutub. Vana fail tuleb ära koristada,
+  // muidu jääb kausta hunnik kasutuseta pilte.
+  for (const kaust of [valjundKaust, pisiKaust]) {
+    for (const f of fs.readdirSync(kaust)) {
+      if (f.endsWith('.webp') && !uuedFailid.has(f)) fs.unlinkSync(path.join(kaust, f));
+    }
+  }
+
   return uued;
 }
 
@@ -167,12 +188,16 @@ function galeriiMarkup() {
           ` loading="lazy" decoding="async" alt="${esc(alt)}">`;
 
         if (!SUURENDUS) {
-          return `        <div class="pilt pilt--vaikne"${peidus}>\n${pilt}\n        </div>`;
+          return `        <figure class="pilt pilt--vaikne"${peidus}>\n${pilt}\n` +
+            `          <figcaption class="pilt__tekst">${esc(alt)}</figcaption>\n` +
+            `        </figure>`;
         }
 
         return `        <button class="pilt" type="button"${peidus}` +
           ` data-suur="pildid/galerii/${kat.kaust}/${p.fail}"` +
-          ` data-alt="${esc(alt)}">\n${pilt}\n        </button>`;
+          ` data-alt="${esc(alt)}">\n${pilt}\n` +
+          `          <figcaption class="pilt__tekst">${esc(alt)}</figcaption>\n` +
+          `        </button>`;
       }).join('\n');
     }
 
@@ -245,39 +270,34 @@ function toodeJsonLd() {
   };
 }
 
-/* --- 4. avalehe pildilint ------------------------------------------------ */
+/* --- 4. avalehe kategooriakastid ----------------------------------------- */
 
-// Võtab pildid kategooriatest vaheldumisi, et lindil ei oleks kakskümmend
-// peaaegu ühesugust kaadrit.
-function lindiVaru() {
-  const jarjendid = andmed.kategooriad.map((k) => ({
-    kaust: k.kaust,
-    pildid: (k.pildid || []).slice()
-  }));
-  const varu = [];
-  while (varu.length < LINDI_VARU && jarjendid.some((j) => j.pildid.length)) {
-    for (const j of jarjendid) {
-      if (varu.length >= LINDI_VARU) break;
-      const p = j.pildid.shift();
-      if (p) varu.push({ tee: `pildid/galerii/${j.kaust}/pisi/${p.fail}`, alt: p.alt || '' });
-    }
-  }
-  return varu;
-}
+const LINDI_VARU = 10;          // mitu pilti ühes kastis vaheldub
 
 function lindiMarkup() {
-  const varu = lindiVaru();
-  if (!varu.length) return '';
+  const kastid = andmed.kategooriad
+    .filter((k) => (k.pildid || []).length)
+    .map((k) => {
+      const varu = k.pildid.slice(0, LINDI_VARU).map((p) => ({
+        tee: `pildid/galerii/${k.kaust}/pisi/${p.fail}`,
+        alt: p.alt || `${k.nimi}, Meryton Group tehtud töö`
+      }));
+      const esimene = varu[0];
+      const arv = k.pildid.length;
 
-  const ruudud = varu.slice(0, LINDI_RUUTE).map((p) =>
-    `          <div class="lint__ruut">\n` +
-    `            <img src="${p.tee}" width="600" height="450" loading="lazy" decoding="async" alt="${esc(p.alt)}">\n` +
-    `          </div>`
-  ).join('\n');
+      return `          <li>\n` +
+        `            <a class="lint__kast" href="tood.html#${k.kaust}" data-pildid="${esc(JSON.stringify(varu))}">\n` +
+        `              <span class="lint__pilt">\n` +
+        `                <img src="${esimene.tee}" width="600" height="450" loading="lazy" decoding="async" alt="${esc(esimene.alt)}">\n` +
+        `              </span>\n` +
+        `              <span class="lint__silt">${esc(k.nimi)}` +
+        ` <span class="lint__arv">${arv} fotot</span></span>\n` +
+        `            </a>\n` +
+        `          </li>`;
+    });
 
-  const andmestik = esc(JSON.stringify(varu));
-
-  return `        <div class="lint" data-pildid="${andmestik}">\n${ruudud}\n        </div>`;
+  if (!kastid.length) return '';
+  return `        <ul class="lint">\n${kastid.join('\n')}\n        </ul>`;
 }
 
 /* --- 5. sitemap ---------------------------------------------------------- */

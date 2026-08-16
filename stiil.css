@@ -723,33 +723,75 @@ ul {
   color: var(--kuld-hele);
 }
 
-/* --- Avalehe pildilint --------------------------------------------------- */
+/* --- Avalehe kategooriakastid -------------------------------------------- */
 
 .lint {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(0.6rem, 1.4vw, 1rem);
-  margin-bottom: var(--v3);
+  list-style: none;
+  margin: 0 0 var(--v3);
+  padding: 0;
 }
 
-.lint__ruut {
+.lint__kast {
+  display: block;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--pind);
   border-radius: var(--raadius);
+  background: var(--pind);
+  text-decoration: none;
 }
 
-.lint img {
+.lint__pilt {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.lint__kast img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 1;
-  transition: opacity 0.45s ease;
+  transition: opacity 0.45s ease, transform 0.5s ease;
 }
 
-.lint img[data-vahetub] {
+.lint__kast:hover img,
+.lint__kast:focus-visible img {
+  transform: scale(1.04);
+}
+
+.lint__kast img[data-vahetub] {
   opacity: 0;
+}
+
+.lint__silt {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 2.25rem 0.9rem 0.8rem;
+  background: linear-gradient(to top, rgba(6, 6, 7, 0.93) 32%, transparent);
+  color: var(--valge);
+  font-family: var(--pealkiri);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lint__arv {
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--kuld-hele);
+}
+
+@media (max-width: 1024px) {
+  .lint {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 720px) {
@@ -764,10 +806,14 @@ ul {
   }
 }
 
-/* Kes on liikumise välja lülitanud, näeb ühte kindlat pilti */
 @media (prefers-reduced-motion: reduce) {
-  .lint img {
+  .lint__kast img {
     transition: none;
+  }
+
+  .lint__kast:hover img,
+  .lint__kast:focus-visible img {
+    transform: none;
   }
 }
 
@@ -846,6 +892,47 @@ ul {
 /* Kui suurendus on välja lülitatud, ei tohi pilt klõpsatavat muljet jätta */
 .pilt--vaikne {
   cursor: default;
+}
+
+/* Pildi kirjeldus. See on lehel päriselt olemas, mitte peidetud, sest
+   Google Images kasutab pildi ümber olevat teksti. Ekraanil tuleb see
+   nähtavale hiire alla või klaviatuuriga liikudes, et 260 kirjeldust ei
+   muudaks galeriid tekstiseinaks. */
+.pilt__tekst {
+  position: absolute;
+  inset: auto 0 0;
+  margin: 0;
+  padding: 2rem 0.75rem 0.7rem;
+  background: linear-gradient(to top, rgba(6, 6, 7, 0.94) 30%, transparent);
+  color: var(--valge);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.pilt:hover .pilt__tekst,
+.pilt:focus-visible .pilt__tekst {
+  opacity: 1;
+  transform: none;
+}
+
+/* Puuteekraanil ei ole hiire alla minekut, seal on kirjeldus alati näha */
+@media (hover: none) {
+  .pilt__tekst {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilt__tekst {
+    transition: none;
+    transform: none;
+  }
 }
 
 /* Kohatäide puuduva foto asemel: triibustik ja failinimi */

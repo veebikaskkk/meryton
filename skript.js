@@ -32,74 +32,75 @@
     });
   }
 
-  /* --- Avalehe pildilint -------------------------------------------------- */
+  /* --- Avalehe kategooriakastid ------------------------------------------- */
 
-  var lint = document.querySelector('.lint');
+  var kastid = Array.prototype.slice.call(document.querySelectorAll('.lint__kast'));
 
-  if (lint && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var varu = [];
-    try {
-      varu = JSON.parse(lint.getAttribute('data-pildid')) || [];
-    } catch (e) {
-      varu = [];
-    }
+  if (kastid.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var VAHE = 2000;          // kui tihti üks kast pilti vahetab
+    var TUHMUMINE = 450;      // peab kokku langema CSS-i üleminekuga
+    var kellad = [];
 
-    var ruudud = Array.prototype.slice.call(lint.querySelectorAll('img'));
+    var lindid = kastid.map(function (kast) {
+      var varu = [];
+      try {
+        varu = JSON.parse(kast.getAttribute('data-pildid')) || [];
+      } catch (e) {
+        varu = [];
+      }
+      return { img: kast.querySelector('img'), varu: varu, kohal: 0 };
+    }).filter(function (l) {
+      return l.img && l.varu.length > 1;
+    });
 
-    if (varu.length > ruudud.length) {
-      // Lae ülejäänud pildid vaikselt ette, et vahetus ei jätaks auku
-      window.addEventListener('load', function () {
-        varu.slice(ruudud.length).forEach(function (p) {
+    // Lae ülejäänud pildid vaikselt ette, muidu jääb esimesel vahetusel auk
+    window.addEventListener('load', function () {
+      lindid.forEach(function (l) {
+        l.varu.slice(1).forEach(function (p) {
           var e = new Image();
           e.src = p.tee;
         });
       });
+    });
 
-      var jargmine = ruudud.length;   // järgmine varust võetav pilt
-      var ruut = 0;                   // järgmine vahetatav ruut
-      var kell = null;
-
-      function vaheta() {
-        var img = ruudud[ruut % ruudud.length];
-        var p = varu[jargmine % varu.length];
-
-        // ära pane ekraanile sama pilti kaks korda
-        var juba = ruudud.some(function (i) {
-          return i !== img && i.getAttribute('src') === p.tee;
-        });
-        if (juba) {
-          jargmine += 1;
-          ruut += 0;
-          return;
-        }
-
-        img.setAttribute('data-vahetub', '');
-        window.setTimeout(function () {
-          img.setAttribute('src', p.tee);
-          img.setAttribute('alt', p.alt || '');
-          img.removeAttribute('data-vahetub');
-        }, 450);
-
-        jargmine += 1;
-        ruut += 1;
-      }
-
-      function kaima() {
-        if (!kell) kell = window.setInterval(vaheta, 2000);
-      }
-
-      function seisma() {
-        window.clearInterval(kell);
-        kell = null;
-      }
-
-      document.addEventListener('visibilitychange', function () {
-        if (document.hidden) seisma();
-        else kaima();
-      });
-
-      kaima();
+    function vaheta(l) {
+      l.kohal = (l.kohal + 1) % l.varu.length;
+      var p = l.varu[l.kohal];
+      l.img.setAttribute('data-vahetub', '');
+      window.setTimeout(function () {
+        l.img.setAttribute('src', p.tee);
+        l.img.setAttribute('alt', p.alt || '');
+        l.img.removeAttribute('data-vahetub');
+      }, TUHMUMINE);
     }
+
+    function kaima() {
+      if (kellad.length) return;
+      lindid.forEach(function (l, i) {
+        // kastid nihutatakse üksteise suhtes, et nad ei vahetaks korraga
+        var nihe = Math.round((VAHE / lindid.length) * i);
+        var alusta = window.setTimeout(function () {
+          vaheta(l);
+          kellad.push(window.setInterval(function () { vaheta(l); }, VAHE));
+        }, nihe);
+        kellad.push(alusta);
+      });
+    }
+
+    function seisma() {
+      kellad.forEach(function (k) {
+        window.clearTimeout(k);
+        window.clearInterval(k);
+      });
+      kellad = [];
+    }
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) seisma();
+      else kaima();
+    });
+
+    if (lindid.length) kaima();
   }
 
   /* --- Galerii: vaata veel ----------------------------------------------- */
