@@ -146,22 +146,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi, iga kategooria all on näha kolm pilti ja soovi korral saab avada kogu kausta.
 
 [index.html:li:4]
-> Eramu ehitus 38 fotot
+> Eramu ehitus
 
 [index.html:li:5]
-> Põrandatööd 50 fotot
+> Põrandatööd
 
 [index.html:li:6]
-> Vannitoad 50 fotot
+> Vannitoad
 
 [index.html:li:7]
-> Vesi ja kanalisatsioon 18 fotot
+> Siseviimistlus ja plaatimine
 
 [index.html:li:8]
-> Küte ja ventilatsioon 30 fotot
+> Vesi ja kanalisatsioon
 
 [index.html:li:9]
-> Saunad ja terrassid 4 fotot
+> Küte ja ventilatsioon
+
+[index.html:li:10]
+> Saunad, terrassid ja varjualused
+
+[index.html:li:11]
+> Välitööd ja vundament
 
 [index.html:a:10]
 > Ava galerii
@@ -199,28 +205,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:p:24]
 > Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.
 
-[index.html:li:10]
+[index.html:li:12]
 > Apollo kino, Ülemiste keskus
 
-[index.html:li:11]
+[index.html:li:13]
 > Apollo kino, Panevėžys, Leedu
 
-[index.html:li:12]
+[index.html:li:14]
 > Apollo kino, Riga Plaza, Läti
 
-[index.html:li:13]
+[index.html:li:15]
 > Apollo raamatupood, Ülemiste keskus
 
-[index.html:li:14]
+[index.html:li:16]
 > Restoran CHI
 
-[index.html:li:15]
+[index.html:li:17]
 > Restoran Little India
 
-[index.html:li:16]
+[index.html:li:18]
 > Babyback, Läti
 
-[index.html:li:17]
+[index.html:li:19]
 > O'Learys, Riga Plaza
 
 [index.html:p:25]
@@ -276,9 +282,6 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Tehtud töid saab vaadata galerii eramu ehituse kaustast.
 
 [teenused.html:a:2]
-> Vaata eramu ehituse ja renoveerimise fotosid 38 fotot
-
-[teenused.html:a:3]
 > Küsi pakkumist eramu ehitusele või renoveerimisele
 
 [teenused.html:h2:2]
@@ -296,10 +299,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:10]
 > Vaata ka põrandatööde galeriid.
 
-[teenused.html:a:4]
-> Vaata põrandatööde fotosid 50 fotot
-
-[teenused.html:a:5]
+[teenused.html:a:3]
 > Küsi pakkumist põrandakatete paigaldusele
 
 [teenused.html:h2:3]
@@ -317,10 +317,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:14]
 > Vannitubade fotod on galerii vannitubade kaustas.
 
-[teenused.html:a:6]
-> Vaata vannitubade fotosid 50 fotot
-
-[teenused.html:a:7]
+[teenused.html:a:4]
 > Küsi pakkumist vannitoa renoveerimisele
 
 [teenused.html:h2:4]
@@ -335,10 +332,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:17]
 > Kui plaanis on ka vannitoa või köögi ümberehitus, tasub need tööd korraga tellida, sest siis tuleb põrand ja sein lahti võtta ainult üks kord.
 
-[teenused.html:a:8]
-> Vaata vee- ja kanalisatsioonitööde fotosid 18 fotot
-
-[teenused.html:a:9]
+[teenused.html:a:5]
 > Küsi pakkumist vee- ja kanalisatsioonitöödele
 
 [teenused.html:h2:5]
@@ -353,10 +347,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:20]
 > Süsteemi paigaldus käib enamasti koos teiste töödega, sest torud ja kanalid peavad paigas olema enne, kui seinad kinni lähevad.
 
-[teenused.html:a:10]
-> Vaata kütte- ja ventilatsioonitööde fotosid 30 fotot
-
-[teenused.html:a:11]
+[teenused.html:a:6]
 > Küsi pakkumist kütte- ja ventilatsioonitöödele
 
 [teenused.html:h2:6]
@@ -374,10 +365,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:24]
 > Puittööde fotod on galerii puittööde kaustas.
 
-[teenused.html:a:12]
-> Vaata saunade, terrasside ja varjualuste fotosid 4 fotot
-
-[teenused.html:a:13]
+[teenused.html:a:7]
 > Küsi pakkumist saunale, terrassile või varjualusele
 
 [teenused.html:p:25]
@@ -422,7 +410,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:31]
 > Tegevjuht Ain Uibokandiga. Telefon +372 5689 3723, e-post info@meryton.ee.
 
-[teenused.html:a:14]
+[teenused.html:a:8]
 > Küsi pakkumist
 
 ---

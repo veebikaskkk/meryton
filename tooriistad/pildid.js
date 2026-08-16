@@ -35,6 +35,7 @@ const ANDMED = path.join(__dirname, 'galerii-andmed.json');
 const TOOR = path.join(JUUR, 'pildid/toorpildid');
 const VALJUND = path.join(JUUR, 'pildid/galerii');
 const TOOD = path.join(JUUR, 'tood.html');
+const ESILEHT = path.join(JUUR, 'index.html');
 const SITEMAP = path.join(JUUR, 'sitemap.xml');
 
 const SAIT = 'https://www.meryton.ee';
@@ -47,6 +48,8 @@ const EELVAADE = 4;             // mitu pilti on kohe näha, mobiilis kaks rida
 const SUURENDUS = false;
 const SUUR = { laius: 1400, kvaliteet: 78 };
 const PISI = { laius: 600, kvaliteet: 75 };
+const LINDI_RUUTE = 6;          // mitu pilti on avalehel korraga näha
+const LINDI_VARU = 20;          // kui suurest hulgast neid vahetatakse
 const LUBATUD = ['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic', '.heif'];
 
 const andmed = JSON.parse(fs.readFileSync(ANDMED, 'utf8'));
@@ -204,7 +207,42 @@ function galeriiMarkup() {
   return tykid.join('\n\n');
 }
 
-/* --- 3. sitemap ---------------------------------------------------------- */
+/* --- 3. avalehe pildilint ------------------------------------------------ */
+
+// Võtab pildid kategooriatest vaheldumisi, et lindil ei oleks kakskümmend
+// peaaegu ühesugust kaadrit.
+function lindiVaru() {
+  const jarjendid = andmed.kategooriad.map((k) => ({
+    kaust: k.kaust,
+    pildid: (k.pildid || []).slice()
+  }));
+  const varu = [];
+  while (varu.length < LINDI_VARU && jarjendid.some((j) => j.pildid.length)) {
+    for (const j of jarjendid) {
+      if (varu.length >= LINDI_VARU) break;
+      const p = j.pildid.shift();
+      if (p) varu.push({ tee: `pildid/galerii/${j.kaust}/pisi/${p.fail}`, alt: p.alt || '' });
+    }
+  }
+  return varu;
+}
+
+function lindiMarkup() {
+  const varu = lindiVaru();
+  if (!varu.length) return '';
+
+  const ruudud = varu.slice(0, LINDI_RUUTE).map((p) =>
+    `          <div class="lint__ruut">\n` +
+    `            <img src="${p.tee}" width="600" height="450" loading="lazy" decoding="async" alt="${esc(p.alt)}">\n` +
+    `          </div>`
+  ).join('\n');
+
+  const andmestik = esc(JSON.stringify(varu));
+
+  return `        <div class="lint" data-pildid="${andmestik}">\n${ruudud}\n        </div>`;
+}
+
+/* --- 4. sitemap ---------------------------------------------------------- */
 
 function sitemap() {
   const kuup = new Date().toISOString().slice(0, 10);
@@ -273,12 +311,23 @@ function sitemap() {
   const uus = html.slice(0, a + algus.length) + '\n' + galeriiMarkup() + '\n    ' + html.slice(b);
   fs.writeFileSync(TOOD, uus);
 
+  const esi = fs.readFileSync(ESILEHT, 'utf8');
+  const lA = '<!-- ESILEHE-PILDID:ALGUS -->';
+  const lB = '<!-- ESILEHE-PILDID:LOPP -->';
+  const x = esi.indexOf(lA);
+  const y = esi.indexOf(lB);
+  if (x === -1 || y === -1) {
+    console.error('index.html failist ei leia märgiseid ESILEHE-PILDID:ALGUS ja ESILEHE-PILDID:LOPP');
+    process.exit(1);
+  }
+  fs.writeFileSync(ESILEHT, esi.slice(0, x + lA.length) + '\n' + lindiMarkup() + '\n        ' + esi.slice(y));
+
   fs.writeFileSync(SITEMAP, sitemap());
 
   const puuduAlt = andmed.kategooriad
     .flatMap((k) => (k.pildid || []).filter((p) => !p.alt).map((p) => `${k.kaust}/${p.fail}`));
 
-  console.log(`\nKokku ${kokku} pilti. tood.html ja sitemap.xml on uuendatud.`);
+  console.log(`\nKokku ${kokku} pilti. tood.html, index.html ja sitemap.xml on uuendatud.`);
   if (puuduAlt.length) {
     console.log(`Alt-tekst puudub ${puuduAlt.length} pildil. Kirjuta need faili tooriistad/galerii-andmed.json:`);
     puuduAlt.slice(0, 20).forEach((f) => console.log('  ' + f));

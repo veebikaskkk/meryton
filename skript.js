@@ -32,6 +32,76 @@
     });
   }
 
+  /* --- Avalehe pildilint -------------------------------------------------- */
+
+  var lint = document.querySelector('.lint');
+
+  if (lint && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var varu = [];
+    try {
+      varu = JSON.parse(lint.getAttribute('data-pildid')) || [];
+    } catch (e) {
+      varu = [];
+    }
+
+    var ruudud = Array.prototype.slice.call(lint.querySelectorAll('img'));
+
+    if (varu.length > ruudud.length) {
+      // Lae ülejäänud pildid vaikselt ette, et vahetus ei jätaks auku
+      window.addEventListener('load', function () {
+        varu.slice(ruudud.length).forEach(function (p) {
+          var e = new Image();
+          e.src = p.tee;
+        });
+      });
+
+      var jargmine = ruudud.length;   // järgmine varust võetav pilt
+      var ruut = 0;                   // järgmine vahetatav ruut
+      var kell = null;
+
+      function vaheta() {
+        var img = ruudud[ruut % ruudud.length];
+        var p = varu[jargmine % varu.length];
+
+        // ära pane ekraanile sama pilti kaks korda
+        var juba = ruudud.some(function (i) {
+          return i !== img && i.getAttribute('src') === p.tee;
+        });
+        if (juba) {
+          jargmine += 1;
+          ruut += 0;
+          return;
+        }
+
+        img.setAttribute('data-vahetub', '');
+        window.setTimeout(function () {
+          img.setAttribute('src', p.tee);
+          img.setAttribute('alt', p.alt || '');
+          img.removeAttribute('data-vahetub');
+        }, 450);
+
+        jargmine += 1;
+        ruut += 1;
+      }
+
+      function kaima() {
+        if (!kell) kell = window.setInterval(vaheta, 2000);
+      }
+
+      function seisma() {
+        window.clearInterval(kell);
+        kell = null;
+      }
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) seisma();
+        else kaima();
+      });
+
+      kaima();
+    }
+  }
+
   /* --- Galerii: vaata veel ----------------------------------------------- */
 
   var EELVAADE = 4;
