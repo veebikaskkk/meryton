@@ -143,7 +143,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Pildid tehtud töödest
 
 [index.html:p:17]
-> Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi, iga kategooria all on näha kolm pilti ja soovi korral saab avada kogu kausta.
+> Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi ja iga kategooria kausta saab täies mahus avada.
 
 [index.html:li:4]
 > Põrandatööd 50 fotot
@@ -433,7 +433,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Pildid tehtud töödest
 
 [tood.html:p:2]
-> Tööd on jaotatud liigi järgi. Iga kategooria all on kohe näha kolm pilti, ülejäänud avanevad nupust. Mis töö täpsemalt sisse käib, on kirjas teenuste lehel.
+> Tööd on jaotatud liigi järgi. Mis töö täpsemalt sisse käib, on kirjas teenuste lehel.
 
 [tood.html:p:3]
 > Alltöövõtt
