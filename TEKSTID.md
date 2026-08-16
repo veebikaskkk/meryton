@@ -164,7 +164,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Küte ja ventilatsioon
 
 [index.html:li:10]
-> Saunad, terrassid ja varjualused
+> Terrassid ja varjualused
 
 [index.html:li:11]
 > Välitööd ja vundament
@@ -363,7 +363,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Puitosa saab majast kõige rohkem ilma. Materjali valik ja viimistlus otsustavad, kui kaua terrass või varjualune korralikuna püsib.
 
 [teenused.html:p:24]
-> Puittööde fotod on galerii puittööde kaustas.
+> Terrasside ja varjualuste fotod on galeriis. Saunade pilte meil praegu galeriis ei ole.
 
 [teenused.html:a:7]
 > Küsi pakkumist saunale, terrassile või varjualusele

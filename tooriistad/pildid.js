@@ -207,7 +207,45 @@ function galeriiMarkup() {
   return tykid.join('\n\n');
 }
 
-/* --- 3. avalehe pildilint ------------------------------------------------ */
+/* --- 3. tood.html struktuurandmed ---------------------------------------- */
+
+// Kategooriate nimed on ka JSON-LD sees, seega genereerime selle samast
+// allikast. Muidu jääb ühe nime muutmisel teine maha.
+function toodeJsonLd() {
+  const osad = andmed.kategooriad
+    .filter((k) => (k.pildid || []).length)
+    .map((k) => ({
+      '@type': 'ImageGallery',
+      '@id': `${SAIT}/tood.html#${k.kaust}`,
+      name: k.nimi,
+      description: k.kirjeldus,
+      numberOfItems: k.pildid.length
+    }));
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Avaleht', item: `${SAIT}/` },
+          { '@type': 'ListItem', position: 2, name: 'Tehtud tööd', item: `${SAIT}/tood.html` }
+        ]
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${SAIT}/tood.html#galerii`,
+        name: 'Meryton Group OÜ tehtud tööd',
+        url: `${SAIT}/tood.html`,
+        inLanguage: 'et',
+        isPartOf: { '@id': `${SAIT}/#ettevote` },
+        hasPart: osad
+      }
+    ]
+  };
+}
+
+/* --- 4. avalehe pildilint ------------------------------------------------ */
 
 // Võtab pildid kategooriatest vaheldumisi, et lindil ei oleks kakskümmend
 // peaaegu ühesugust kaadrit.
@@ -242,7 +280,7 @@ function lindiMarkup() {
   return `        <div class="lint" data-pildid="${andmestik}">\n${ruudud}\n        </div>`;
 }
 
-/* --- 4. sitemap ---------------------------------------------------------- */
+/* --- 5. sitemap ---------------------------------------------------------- */
 
 function sitemap() {
   const kuup = new Date().toISOString().slice(0, 10);
@@ -308,7 +346,19 @@ function sitemap() {
     console.error('tood.html failist ei leia märgiseid GALERII:ALGUS ja GALERII:LOPP');
     process.exit(1);
   }
-  const uus = html.slice(0, a + algus.length) + '\n' + galeriiMarkup() + '\n    ' + html.slice(b);
+  let uus = html.slice(0, a + algus.length) + '\n' + galeriiMarkup() + '\n    ' + html.slice(b);
+
+  // struktuurandmed samast allikast üle
+  const ldA = uus.indexOf('<script type="application/ld+json">');
+  const ldB = uus.indexOf('</script>', ldA) + '</script>'.length;
+  if (ldA !== -1) {
+    uus = uus.slice(0, ldA) +
+      '<script type="application/ld+json">\n' +
+      JSON.stringify(toodeJsonLd(), null, 2) +
+      '\n</script>' +
+      uus.slice(ldB);
+  }
+
   fs.writeFileSync(TOOD, uus);
 
   const esi = fs.readFileSync(ESILEHT, 'utf8');
