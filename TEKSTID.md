@@ -29,16 +29,16 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Ehitus ja renoveerimine Pärnumaal | Meryton Group
 
 [index.html:description]
-> Eramu ehitus ja renoveerimine, vannitoad, põrandakatted ning tehnosüsteemid. Üle 20 aasta kogemust Pärnumaal, Viljandimaal ja Harjumaal. Küsi pakkumist.
+> Eramu ehitus ja renoveerimine, vannitoad, põrandakatted, torutööd ja küte. Üle 20 aasta kogemust Pärnumaal, Viljandimaal ja Harjumaal. Küsi pakkumist.
 
 [index.html:a:1]
 > Liigu sisu juurde
 
 [index.html:h1:1]
-> Eramud, mis peavad ajale vastu
+> Ehitame ja teeme korda eramuid
 
 [index.html:p:1]
-> Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal. Vundamendist vannitoani, ühe partneri käe alt. Räägime ausalt ka siis, kui vastus ei ole see, mida tellija kuulda loodab.
+> Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal. Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi meest otsima.
 
 [index.html:a:2]
 > Küsi pakkumist
@@ -50,7 +50,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > 20+ aastat kogemust ehituses
 
 [index.html:li:2]
-> 3 maakonda põhilises tööpiirkonnas
+> 3 maakonda kus töötame kõige rohkem
 
 [index.html:li:3]
 > Turvaline Partner Eesti Võlausaldajate Liit
@@ -59,10 +59,10 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > 01 Teenused
 
 [index.html:h2:1]
-> Mida me ära teeme
+> Millega me tegeleme
 
 [index.html:p:3]
-> Fookuses on erasektor, eelkõige eramajad ja väiksemad arendusprojektid. Iga teenus on kirjas ka teenuste lehel koos selgitusega, mis töö sisse käib.
+> Teeme peamiselt eramaju ja väiksemaid arendusprojekte. Teenuste lehel on iga töö juures kirjas, mis selle sisse käib.
 
 [index.html:p:4]
 > 01
@@ -71,7 +71,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Eramu ehitus ja renoveerimine
 
 [index.html:p:5]
-> Uue maja püstitamine ja vana maja kordategemine. Võtame vedada terve objekti või ainult selle osa, milleks tellijal endal aega ei ole.
+> Ehitame uue maja valmis ja teeme vana korda. Võtame enda peale terve objekti või ainult selle osa, mille jaoks tellijal endal aega ei ole.
 
 [index.html:a:4]
 > Loe lähemalt
@@ -83,7 +83,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Põrandakatete paigaldus
 
 [index.html:p:7]
-> Vaip, LVT, parkett ja muud pinnakatted. See on töö, mida oleme alltöövõtu korras teinud ka suurtel kaubandus- ja toitlustusobjektidel.
+> Vaip, LVT, parkett ja muud pinnakatted. Sama tööd oleme alltöövõtjana teinud kaubanduskeskustes ja restoranides.
 
 [index.html:a:5]
 > Loe lähemalt
@@ -131,7 +131,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Saunad, terrassid ja varjualused
 
 [index.html:p:15]
-> Puittööd õue ja majja: saun, terrass, varjualune. Sealhulgas need lahendused, mida kataloogist ei saa.
+> Saun, terrass ja varjualune ning muud puittööd maja juures. Enamasti tuleb mõõdud võtta kohapeal ja ehitada nende järgi.
 
 [index.html:a:9]
 > Loe lähemalt
@@ -140,34 +140,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > 02 Tehtud tööd
 
 [index.html:h2:2]
-> Töö näeb välja nii, nagu ta on
+> Pildid tehtud töödest
 
 [index.html:p:17]
-> Fotod on tehtud objektidel, mitte stuudios. Galerii on jaotatud tööliigi järgi, iga kategooria all on näha kolm pilti ja soovi korral saab avada kogu kausta.
+> Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi, iga kategooria all on näha kolm pilti ja soovi korral saab avada kogu kausta.
 
 [index.html:li:4]
-> Põrandatööd
+> Eramu ehitus 38 fotot
 
 [index.html:li:5]
-> Vannitoad
+> Põrandatööd 50 fotot
 
 [index.html:li:6]
-> Eramu ehitus
+> Vannitoad 50 fotot
 
 [index.html:li:7]
-> Siseviimistlus ja plaatimine
+> Vesi ja kanalisatsioon 18 fotot
 
 [index.html:li:8]
-> Vesi ja kanalisatsioon
+> Küte ja ventilatsioon 30 fotot
 
 [index.html:li:9]
-> Küte ja ventilatsioon
-
-[index.html:li:10]
-> Saunad, terrassid ja varjualused
-
-[index.html:li:11]
-> Välitööd ja vundament
+> Saunad ja terrassid 4 fotot
 
 [index.html:a:10]
 > Ava galerii
@@ -176,13 +170,13 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > 03 Miks meid
 
 [index.html:h2:3]
-> Professionaalsus, korrektsus ja aus suhtlus
+> Kes me oleme
 
 [index.html:p:19]
-> Üle kahekümne aasta ehituses tähendab, et oleme näinud, mis läheb valesti ja miks. Sellepärast räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
+> Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb. Sellepärast räägime tellijaga otse, mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
 
 [index.html:p:20]
-> Meie eesmärk on lahendus, mis peab ajale vastu ja mille üle nii meie kui ka tellija saavad uhkust tunda. Oleme avatud koostööle üle Eesti, kuid eelistame toimetada Pärnumaal, Viljandimaal ja Harjumaal.
+> Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemad objektid lepime eraldi kokku.
 
 [index.html:p:21]
 > Ettevõte on Eesti äriregistris registrikoodiga 16262305 ja käibemaksukohustuslane numbriga EE102721669. Tegevjuht Ain Uibokand vastab telefonile ise.
@@ -203,40 +197,40 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Pinnakatted suurtel objektidel
 
 [index.html:p:24]
-> Alltöövõtu korras oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need objektid on avalikud ja neid saab käia oma silmaga vaatamas.
+> Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.
 
-[index.html:li:12]
+[index.html:li:10]
 > Apollo kino, Ülemiste keskus
 
-[index.html:li:13]
+[index.html:li:11]
 > Apollo kino, Panevėžys, Leedu
 
-[index.html:li:14]
+[index.html:li:12]
 > Apollo kino, Riga Plaza, Läti
 
-[index.html:li:15]
+[index.html:li:13]
 > Apollo raamatupood, Ülemiste keskus
 
-[index.html:li:16]
+[index.html:li:14]
 > Restoran CHI
 
-[index.html:li:17]
+[index.html:li:15]
 > Restoran Little India
 
-[index.html:li:18]
+[index.html:li:16]
 > Babyback, Läti
 
-[index.html:li:19]
+[index.html:li:17]
 > O'Learys, Riga Plaza
 
 [index.html:p:25]
 > 05 Kontakt
 
 [index.html:h2:5]
-> Räägime su objektist ära
+> Võta ühendust
 
 [index.html:p:26]
-> Kirjelda lühidalt, mis maja, mis töö ja mis ajaks. Vastame ausalt ka siis, kui töö meile ei sobi või kui õigem oleks see teha teises järjekorras.
+> Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Kui töö meile ei sobi või kui õigem oleks see teha teises järjekorras, ütleme seda kohe.
 
 [index.html:a:12]
 > Küsi pakkumist
@@ -252,7 +246,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Ehitusteenused eramutele Pärnumaal | Meryton Group
 
 [teenused.html:description]
-> Eramu ehitus, vannitoad, põrandakatted, vesi ja kanalisatsioon, küte ja ventilatsioon ning puittööd. Vaata, mis iga teenuse sisse käib.
+> Eramu ehitus ja renoveerimine, vannitoad, parketi, vaiba ja LVT paigaldus, torutööd, küte ning saunad. Vaata, mis iga teenuse sisse käib.
 
 [teenused.html:a:1]
 > Liigu sisu juurde
@@ -261,19 +255,19 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Teenused
 
 [teenused.html:h1:1]
-> Kuus asja, mille me ära teeme
+> Mida me teeme
 
 [teenused.html:p:2]
-> Iga töö all on kirjas, mis selle sisse käib ja mis jääb välja. Kui su objektil on vaja mitut neist korraga, on see pigem hea uudis, sest siis ei pea eri meeste graafikuid kokku sobitama.
+> Iga töö juures on kirjas, mis selle sisse käib ja mis jääb välja. Kui objektil on vaja mitut tööd korraga, saab need tellida ühest kohast ega pea eri meeste graafikuid kokku sobitama.
 
 [teenused.html:h2:1]
 > Eramu ehitus ja renoveerimine
 
 [teenused.html:p:3]
-> Ehitame uusi eramuid ja teeme vanad korda. Võtame vedada terve objekti või ainult selle osa, mille jaoks tellijal endal aega või oskusi ei jagu.
+> Ehitame uusi eramuid ja teeme vanad korda. Võtame enda peale terve objekti või ainult selle osa, mille jaoks tellijal endal aega või oskust napib.
 
 [teenused.html:p:4]
-> Renoveerimise puhul algab töö sellest, et vaatame maja üle ja ütleme ausalt, mis seisus ta on. Mõnikord tähendab see ka seda, et soovitame teha vähem, kui tellija algselt plaanis, või teha asjad teises järjekorras.
+> Renoveerimine algab sellest, et vaatame maja üle ja ütleme, mis seisus see tegelikult on. Mõnikord soovitame teha algsest plaanist vähem või võtta tööd ette teises järjekorras.
 
 [teenused.html:p:5]
 > Väiksemad arendusprojektid on samamoodi teretulnud. Suured korterelamud ja tööstushooned ei ole meie tavapärane töö.
@@ -281,20 +275,32 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:6]
 > Tehtud töid saab vaadata galerii eramu ehituse kaustast.
 
+[teenused.html:a:2]
+> Vaata eramu ehituse ja renoveerimise fotosid 38 fotot
+
+[teenused.html:a:3]
+> Küsi pakkumist eramu ehitusele või renoveerimisele
+
 [teenused.html:h2:2]
 > Põrandakatete paigaldus
 
 [teenused.html:p:7]
-> Paigaldame vaipa, LVT-d, parketti ja muid pinnakatteid. See on töö, mida oleme teinud kõige rohkem, ja seda mitte ainult eramutes.
+> Paigaldame vaipa, LVT-d, parketti ja muid pinnakatteid. Seda tööd oleme teinud kõige rohkem ja mitte ainult eramutes.
 
 [teenused.html:p:8]
 > Alltöövõtu korras on meie paigaldatud pinnakatted Apollo kinodes Ülemistes, Panevėžyses ja Riga Plazas, Apollo raamatupoes Ülemiste keskuses ning restoranides CHI, Little India, Babyback ja O'Learys.
 
 [teenused.html:p:9]
-> Suure läbikäiguga ruumis on paigalduse kvaliteet näha paari aasta pärast, mitte üleandmise päeval. Sellepärast tegeleme aluspinna ettevalmistusega sama tõsiselt kui katte enda paigaldusega.
+> Suure läbikäiguga ruumis tuleb kehv paigaldus välja alles paari aasta pärast. Sellepärast valmistame aluspinna ette sama hoolikalt, kui paigaldame katte ennast.
 
 [teenused.html:p:10]
 > Vaata ka põrandatööde galeriid.
+
+[teenused.html:a:4]
+> Vaata põrandatööde fotosid 50 fotot
+
+[teenused.html:a:5]
+> Küsi pakkumist põrandakatete paigaldusele
 
 [teenused.html:h2:3]
 > Vannitoa ehitus ja renoveerimine
@@ -303,13 +309,19 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Teeme vannitoa lammutusest valmis ruumini. See tähendab vana ruumi maha võtmist, torustiku ümbertegemist, hüdroisolatsiooni, plaatimist ja sanitaartehnika paigaldust.
 
 [teenused.html:p:12]
-> Vannituba on ainus ruum majas, kus vea hind ei ole kosmeetiline. Kui hüdroisolatsioon on tehtud lohakalt, tuleb see välja alles siis, kui naabri lagi on märg.
+> Kõige tähtsam osa on hüdroisolatsioon. Kui see on tehtud lohakalt, saab asjast teada alles siis, kui vesi on juba edasi läinud, ja parandamiseks tuleb valmis ruum uuesti lahti võtta.
 
 [teenused.html:p:13]
 > Kuna vee- ja kanalisatsioonitööd teeme ise, ei jää vannitoa graafik seisma selle taha, et torumees tuleb alles järgmisel nädalal.
 
 [teenused.html:p:14]
 > Vannitubade fotod on galerii vannitubade kaustas.
+
+[teenused.html:a:6]
+> Vaata vannitubade fotosid 50 fotot
+
+[teenused.html:a:7]
+> Küsi pakkumist vannitoa renoveerimisele
 
 [teenused.html:h2:4]
 > Vee- ja kanalisatsioonitööd
@@ -321,7 +333,13 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Töö käib eramutes. Ühisveevärgi ja suurte süsteemide projekteerimine ei ole meie tegevusala.
 
 [teenused.html:p:17]
-> Kui plaanis on ka vannitoa või köögi ümberehitus, tasub need tööd korraga tellida, sest siis avatakse põrand ja sein ühe korra, mitte kaks.
+> Kui plaanis on ka vannitoa või köögi ümberehitus, tasub need tööd korraga tellida, sest siis tuleb põrand ja sein lahti võtta ainult üks kord.
+
+[teenused.html:a:8]
+> Vaata vee- ja kanalisatsioonitööde fotosid 18 fotot
+
+[teenused.html:a:9]
+> Küsi pakkumist vee- ja kanalisatsioonitöödele
 
 [teenused.html:h2:5]
 > Kütte- ja ventilatsioonisüsteemide paigaldus
@@ -333,7 +351,13 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Projekti ennast me ei koosta. Kui projekt on olemas, paigaldame selle järgi. Kui projekti veel ei ole, ütleme, mis on vaja enne paigaldust ära otsustada.
 
 [teenused.html:p:20]
-> Süsteemi paigaldus käib enamasti koos teiste töödega, sest torud ja kanalid peavad ruumi enne seda, kui seinad kinni lähevad.
+> Süsteemi paigaldus käib enamasti koos teiste töödega, sest torud ja kanalid peavad paigas olema enne, kui seinad kinni lähevad.
+
+[teenused.html:a:10]
+> Vaata kütte- ja ventilatsioonitööde fotosid 30 fotot
+
+[teenused.html:a:11]
+> Küsi pakkumist kütte- ja ventilatsioonitöödele
 
 [teenused.html:h2:6]
 > Saunad, terrassid ja varjualused
@@ -342,19 +366,25 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Ehitame sauna, terrassi ja varjualuse ning teeme muid puittöid, mis maja juurde käivad.
 
 [teenused.html:p:22]
-> Need on tööd, kus tellija soov ja kataloogitoode harva kokku lähevad. Enamasti tuleb lahendus kohapeal mõõtude järgi paika panna. Seda me teeme.
+> Need on tööd, kus valmislahendus tellija sooviga harva kokku läheb. Enamasti tuleb mõõdud võtta kohapeal ja ehitada nende järgi.
 
 [teenused.html:p:23]
-> Puitehitis on ka see osa majast, mis on kõige rohkem ilma käes. Materjali valik ja viimistlus otsustavad, kas terrass näeb viie aasta pärast välja nagu terrass või nagu vana terrass.
+> Puitosa saab majast kõige rohkem ilma. Materjali valik ja viimistlus otsustavad, kui kaua terrass või varjualune korralikuna püsib.
 
 [teenused.html:p:24]
 > Puittööde fotod on galerii puittööde kaustas.
+
+[teenused.html:a:12]
+> Vaata saunade, terrasside ja varjualuste fotosid 4 fotot
+
+[teenused.html:a:13]
+> Küsi pakkumist saunale, terrassile või varjualusele
 
 [teenused.html:p:25]
 > Korduvad küsimused
 
 [teenused.html:h2:7]
-> Mida kliendid kõige sagedamini küsivad
+> Mida kõige sagedamini küsitakse
 
 [teenused.html:summary:1]
 > Millistes piirkondades te töötate?
@@ -392,7 +422,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [teenused.html:p:31]
 > Tegevjuht Ain Uibokandiga. Telefon +372 5689 3723, e-post info@meryton.ee.
 
-[teenused.html:a:2]
+[teenused.html:a:14]
 > Küsi pakkumist
 
 ---
@@ -412,7 +442,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Tehtud tööd
 
 [tood.html:h1:1]
-> Fotod objektidelt, mitte stuudiost
+> Pildid tehtud töödest
 
 [tood.html:p:2]
 > Tööd on jaotatud liigi järgi. Iga kategooria all on kohe näha kolm pilti, ülejäänud avanevad nupust. Mis töö täpsemalt sisse käib, on kirjas teenuste lehel.
@@ -421,10 +451,10 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Alltöövõtt
 
 [tood.html:h2:1]
-> Objektid, kuhu saab ise kohale minna
+> Kohad, kus meie tööd saab ise vaatamas käia
 
 [tood.html:p:4]
-> Pinnakatteid oleme alltöövõtu korras paigaldanud ka avalikes ruumides. Neid objekte saab käia oma silmaga vaatamas, ilma et keegi peaks fotot uskuma.
+> Pinnakatteid oleme alltöövõtjana paigaldanud ka avalikes ruumides. Nendesse kohtadesse saab igaüks ise sisse astuda.
 
 [tood.html:li:1]
 > Apollo kino, Ülemiste keskus
@@ -479,10 +509,10 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Kontakt
 
 [kontakt.html:h1:1]
-> Räägime su objektist ära
+> Võta ühendust
 
 [kontakt.html:p:2]
-> Kirjelda lühidalt, mis maja, mis töö ja mis ajaks. Mida täpsem on kirjeldus, seda vähem käib pakkumine hiljem üles-alla. Kui asi on kiire, helista.
+> Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Mida täpsem on kirjeldus, seda täpsema vastuse saame anda. Kui asi on kiire, helista.
 
 [kontakt.html:h2:1]
 > Hinnapäring
@@ -544,6 +574,9 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [kontakt.html:label:15]
 > Jäta see väli tühjaks
 
+[kontakt.html:p:6]
+> Enne päringut tasub üle vaadata teenused ja tehtud tööd.
+
 [kontakt.html:button:1]
 > Saada päring
 
@@ -556,7 +589,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [kontakt.html:a:3]
 > info@meryton.ee
 
-[kontakt.html:p:6]
+[kontakt.html:p:7]
 > Enne päringut tasub üle vaadata teenused ja tehtud tööd.
 
 ---
@@ -579,7 +612,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Mida tasub enne ehitust teada
 
 [artiklid.html:p:2]
-> Kirjutame siia asju, mida objektil kõige sagedamini valesti tehakse, ja seda tellija vaatest. Kuni esimesed lood valmis saavad, vasta küsimustele telefon või korduvate küsimuste plokk teenuste lehel.
+> Plaanis on kirjutada asjadest, mis objektil kõige sagedamini valesti lähevad, ja seda tellija vaatest. Kuni esimesed lood valmis saavad, aitavad edasi teenuste lehe korduvad küsimused või helistamine.
 
 [artiklid.html:p:3]
 > Esimesed artiklid on kirjutamisel.

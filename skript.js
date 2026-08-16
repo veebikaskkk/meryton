@@ -168,6 +168,14 @@
     var teade = document.getElementById('vormi-teade');
     var saatmisel = false;
 
+    // Teenuste lehelt tullakse aadressiga kontakt.html?teenus=vannitoad,
+    // siis on õige linnuke juba ette valitud.
+    var soovitud = new URLSearchParams(window.location.search).get('teenus');
+    if (soovitud) {
+      var linnuke = vorm.querySelector('input[data-teenus="' + soovitud.replace(/[^a-z-]/g, '') + '"]');
+      if (linnuke) linnuke.checked = true;
+    }
+
     vorm.addEventListener('submit', function (e) {
       if (saatmisel) { e.preventDefault(); return; }
 

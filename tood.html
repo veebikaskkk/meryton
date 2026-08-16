@@ -32,10 +32,92 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Avaleht", "item": "https://www.meryton.ee/" },
-    { "@type": "ListItem", "position": 2, "name": "Tehtud tööd", "item": "https://www.meryton.ee/tood.html" }
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Avaleht",
+          "item": "https://www.meryton.ee/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tehtud tööd",
+          "item": "https://www.meryton.ee/tood.html"
+        }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.meryton.ee/tood.html#galerii",
+      "name": "Meryton Group OÜ tehtud tööd",
+      "url": "https://www.meryton.ee/tood.html",
+      "inLanguage": "et",
+      "isPartOf": {
+        "@id": "https://www.meryton.ee/#ettevote"
+      },
+      "hasPart": [
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#porandatood",
+          "name": "Põrandatööd",
+          "description": "Vaip, LVT, parkett ja muud pinnakatted eramutes ning alltöövõtu korras ka suurematel objektidel.",
+          "numberOfItems": 50
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#vannitoad",
+          "name": "Vannitoad",
+          "description": "Vannitoa renoveerimine lammutusest valmis ruumini: torustik, hüdroisolatsioon, plaatimine ja sanitaartehnika.",
+          "numberOfItems": 50
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#eramu-ehitus",
+          "name": "Eramu ehitus ja renoveerimine",
+          "description": "Uued eramud ja vanade majade kordategemine, terve objekt või selle osa.",
+          "numberOfItems": 38
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#siseviimistlus",
+          "name": "Siseviimistlus ja plaatimine",
+          "description": "Seinad, laed ja plaaditud pinnad, mis jäävad lõpuks silma alla.",
+          "numberOfItems": 20
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#vesi-ja-kanalisatsioon",
+          "name": "Vesi ja kanalisatsioon",
+          "description": "Eramute vee- ja kanalisatsioonitorustik, nii uus kui ka vana väljavahetamine.",
+          "numberOfItems": 18
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#kute-ja-ventilatsioon",
+          "name": "Küte ja ventilatsioon",
+          "description": "Kütte- ja ventilatsioonisüsteemide paigaldus eramutes vastavalt projektile.",
+          "numberOfItems": 30
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#puittood",
+          "name": "Saunad, terrassid ja varjualused",
+          "description": "Puittööd õue ja majja, enamasti kohapeal mõõtude järgi paika pandud.",
+          "numberOfItems": 4
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://www.meryton.ee/tood.html#valitood",
+          "name": "Välitööd ja vundament",
+          "description": "Vundament, betoon, katus, aed ja tänavakivi, ehk kõik see, mis jääb maja seintest väljapoole.",
+          "numberOfItems": 50
+        }
+      ]
+    }
   ]
 }
 </script>
@@ -79,7 +161,7 @@
   <section class="lehepais">
     <div class="kest">
       <p class="moot">Tehtud tööd</p>
-      <h1>Fotod objektidelt, mitte stuudiost</h1>
+      <h1>Pildid tehtud töödest</h1>
       <p>
         Tööd on jaotatud liigi järgi. Iga kategooria all on kohe näha kolm pilti, ülejäänud avanevad
         nupust. Mis töö täpsemalt sisse käib, on kirjas <a href="teenused.html">teenuste lehel</a>.
@@ -981,11 +1063,8 @@
     <div class="kest">
       <div class="jaotis-pais">
         <p class="moot">Alltöövõtt</p>
-        <h2>Objektid, kuhu saab ise kohale minna</h2>
-        <p>
-          Pinnakatteid oleme alltöövõtu korras paigaldanud ka avalikes ruumides. Neid objekte saab
-          käia oma silmaga vaatamas, ilma et keegi peaks fotot uskuma.
-        </p>
+        <h2>Kohad, kus meie tööd saab ise vaatamas käia</h2>
+        <p>Pinnakatteid oleme alltöövõtjana paigaldanud ka avalikes ruumides. Nendesse kohtadesse saab igaüks ise sisse astuda.</p>
       </div>
       <ul class="viited">
         <li>Apollo kino, Ülemiste keskus</li>

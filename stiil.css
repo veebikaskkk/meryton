@@ -705,6 +705,107 @@ ul {
   color: var(--kuld-hele);
 }
 
+/* --- Kategooriate eelvaade avalehel ja teenuste lehel -------------------- */
+
+.eelvaade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.6rem, 1.4vw, 1rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.eelvaade a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--raadius);
+  text-decoration: none;
+  background: var(--pind);
+}
+
+.eelvaade img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.eelvaade a:hover img,
+.eelvaade a:focus-visible img {
+  transform: scale(1.05);
+}
+
+.eelvaade__silt {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 2.25rem 1rem 0.85rem;
+  background: linear-gradient(to top, rgba(6, 6, 7, 0.92) 30%, transparent);
+  color: var(--valge);
+  font-family: var(--pealkiri);
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.eelvaade__arv {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: var(--kuld-hele);
+  flex: none;
+}
+
+/* Teenuse juures üks pilt, mis viib galeriisse */
+.teenus__pilt {
+  display: block;
+  position: relative;
+  margin-top: var(--v3);
+  overflow: hidden;
+  border-radius: var(--raadius);
+  text-decoration: none;
+  background: var(--pind);
+}
+
+.teenus__pilt img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.teenus__pilt:hover img,
+.teenus__pilt:focus-visible img {
+  transform: scale(1.04);
+}
+
+@media (max-width: 720px) {
+  .eelvaade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .eelvaade__silt {
+    font-size: 0.8rem;
+    padding: 2rem 0.7rem 0.7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+}
+
+/* Ühte veergu alles siis, kui kaks enam ei mahu */
+@media (max-width: 340px) {
+  .eelvaade {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* --- Galerii ------------------------------------------------------------- */
 
 .kategooria {

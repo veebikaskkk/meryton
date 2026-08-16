@@ -106,11 +106,8 @@
   <section class="lehepais">
     <div class="kest">
       <p class="moot">Kontakt</p>
-      <h1>Räägime su objektist ära</h1>
-      <p>
-        Kirjelda lühidalt, mis maja, mis töö ja mis ajaks. Mida täpsem on kirjeldus, seda vähem käib
-        pakkumine hiljem üles-alla. Kui asi on kiire, helista.
-      </p>
+      <h1>Võta ühendust</h1>
+      <p>Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Mida täpsem on kirjeldus, seda täpsema vastuse saame anda. Kui asi on kiire, helista.</p>
     </div>
   </section>
 
@@ -148,27 +145,27 @@
                   <p class="abi" id="laad-abi">Vali kõik, mis sobivad.</p>
                   <div class="raadiod" aria-describedby="laad-abi">
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Eramu ehitus ja renoveerimine">
+                      <input type="checkbox" name="laad" value="Eramu ehitus ja renoveerimine" data-teenus="eramu-ehitus">
                       <span>Eramu ehitus ja renoveerimine</span>
                     </label>
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Põrandakatete paigaldus">
+                      <input type="checkbox" name="laad" value="Põrandakatete paigaldus" data-teenus="porandakatted">
                       <span>Põrandakatete paigaldus</span>
                     </label>
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Vannitoa ehitus ja renoveerimine">
+                      <input type="checkbox" name="laad" value="Vannitoa ehitus ja renoveerimine" data-teenus="vannitoad">
                       <span>Vannitoa ehitus ja renoveerimine</span>
                     </label>
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Vee- ja kanalisatsioonitööd">
+                      <input type="checkbox" name="laad" value="Vee- ja kanalisatsioonitööd" data-teenus="vesi-kanalisatsioon">
                       <span>Vesi ja kanalisatsioon</span>
                     </label>
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Kütte- ja ventilatsioonitööd">
+                      <input type="checkbox" name="laad" value="Kütte- ja ventilatsioonitööd" data-teenus="kute-ventilatsioon">
                       <span>Küte ja ventilatsioon</span>
                     </label>
                     <label class="raadio">
-                      <input type="checkbox" name="laad" value="Saunad, terrassid ja varjualused">
+                      <input type="checkbox" name="laad" value="Saunad, terrassid ja varjualused" data-teenus="puittood">
                       <span>Saunad, terrassid, varjualused</span>
                     </label>
                     <label class="raadio">
@@ -209,7 +206,7 @@
               </div>
             </div>
 
-            <p class="vorm__teade" id="vormi-teade" role="status" aria-live="polite"></p>
+            <p class="vorm__teade" id="vormi-teade" role="status" aria-live="polite">Enne päringut tasub üle vaadata teenused ja tehtud tööd.</p>
 
             <div>
               <button class="nupp nupp--kuld" type="submit">Saada päring</button>
