@@ -105,7 +105,7 @@
 
   /* --- Galerii: vaata veel ----------------------------------------------- */
 
-  var EELVAADE = 4;
+  var EELVAADE = 3;
   var veelNupud = document.querySelectorAll('[data-veel]');
 
   // Mitu pilti on hetkel peidus. Osa peidab hidden-atribuut, neljanda pildi
@@ -171,6 +171,24 @@
       ootel = setTimeout(loeUuesti, 200);
     });
   }
+
+  /* --- Galerii: kirjeldus vajutusel --------------------------------------- */
+
+  // Hiirega tuleb kirjeldus pildi peale minnes. Puuteekraanil hiirt ei ole,
+  // seega seal avab ja sulgeb kirjelduse vajutus.
+  var ruudustikud = document.querySelectorAll('.pildid');
+
+  Array.prototype.forEach.call(ruudustikud, function (r) {
+    r.addEventListener('click', function (e) {
+      var pilt = e.target.closest ? e.target.closest('.pilt--vaikne') : null;
+      if (!pilt) return;
+      var avatud = pilt.getAttribute('data-tekst') === 'jah';
+      Array.prototype.forEach.call(r.querySelectorAll('.pilt[data-tekst]'), function (p) {
+        p.removeAttribute('data-tekst');
+      });
+      if (!avatud) pilt.setAttribute('data-tekst', 'jah');
+    });
+  });
 
   /* --- Galerii: suurendus ------------------------------------------------ */
 

@@ -39,7 +39,7 @@ const ESILEHT = path.join(JUUR, 'index.html');
 const SITEMAP = path.join(JUUR, 'sitemap.xml');
 
 const SAIT = 'https://www.meryton.ee';
-const EELVAADE = 4;             // mitu pilti on kohe näha, mobiilis kaks rida
+const EELVAADE = 3;             // mitu pilti on kohe näha, mobiilis kaks rida
 
 // Klõpsuga avanev suurendus. Praegu välja lülitatud, sest galeriis on
 // hange.ee 300x200 pisipildid ja suurendus teeb neist pudru. Kui kliendi

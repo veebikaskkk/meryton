@@ -712,25 +712,22 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [privaatsus.html:h2:5]
 > Kellega andmeid jagatakse
 
-[privaatsus.html:li:7]
-> Resend, e-kirja saatmise teenus, mis edastab vormi sisu ettevõtte e-posti aadressile.
-
-[privaatsus.html:li:8]
-> Vercel, veebimajutus, mille serveris leht ja vormi töötlus jooksevad.
-
 [privaatsus.html:p:8]
-> Muudele kolmandatele isikutele andmeid ei edastata, välja arvatud juhul, kui seadus seda nõuab.
-
-[privaatsus.html:h2:6]
-> Küpsised ja statistika
+> Päringu kohaletoimetamiseks kasutame veebimajutuse ja e-kirja edastamise teenusepakkujaid. Nemad töötlevad andmeid ainult meie ülesandel ja ainult selleks, et kiri kohale jõuaks.
 
 [privaatsus.html:p:9]
-> See leht ei kasuta jälgimisküpsiseid ega reklaamiküpsiseid. Külastuste loendamiseks on kasutusel Vercel Analytics, mis ei sea küpsiseid ega koosta külastaja profiili. Sellepärast ei ole lehel ka küpsiste nõusolekuriba.
+> Muudele kolmandatele isikutele andmeid ei edastata, välja arvatud juhul, kui seadus seda nõuab. Andmeid ei müüda ega vahetata.
+
+[privaatsus.html:h2:6]
+> Küpsised
+
+[privaatsus.html:p:10]
+> See leht ei kasuta jälgimisküpsiseid ega reklaamiküpsiseid ja ei koosta külastaja profiili. Sellepärast ei ole lehel ka küpsiste nõusolekuriba.
 
 [privaatsus.html:h2:7]
 > Sinu õigused
 
-[privaatsus.html:p:10]
+[privaatsus.html:p:11]
 > Sul on õigus küsida, mis andmeid sinu kohta on, paluda nende parandamist ja paluda nende kustutamist. Saada selleks kiri aadressile info@meryton.ee. Kui vastus sind ei rahulda, saad pöörduda Andmekaitse Inspektsiooni poole.
 
 ---

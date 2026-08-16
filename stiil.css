@@ -800,6 +800,20 @@ ul {
   }
 }
 
+/* Telefonis kattis silt pildi alumist osa, seega läheb ta pildi alla */
+@media (max-width: 520px) {
+  .lint__kast {
+    background: var(--pind);
+  }
+
+  .lint__silt {
+    position: static;
+    padding: 0.55rem 0.7rem 0.7rem;
+    background: none;
+    font-size: 0.82rem;
+  }
+}
+
 @media (max-width: 340px) {
   .lint {
     grid-template-columns: 1fr;
@@ -920,11 +934,16 @@ ul {
   transform: none;
 }
 
-/* Puuteekraanil ei ole hiire alla minekut, seal on kirjeldus alati näha */
+/* Puuteekraanil ei ole hiire alla minekut. Kirjeldus kattis väikesel
+   ekraanil poole pildist, seega tuleb see nüüd pildile vajutades. */
+.pilt[data-tekst='jah'] .pilt__tekst {
+  opacity: 1;
+  transform: none;
+}
+
 @media (hover: none) {
-  .pilt__tekst {
-    opacity: 1;
-    transform: none;
+  .pilt--vaikne {
+    cursor: pointer;
   }
 }
 
@@ -955,15 +974,6 @@ ul {
   line-height: 1.4;
   color: var(--hall);
   word-break: break-all;
-}
-
-/* HTML-is on neli pilti nähtaval, mis sobib mobiili kahele veerule.
-   Laiemal ekraanil on ruudustik kolmeveeruline, seega neljas läheb peitu,
-   kuni Vaata veel kogu kausta avab. */
-@media (min-width: 521px) {
-  .pildid:not([data-avatud='jah']) > .pilt:nth-of-type(4) {
-    display: none;
-  }
 }
 
 .veel {
@@ -1587,8 +1597,14 @@ legend {
 }
 
 @media (max-width: 520px) {
+  /* Üks pilt rea peale, siis on foto päriselt vaadatav */
   .pildid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  /* Telefonis on alguses kaks pilti, laiemal ekraanil kolm */
+  .pildid:not([data-avatud='jah']) > .pilt:nth-of-type(3) {
+    display: none;
   }
 
   .hero__faktid {
