@@ -194,7 +194,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Turvaline Partner
 
 [index.html:p:22]
-> Eesti Võlausaldajate Liidu märgis. Märgis on nähtav kõigil selle lehe alamlehtedel.
+> Märgise annab Eesti Võlausaldajate Liit ja see puudutab ettevõtte maksekäitumist.
 
 [index.html:p:23]
 > 04 Alltöövõtt
@@ -396,7 +396,7 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Mida tähendab Turvalise Partneri märgis?
 
 [teenused.html:p:29]
-> Märgise annab Eesti Võlausaldajate Liit ja see puudutab ettevõtte maksekäitumist. Märgis on nähtav iga selle lehe jaluses.
+> Märgise annab Eesti Võlausaldajate Liit ja see puudutab ettevõtte maksekäitumist.
 
 [teenused.html:summary:5]
 > Kas te võtate ka alltöövõtutöid?
