@@ -8,7 +8,6 @@ index.html        avaleht
 teenused.html     kuus teenust ja korduvad küsimused
 tood.html         galerii, kategooriate kaupa
 kontakt.html      hinnapäringu vorm ja rekvisiidid
-artiklid.html     artiklite nimekiri, praegu tühi struktuur
 aitah.html        tänuleht pärast vormi saatmist
 privaatsus.html   privaatsusteade
 404.html          vealeht
@@ -138,8 +137,8 @@ Vorm töötab ka ilma JavaScriptita: siis saadab brauser vormi otse ja funktsioo
 2. **Turvalise Partneri märgise selgitus.** Lehel on kirjas ainult "Märgise annab Eesti
    Võlausaldajate Liit" ja korduvates küsimustes "see puudutab ettevõtte maksekäitumist".
    Küsi kliendilt liidu enda sõnastus ja kontrollilink, siis saab selle täpsemaks teha.
-3. **Artiklite lehe lubadus.** `artiklid.html` ütleb, et plaanis on kolm lugu. Kui klient neid
-   kirjutada ei plaani, tuleb see lause ära muuta.
+3. **Artiklite leht on praegu maas.** `artiklid.html` oli valmis, aga tühi, seega võtsime selle
+   ajutiselt välja. Fail on git-ajaloos alles, taastamiseks vaata punkt 9.
 4. **Andmed, mida lehel teadlikult ei ole**, sest neid ei olnud antud: hinnad, tähtajad,
    garantii, töötajate arv, klientide tagasiside, asutamisaasta. Kui klient need annab,
    tasub lisada eelkõige tagasiside, sest see mõjub hinnapäringule kõige rohkem.
@@ -189,10 +188,13 @@ väikeettevõttele tavaliselt rohkem päringuid kui koduleht ise.
 - **Väike muudatus**, näiteks telefoninumber või üks lause: paranda fail otse GitHubis,
   Vercel uuendab umbes 30 sekundiga.
 - **Uued fotod**: vaata punkt 2, seejärel laadi muutunud failid üles.
-- **Uus artikkel**: `artiklid.html` sees on kommentaaris valmis kaardimall. Iga artikkel
-  saab oma faili kausta `artiklid/` ja oma `Article` tüüpi JSON-LD ploki, milles on
-  `headline`, `datePublished`, `dateModified`, `author`, `publisher` ja `mainEntityOfPage`.
-  Lisa uus aadress ka `sitemap.xml` faili, ehk `tooriistad/pildid.js` sisse muutujasse `lehed`.
+- **Artiklite lehe tagasitoomine**: fail on git-ajaloos alles. Taasta see käsuga
+  `git show 1612966:artiklid.html > artiklid.html`, seejärel lisa menüü ja jaluse link
+  tagasi kõigile lehtedele ning rida `['/artiklid.html', '0.5']` faili
+  `tooriistad/pildid.js` muutujasse `lehed`. Failis on kommentaaris valmis artikli
+  kaardimall. Iga artikkel saab oma faili kausta `artiklid/` ja oma `Article` tüüpi
+  JSON-LD ploki, milles on `headline`, `datePublished`, `dateModified`, `author`,
+  `publisher` ja `mainEntityOfPage`.
 
 ## 10. Mobiili murdepunktid
 

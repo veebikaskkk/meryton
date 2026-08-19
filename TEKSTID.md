@@ -582,40 +582,6 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 
 ---
 
-## Artiklid (artiklid.html)
-
-[artiklid.html:title]
-> Artiklid ehitusest ja renoveerimisest | Meryton Group
-
-[artiklid.html:description]
-> Meryton Group OÜ kirjutab siia praktilisi juhiseid eramu ehitusest, renoveerimisest ja vannitoa remondist. Esimesed artiklid on tulekul.
-
-[artiklid.html:a:1]
-> Liigu sisu juurde
-
-[artiklid.html:p:1]
-> Artiklid
-
-[artiklid.html:h1:1]
-> Mida tasub enne ehitust teada
-
-[artiklid.html:p:2]
-> Plaanis on kirjutada asjadest, mis objektil kõige sagedamini valesti lähevad, ja seda tellija vaatest. Kuni esimesed lood valmis saavad, aitavad edasi teenuste lehe korduvad küsimused või helistamine.
-
-[artiklid.html:p:3]
-> Esimesed artiklid on kirjutamisel.
-
-[artiklid.html:p:4]
-> Plaanis on lood vannitoa renoveerimise õigest järjekorrast, põrandakatte valikust suure läbikäiguga ruumis ning sellest, mida eramu renoveerimise eelarves kõige sagedamini unustatakse.
-
-[artiklid.html:a:2]
-> Vaata seni tehtud töid
-
-[artiklid.html:a:3]
-> Küsi pakkumist
-
----
-
 ## Tänuleht (aitah.html)
 
 [aitah.html:title]

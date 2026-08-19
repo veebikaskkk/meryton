@@ -309,7 +309,6 @@ function sitemap() {
     ['/teenused.html', '0.9'],
     ['/tood.html', '0.9'],
     ['/kontakt.html', '0.8'],
-    ['/artiklid.html', '0.5'],
     ['/privaatsus.html', '0.2']
   ];
 

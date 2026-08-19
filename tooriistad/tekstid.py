@@ -24,7 +24,6 @@ LEHED = [
     ('teenused.html', 'Teenused'),
     ('tood.html', 'Tehtud tööd'),
     ('kontakt.html', 'Kontakt'),
-    ('artiklid.html', 'Artiklid'),
     ('aitah.html', 'Tänuleht'),
     ('privaatsus.html', 'Privaatsusteade'),
     ('404.html', 'Vealeht'),
