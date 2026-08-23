@@ -3,7 +3,7 @@
  * Meryton Group, galerii ehitaja.
  *
  * Mida see teeb:
- *  1. Loeb toorfotod kaustast pildid/toorpildid/<kategooria>/
+ *  1. Loeb toorfotod kaustast toorpildid/<kategooria>/
  *  2. Pöörab need EXIF-i järgi õigetpidi, eemaldab kogu EXIF-i koos GPS-iga
  *     ning teisendab WebP-ks: galeriipilt 1400 px q78, pisipilt 600 px q75
  *  3. Kirjutab tulemuse kausta pildid/galerii/<kategooria>/
@@ -15,7 +15,7 @@
  *   cd tooriistad && npm install     (ainult esimesel korral)
  *   node tooriistad/pildid.js        (projekti juurkaustast)
  *
- * Toorfotod jäävad kausta pildid/toorpildid/ ja neid ei panda veebi.
+ * Toorfotod jäävad kausta toorpildid/ ja neid ei panda veebi.
  */
 
 const fs = require('fs');
@@ -31,19 +31,20 @@ try {
 }
 
 const JUUR = path.resolve(__dirname, '..');
+const PUBLIC = path.join(JUUR, 'public');
 const ANDMED = path.join(__dirname, 'galerii-andmed.json');
-const TOOR = path.join(JUUR, 'pildid/toorpildid');
-const VALJUND = path.join(JUUR, 'pildid/galerii');
-const TOOD = path.join(JUUR, 'tood.html');
-const ESILEHT = path.join(JUUR, 'index.html');
-const SITEMAP = path.join(JUUR, 'sitemap.xml');
+const TOOR = path.join(JUUR, 'toorpildid');            // väljaspool public'ut, ei lähe veebi
+const VALJUND = path.join(PUBLIC, 'pildid/galerii');
+const TOOD = path.join(PUBLIC, 'tood.html');
+const ESILEHT = path.join(PUBLIC, 'index.html');
+const SITEMAP = path.join(PUBLIC, 'sitemap.xml');
 
 const SAIT = 'https://www.meryton.ee';
 const EELVAADE = 3;             // mitu pilti on kohe näha, mobiilis kaks rida
 
 // Klõpsuga avanev suurendus. Praegu välja lülitatud, sest galeriis on
 // hange.ee 300x200 pisipildid ja suurendus teeb neist pudru. Kui kliendi
-// originaalfotod on kaustas pildid/toorpildid/, pane siia true ja jooksuta
+// originaalfotod on kaustas toorpildid/, pane siia true ja jooksuta
 // skript uuesti, siis tulevad klõpsatavad pildid tagasi.
 const SUURENDUS = false;
 const SUUR = { laius: 1400, kvaliteet: 78 };
@@ -131,12 +132,15 @@ async function tootleKategooria(kat) {
       .webp({ quality: SUUR.kvaliteet })
       .toFile(suurTee);
 
+    // withoutEnlargement, muidu venitatakse väike lähtefail suuremaks ja
+    // tulemus on pehmem kui originaal. Kärpimise teeb CSS object-fit.
     await loeSisse(tee).rotate()
-      .resize({ width: PISI.laius, height: Math.round(PISI.laius * 0.75), fit: 'cover', position: 'attention', withoutEnlargement: false })
+      .resize({ width: PISI.laius, withoutEnlargement: true })
       .webp({ quality: PISI.kvaliteet })
       .toFile(pisiTee);
 
     const suurMeta = await sharp(suurTee).metadata();
+    const pisiMeta = await sharp(pisiTee).metadata();
     const kb = fs.statSync(suurTee).size / 1024;
     if (kb > 400) console.warn(`  hoiatus: ${valjundNimi} on ${Math.round(kb)} KB, üle 400 KB`);
 
@@ -146,6 +150,8 @@ async function tootleKategooria(kat) {
       fail: valjundNimi,
       laius: suurMeta.width,
       korgus: suurMeta.height,
+      pisiLaius: pisiMeta.width,
+      pisiKorgus: pisiMeta.height,
       alt: (olemas && olemas.alt) || '',
       originaal: `${meta.width}x${meta.height}`
     });
@@ -166,7 +172,7 @@ async function tootleKategooria(kat) {
 
 function kohataide(kat, nr) {
   const nimi = `${kat.kaust}-${String(nr).padStart(2, '0')}.webp`;
-  return `        <div class="pilt pilt--tyhi" aria-hidden="true"><span>pildid/galerii/${kat.kaust}/${nimi}</span></div>`;
+  return `        <div class="pilt pilt--tyhi" aria-hidden="true"><span>public/pildid/galerii/${kat.kaust}/${nimi}</span></div>`;
 }
 
 function galeriiMarkup() {
@@ -184,7 +190,7 @@ function galeriiMarkup() {
       ruudud = pildid.map((p, i) => {
         const peidus = i >= EELVAADE ? ' hidden' : '';
         const alt = p.alt || `${kat.nimi}, Meryton Group tehtud töö`;
-        const pilt = `          <img src="pildid/galerii/${kat.kaust}/pisi/${p.fail}" width="600" height="450"` +
+        const pilt = `          <img src="/pildid/galerii/${kat.kaust}/pisi/${p.fail}" width="${p.pisiLaius || 600}" height="${p.pisiKorgus || 450}"` +
           ` loading="lazy" decoding="async" alt="${esc(alt)}">`;
 
         if (!SUURENDUS) {
@@ -194,7 +200,7 @@ function galeriiMarkup() {
         }
 
         return `        <button class="pilt" type="button"${peidus}` +
-          ` data-suur="pildid/galerii/${kat.kaust}/${p.fail}"` +
+          ` data-suur="/pildid/galerii/${kat.kaust}/${p.fail}"` +
           ` data-alt="${esc(alt)}">\n${pilt}\n` +
           `          <figcaption class="pilt__tekst">${esc(alt)}</figcaption>\n` +
           `        </button>`;
@@ -241,7 +247,7 @@ function toodeJsonLd() {
     .filter((k) => (k.pildid || []).length)
     .map((k) => ({
       '@type': 'ImageGallery',
-      '@id': `${SAIT}/tood.html#${k.kaust}`,
+      '@id': `${SAIT}/tood#${k.kaust}`,
       name: k.nimi,
       description: k.kirjeldus,
       numberOfItems: k.pildid.length
@@ -254,14 +260,14 @@ function toodeJsonLd() {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Avaleht', item: `${SAIT}/` },
-          { '@type': 'ListItem', position: 2, name: 'Tehtud tööd', item: `${SAIT}/tood.html` }
+          { '@type': 'ListItem', position: 2, name: 'Tehtud tööd', item: `${SAIT}/tood` }
         ]
       },
       {
         '@type': 'CollectionPage',
-        '@id': `${SAIT}/tood.html#galerii`,
+        '@id': `${SAIT}/tood#galerii`,
         name: 'Meryton Group OÜ tehtud tööd',
-        url: `${SAIT}/tood.html`,
+        url: `${SAIT}/tood`,
         inLanguage: 'et',
         isPartOf: { '@id': `${SAIT}/#ettevote` },
         hasPart: osad
@@ -279,16 +285,17 @@ function lindiMarkup() {
     .filter((k) => (k.pildid || []).length)
     .map((k) => {
       const varu = k.pildid.slice(0, LINDI_VARU).map((p) => ({
-        tee: `pildid/galerii/${k.kaust}/pisi/${p.fail}`,
+        tee: `/pildid/galerii/${k.kaust}/pisi/${p.fail}`,
         alt: p.alt || `${k.nimi}, Meryton Group tehtud töö`
       }));
       const esimene = varu[0];
+      const esimeneP = k.pildid[0];
       const arv = k.pildid.length;
 
       return `          <li>\n` +
-        `            <a class="lint__kast" href="tood.html#${k.kaust}" data-pildid="${esc(JSON.stringify(varu))}">\n` +
+        `            <a class="lint__kast" href="/tood#${k.kaust}" data-pildid="${esc(JSON.stringify(varu))}">\n` +
         `              <span class="lint__pilt">\n` +
-        `                <img src="${esimene.tee}" width="600" height="450" loading="lazy" decoding="async" alt="${esc(esimene.alt)}">\n` +
+        `                <img src="${esimene.tee}" width="${esimeneP.pisiLaius || 600}" height="${esimeneP.pisiKorgus || 450}" loading="lazy" decoding="async" alt="${esc(esimene.alt)}">\n` +
         `              </span>\n` +
         `              <span class="lint__silt">${esc(k.nimi)}` +
         ` <span class="lint__arv">${arv} fotot</span></span>\n` +
@@ -306,10 +313,10 @@ function sitemap() {
   const kuup = new Date().toISOString().slice(0, 10);
   const lehed = [
     ['/', '1.0'],
-    ['/teenused.html', '0.9'],
-    ['/tood.html', '0.9'],
-    ['/kontakt.html', '0.8'],
-    ['/privaatsus.html', '0.2']
+    ['/teenused', '0.9'],
+    ['/tood', '0.9'],
+    ['/kontakt', '0.8'],
+    ['/privaatsus', '0.2']
   ];
 
   let pildiread = '';
@@ -330,7 +337,7 @@ function sitemap() {
 
   for (const [tee, prio] of lehed) {
     xml += `  <url>\n    <loc>${SAIT}${tee}</loc>\n    <lastmod>${kuup}</lastmod>\n    <priority>${prio}</priority>\n`;
-    if (tee === '/tood.html' && pildiread) xml += pildiread;
+    if (tee === '/tood' && pildiread) xml += pildiread;
     xml += '  </url>\n';
   }
 

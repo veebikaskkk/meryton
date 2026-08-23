@@ -1,12 +1,13 @@
 {
   "name": "meryton-koduleht",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
-  "description": "MERYTON GROUP OÜ koduleht. Puhas HTML, CSS ja JavaScript, hinnapäringu vorm Resendiga.",
-  "engines": {
-    "node": ">=20"
+  "description": "MERYTON GROUP OÜ koduleht. Puhas HTML, CSS ja JavaScript, Cloudflare Workeri peal.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
   },
-  "dependencies": {
-    "resend": "^4.0.1"
+  "devDependencies": {
+    "wrangler": "^4.0.0"
   }
 }

@@ -17,6 +17,7 @@ import io, os, re, sys
 from html.parser import HTMLParser
 
 JUUR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PUBLIC = os.path.join(JUUR, 'public')
 VALJUND = os.path.join(JUUR, 'TEKSTID.md')
 
 LEHED = [
@@ -110,7 +111,7 @@ def main():
 
     kokku = 0
     for fail, nimi in LEHED:
-        tee = os.path.join(JUUR, fail)
+        tee = os.path.join(PUBLIC, fail)
         if not os.path.exists(tee):
             continue
         s = io.open(tee, encoding='utf-8').read()

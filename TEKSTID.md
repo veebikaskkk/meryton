@@ -47,13 +47,31 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Vaata tehtud töid
 
 [index.html:li:1]
-> 20+ aastat kogemust ehituses
+> Eramu ehitus
 
 [index.html:li:2]
-> 3 maakonda kus töötame kõige rohkem
+> Vannitoad
 
 [index.html:li:3]
-> Turvaline Partner Eesti Võlausaldajate Liit
+> Põrandad
+
+[index.html:li:4]
+> Vesi ja kanalisatsioon
+
+[index.html:li:5]
+> Küte ja ventilatsioon
+
+[index.html:li:6]
+> Terrassid ja saunad
+
+[index.html:li:7]
+> Kogemus: 20+ aastatkogemust ehituses
+
+[index.html:li:8]
+> 3 maakondakus töötame kõige rohkem
+
+[index.html:li:9]
+> Turvaline PartnerEesti Võlausaldajate Liit
 
 [index.html:p:2]
 > 01 Teenused
@@ -145,28 +163,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:p:17]
 > Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi ja iga kategooria kausta saab täies mahus avada.
 
-[index.html:li:4]
+[index.html:li:10]
 > Põrandatööd 50 fotot
 
-[index.html:li:5]
+[index.html:li:11]
 > Vannitoad 50 fotot
 
-[index.html:li:6]
+[index.html:li:12]
 > Eramu ehitus ja renoveerimine 38 fotot
 
-[index.html:li:7]
+[index.html:li:13]
 > Siseviimistlus ja plaatimine 20 fotot
 
-[index.html:li:8]
+[index.html:li:14]
 > Vesi ja kanalisatsioon 18 fotot
 
-[index.html:li:9]
+[index.html:li:15]
 > Küte ja ventilatsioon 30 fotot
 
-[index.html:li:10]
+[index.html:li:16]
 > Terrassid ja varjualused 4 fotot
 
-[index.html:li:11]
+[index.html:li:17]
 > Välitööd ja vundament 50 fotot
 
 [index.html:a:10]
@@ -179,10 +197,10 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Kes me oleme
 
 [index.html:p:19]
-> Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb. Sellepärast räägime tellijaga otse, mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
+> Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb. Sellepärast räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
 
 [index.html:p:20]
-> Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemad objektid lepime eraldi kokku.
+> Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel.
 
 [index.html:p:21]
 > Ettevõte on Eesti äriregistris registrikoodiga 16262305 ja käibemaksukohustuslane numbriga EE102721669. Tegevjuht Ain Uibokand vastab telefonile ise.
@@ -205,28 +223,28 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:p:24]
 > Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.
 
-[index.html:li:12]
+[index.html:li:18]
 > Apollo kino, Ülemiste keskus
 
-[index.html:li:13]
+[index.html:li:19]
 > Apollo kino, Panevėžys, Leedu
 
-[index.html:li:14]
+[index.html:li:20]
 > Apollo kino, Riga Plaza, Läti
 
-[index.html:li:15]
+[index.html:li:21]
 > Apollo raamatupood, Ülemiste keskus
 
-[index.html:li:16]
+[index.html:li:22]
 > Restoran CHI
 
-[index.html:li:17]
+[index.html:li:23]
 > Restoran Little India
 
-[index.html:li:18]
+[index.html:li:24]
 > Babyback, Läti
 
-[index.html:li:19]
+[index.html:li:25]
 > O'Learys, Riga Plaza
 
 [index.html:p:25]
@@ -470,15 +488,6 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 
 [tood.html:a:2]
 > Küsi oma objektile pakkumist
-
-[tood.html:button:1]
-> Sulge
-
-[tood.html:button:2]
-> Eelmine
-
-[tood.html:button:3]
-> Järgmine
 
 ---
 

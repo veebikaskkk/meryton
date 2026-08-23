@@ -1,0 +1,12 @@
+# Vanad .html aadressid puhtale kujule. Workeri assets teeb selle niikuinii
+# 307-ga, aga otsingumootori jaoks on 301 selgem.
+/index.html       /            301
+/teenused.html    /teenused    301
+/tood.html        /tood        301
+/kontakt.html     /kontakt     301
+/privaatsus.html  /privaatsus  301
+/aitah.html       /aitah       301
+
+# Artiklite leht on ajutiselt maas
+/artiklid         /            301
+/artiklid.html    /            301

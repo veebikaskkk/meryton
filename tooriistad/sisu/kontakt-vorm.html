@@ -1,0 +1,95 @@
+          <form class="vorm" id="paring" action="/api/kontakt" method="post" novalidate>
+            <div class="valjad">
+              <div class="vali">
+                <label for="nimi">Nimi <span aria-hidden="true">*</span></label>
+                <input type="text" id="nimi" name="nimi" autocomplete="name" required maxlength="120">
+              </div>
+
+              <div class="vali">
+                <label for="ettevote">Ettevõte</label>
+                <input type="text" id="ettevote" name="ettevote" autocomplete="organization" maxlength="120">
+              </div>
+
+              <div class="vali">
+                <label for="epost">E-post <span aria-hidden="true">*</span></label>
+                <input type="email" id="epost" name="epost" autocomplete="email" required maxlength="160">
+              </div>
+
+              <div class="vali">
+                <label for="telefon">Telefon</label>
+                <input type="tel" id="telefon" name="telefon" autocomplete="tel" maxlength="40">
+              </div>
+
+              <div class="vali vali--lai">
+                <fieldset>
+                  <legend>Mis laadi töö see on?</legend>
+                  <p class="abi" id="laad-abi">Vali kõik, mis sobivad.</p>
+                  <div class="raadiod" aria-describedby="laad-abi">
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Eramu ehitus ja renoveerimine" data-teenus="eramu-ehitus">
+                      <span>Eramu ehitus ja renoveerimine</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Põrandakatete paigaldus" data-teenus="porandakatted">
+                      <span>Põrandakatete paigaldus</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Vannitoa ehitus ja renoveerimine" data-teenus="vannitoad">
+                      <span>Vannitoa ehitus ja renoveerimine</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Vee- ja kanalisatsioonitööd" data-teenus="vesi-kanalisatsioon">
+                      <span>Vesi ja kanalisatsioon</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Kütte- ja ventilatsioonitööd" data-teenus="kute-ventilatsioon">
+                      <span>Küte ja ventilatsioon</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Saunad, terrassid ja varjualused" data-teenus="puittood">
+                      <span>Saunad, terrassid, varjualused</span>
+                    </label>
+                    <label class="raadio">
+                      <input type="checkbox" name="laad" value="Muu">
+                      <span>Muu</span>
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+
+              <div class="vali vali--lai" id="objekti-plokk">
+                <label for="objekt">Objekti aadress või asukoht</label>
+                <input type="text" id="objekt" name="objekt" maxlength="180">
+                <p class="abi">Piisab külast ja vallast, täpset aadressi ei pea kirja panema.</p>
+              </div>
+
+              <div class="vali vali--lai">
+                <label for="sonum">Kirjeldus <span aria-hidden="true">*</span></label>
+                <textarea id="sonum" name="sonum" required maxlength="4000"></textarea>
+                <p class="abi" id="sonum-abi">
+                  Kirjuta, mis hoone see on, mis tööd vajab, umbes mis ruutmeetrid ja mis ajaks
+                  valmis peaks saama. Kui sul on projekt või fotod, maini seda, siis küsime need
+                  vastuskirjaga.
+                </p>
+              </div>
+
+              <div class="vali vali--lai">
+                <label class="linnuke">
+                  <input type="checkbox" id="nousolek" name="nousolek" required>
+                  <span>Olen nõus, et minu andmeid kasutatakse päringule vastamiseks.
+                    Loe <a href="/privaatsus">privaatsusteatest</a>.</span>
+                </label>
+              </div>
+
+              <div class="meepott" aria-hidden="true">
+                <label for="veebiaadress">Jäta see väli tühjaks</label>
+                <input type="text" id="veebiaadress" name="veebiaadress" tabindex="-1" autocomplete="off">
+              </div>
+            </div>
+
+            <p class="vorm__teade" id="vormi-teade" role="status" aria-live="polite">Enne päringut tasub üle vaadata teenused ja tehtud tööd.</p>
+
+            <div>
+              <button class="nupp nupp--kuld" type="submit">Saada päring</button>
+            </div>
+          </form>

@@ -14,6 +14,7 @@ import io, os, re, sys
 from html.parser import HTMLParser
 
 JUUR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PUBLIC = os.path.join(JUUR, 'public')
 KORJA = {'h1', 'h2', 'h3', 'p', 'li', 'summary', 'label', 'legend', 'a', 'button', 'title'}
 JATA = {'nav', 'footer', 'header', 'script', 'style'}
 
@@ -81,7 +82,7 @@ def main():
     muudetud, vahele = 0, []
 
     for fail in lehed:
-        tee = os.path.join(JUUR, fail)
+        tee = os.path.join(PUBLIC, fail)
         if not os.path.exists(tee):
             continue
         s = io.open(tee, encoding='utf-8').read()

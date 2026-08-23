@@ -1,0 +1,5 @@
+# Kopeeri see failiks .dev.vars ja täida väärtused.
+# .dev.vars on .gitignore sees ja see ei tohi kunagi hoidlasse jõuda.
+RESEND_API_KEY="re_..."
+SAATJA="Meryton koduleht <vorm@meryton.ee>"
+SAAJA="info@meryton.ee"

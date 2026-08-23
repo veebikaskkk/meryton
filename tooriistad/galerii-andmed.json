@@ -12,6 +12,8 @@
           "fail": "porandaplaatide-paigaldus-eramu-tehnoruumis-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suureformaadiline hall plaatpõrand eramu tehnoruumis.",
           "originaal": "300x200"
         },
@@ -21,6 +23,8 @@
           "fail": "porandaplaatide-paigaldus-porandaluugi-umber-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hall plaatpõrand koos põrandaluugi ümber diagonaalselt lõigatud plaatidega.",
           "originaal": "300x200"
         },
@@ -30,6 +34,8 @@
           "fail": "vaipkatte-paigaldus-suures-saalis-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Mustriline punane vaipkate paigaldamisel suure saali põrandale.",
           "originaal": "300x200"
         },
@@ -39,6 +45,8 @@
           "fail": "betoonporanda-lihvimine-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonpõranda lihvimine ehitusjärgus ruumis.",
           "originaal": "300x200"
         },
@@ -48,6 +56,8 @@
           "fail": "vaipkatte-paigaldus-kaubandusruumis-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punase vaipkatte rullid ja osaliselt paigaldatud kate suures kaubandusruumis.",
           "originaal": "300x200"
         },
@@ -57,6 +67,8 @@
           "fail": "vaipkate-saali-fuajees-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Paigaldatud punane mustriline vaipkate saali fuajees.",
           "originaal": "300x200"
         },
@@ -66,6 +78,8 @@
           "fail": "vaipkatte-paigaldus-saalis-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumehall vaipkate paigaldamisel suures saalis.",
           "originaal": "300x200"
         },
@@ -75,6 +89,8 @@
           "fail": "vaibaplaatide-paigaldus-suures-saalis-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hallsinised vaibaplaadid paigaldamisel suure saali põrandale.",
           "originaal": "300x200"
         },
@@ -84,6 +100,8 @@
           "fail": "vaibaplaatide-paigaldus-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Osaliselt paigaldatud vaibaplaadid saalis.",
           "originaal": "300x200"
         },
@@ -93,6 +111,8 @@
           "fail": "porandakatte-paigaldus-suures-saalis-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suur saal ehitusjärgus, põrandal osaliselt paigaldatud tume pinnakate.",
           "originaal": "300x200"
         },
@@ -102,6 +122,8 @@
           "fail": "vaibaplaatide-paigaldus-ruumis-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vaibaplaadid osaliselt paigaldatud ruumis.",
           "originaal": "300x200"
         },
@@ -111,6 +133,8 @@
           "fail": "vaipkatte-paigaldus-saali-porandal-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumehall vaipkate laotatud suure saali põrandale.",
           "originaal": "300x200"
         },
@@ -120,6 +144,8 @@
           "fail": "mustrilise-vaipkatte-paigaldus-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Mustriline must-valge vaipkate paigaldamisel.",
           "originaal": "300x200"
         },
@@ -129,6 +155,8 @@
           "fail": "vaipkatte-paigaldus-suures-ruumis-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geomeetrilise mustriga vaipkate ja lahti rullimata rull suure ruumi põrandal.",
           "originaal": "300x200"
         },
@@ -138,6 +166,8 @@
           "fail": "mustriline-vaipkate-koridoris-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valmis paigaldatud must-valge mustriline vaipkate koridoris.",
           "originaal": "300x200"
         },
@@ -147,6 +177,8 @@
           "fail": "vaipkatte-rulli-lahtirullimine-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vaipkatte rull lahti rullimisel, all liimitud aluspõrand.",
           "originaal": "300x200"
         },
@@ -156,6 +188,8 @@
           "fail": "vaipkatte-liimimine-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kollase kärgmustriga vaipkate ja liimikamm paigaldustööl.",
           "originaal": "300x200"
         },
@@ -165,6 +199,8 @@
           "fail": "vaipkate-kaubanduskeskuses-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kärgmustriga vaipkate suure keskuse ruumis.",
           "originaal": "300x200"
         },
@@ -174,6 +210,8 @@
           "fail": "kinosaali-vaipkatte-paigaldus-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kinosaali valge ekraaniseina ees mustriline vaipkate.",
           "originaal": "300x200"
         },
@@ -183,6 +221,8 @@
           "fail": "kinofuajee-porandakate-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kinofuajee mustriline põrand, seintel värvilised paneelid ja ekraanid.",
           "originaal": "300x200"
         },
@@ -192,6 +232,8 @@
           "fail": "kinosaali-vaipkate-21.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kinosaali tume mustriline vaipkate enne toolide paigaldust.",
           "originaal": "300x200"
         },
@@ -201,6 +243,8 @@
           "fail": "vaipkate-suures-ruumis-22.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suur ruum mustrilise vaipkattega.",
           "originaal": "300x200"
         },
@@ -210,6 +254,8 @@
           "fail": "mustrilise-pinnakatte-paigaldus-23.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punane pinnakate valge mustriga, paigaldamisel dekoorielemendid.",
           "originaal": "300x200"
         },
@@ -219,6 +265,8 @@
           "fail": "porandaplaatide-ja-puitporanda-uleminek-24.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kuusnurksed valged plaadid ja vana puitpõrand üleminekukohas kõrvuti.",
           "originaal": "300x200"
         },
@@ -228,6 +276,8 @@
           "fail": "kuusnurksete-porandaplaatide-paigaldus-25.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suureformaadilised kuusnurksed helehallid plaadid ruumi põrandal.",
           "originaal": "300x200"
         },
@@ -237,6 +287,8 @@
           "fail": "kuusnurkne-plaatporand-26.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kuusnurkne helehall plaatpõrand.",
           "originaal": "300x200"
         },
@@ -246,6 +298,8 @@
           "fail": "kuusnurkne-plaatporand-porandaluugiga-27.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kuusnurkne plaatpõrand koos põrandaluugi raamiga.",
           "originaal": "300x200"
         },
@@ -255,6 +309,8 @@
           "fail": "vana-puitporanda-eemaldamine-28.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ruum, kus vana puitpõrand on lahti võetud ja uus materjal kimpudes ootel.",
           "originaal": "300x200"
         },
@@ -264,6 +320,8 @@
           "fail": "puitporanda-lihvimine-ja-lakkimine-29.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Lakitud tume puitpõrand ruumis pärast lihvimist.",
           "originaal": "300x200"
         },
@@ -273,6 +331,8 @@
           "fail": "parketi-paigaldus-kalasabamustris-30.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kalasabamustris puitparkett paigaldamisel.",
           "originaal": "300x200"
         },
@@ -282,6 +342,8 @@
           "fail": "porandakatte-aluspind-enne-paigaldust-31.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Aluspõrand enne katte paigaldust.",
           "originaal": "300x200"
         },
@@ -291,6 +353,8 @@
           "fail": "kalasabaparketi-paigaldus-32.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kalasabamustris parketi paigaldus pooleli.",
           "originaal": "300x200"
         },
@@ -300,6 +364,8 @@
           "fail": "kalasabaparkett-valminud-ruumis-33.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kalasabamustris hele puitparkett valminud ruumis.",
           "originaal": "300x200"
         },
@@ -309,6 +375,8 @@
           "fail": "kalasabaparkett-ja-porandaliist-34.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kalasabamustris parkett valge seina ja tumeda põrandaliistuga ruumis.",
           "originaal": "300x200"
         },
@@ -318,6 +386,8 @@
           "fail": "kalasabaparketi-lahivaade-35.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kalasabaparkett tumeda põrandaliistu ääres lähivaates.",
           "originaal": "300x200"
         },
@@ -327,6 +397,8 @@
           "fail": "betoonalusporand-enne-katte-paigaldust-36.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonaluspõrand enne katte paigaldust.",
           "originaal": "300x200"
         },
@@ -336,6 +408,8 @@
           "fail": "puidumustriga-porandaplaadid-37.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puidumustriga pikad plaadid põrandal.",
           "originaal": "300x200"
         },
@@ -345,6 +419,8 @@
           "fail": "puidumustriga-plaatporand-38.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puidumustriga plaatpõrand valminud ruumis.",
           "originaal": "300x200"
         },
@@ -354,6 +430,8 @@
           "fail": "poranda-tasandussegu-39.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tasandussegu kuivamas enne pinnakatte paigaldust.",
           "originaal": "300x200"
         },
@@ -363,6 +441,8 @@
           "fail": "laikiv-puidumustriga-plaatporand-40.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Läikiv puidumustriga plaatpõrand pärast paigaldust.",
           "originaal": "300x200"
         },
@@ -372,6 +452,8 @@
           "fail": "vaipkatte-rullid-enne-paigaldust-41.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vaipkatte rullid laos enne paigaldust.",
           "originaal": "300x200"
         },
@@ -381,6 +463,8 @@
           "fail": "munakivimustriga-vinuulkate-42.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Munakivimustriga vinüülkate ja lahti rullimata rull ruumis.",
           "originaal": "300x200"
         },
@@ -390,6 +474,8 @@
           "fail": "porandakatte-paigaldus-suures-ruumis-43.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumehall pinnakate suures ruumis.",
           "originaal": "300x200"
         },
@@ -399,6 +485,8 @@
           "fail": "vinuulkatte-paigaldus-44.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Munakivimustriga kate ja tume vinüül kõrvuti paigaldamisel.",
           "originaal": "300x200"
         },
@@ -408,6 +496,8 @@
           "fail": "hall-vaipkate-suures-ruumis-45.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ühtlane hall vaipkate suure ruumi põrandal.",
           "originaal": "300x200"
         },
@@ -417,6 +507,8 @@
           "fail": "munakivimustriga-porand-ja-astmed-46.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Munakivimustriga põrand ja selle kõrval puitservaga astmed.",
           "originaal": "300x200"
         },
@@ -426,6 +518,8 @@
           "fail": "vaipkate-astmelisel-platvormil-47.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hall vaipkate astmelisel platvormil.",
           "originaal": "300x200"
         },
@@ -435,6 +529,8 @@
           "fail": "munakivimustriga-vinuulkate-seina-ees-48.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Munakivimustriga vinüülkate oranži seina ees.",
           "originaal": "300x200"
         },
@@ -444,6 +540,8 @@
           "fail": "tume-porandakate-suures-ruumis-49.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tume põrandakate.",
           "originaal": "300x200"
         },
@@ -453,6 +551,8 @@
           "fail": "mustriliste-porandaplaatide-paigaldus-50.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Musta-valge mustriga plaadid paigaldamisel.",
           "originaal": "300x200"
         }
@@ -469,6 +569,8 @@
           "fail": "dusiruumi-ehitus-taimemustriga-plaatidega-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Taimemustriga seinaplaadid ja süvistatud riiulinišš duširuumis, must dušisegisti.",
           "originaal": "300x200"
         },
@@ -478,6 +580,8 @@
           "fail": "vannitoa-renoveerimine-taimemustriga-plaatidega-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Taimemustriga plaaditud duširuum musta dušisüsteemiga.",
           "originaal": "300x200"
         },
@@ -487,6 +591,8 @@
           "fail": "vannitoa-renoveerimine-vanniga-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vanniga vannituba valgete seinaplaatidega, taga aken ribakardinaga.",
           "originaal": "300x200"
         },
@@ -496,6 +602,8 @@
           "fail": "vannitoa-renoveerimine-marmorimustriga-plaatidega-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Rippuv WC-pott ja klaasist dušisein beeži marmorimustrilise plaatpõrandaga vannitoas.",
           "originaal": "300x200"
         },
@@ -505,6 +613,8 @@
           "fail": "dusiruumi-ehitus-puidumustriga-plaatidega-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puidumustriga seinaplaadid duširuumis, kõrval rippuv WC-pott ja klaasist dušisein.",
           "originaal": "300x200"
         },
@@ -514,6 +624,8 @@
           "fail": "vannitoa-renoveerimine-mosaiikporandaga-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Must-valge kuusnurkne mosaiikpõrand ja valged seinaplaadid, seinal rippuv WC-pott.",
           "originaal": "300x200"
         },
@@ -523,6 +635,8 @@
           "fail": "dusiruumi-ehitus-marmorplaatidega-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge marmorimustriga suureformaadilised plaadid ja must aktsentsein duširuumis.",
           "originaal": "300x200"
         },
@@ -532,6 +646,8 @@
           "fail": "dusiruumi-ehitus-musta-aktsentseinaga-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Duširuum valge marmorimustrilise põranda ja musta aktsentseinaga, seinas süvistatud nišš.",
           "originaal": "300x200"
         },
@@ -541,6 +657,8 @@
           "fail": "vannitoa-plaatimine-marmorimustriga-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Marmorimustriga plaaditud vannitoa sein ja valge uks, paigaldus pooleli.",
           "originaal": "300x200"
         },
@@ -550,6 +668,8 @@
           "fail": "dusiruumi-ehitus-suvistatud-riiuliga-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge marmorimustriline plaatsein koos süvistatud riiuliga duširuumis.",
           "originaal": "300x200"
         },
@@ -559,6 +679,8 @@
           "fail": "vannitoa-plaatimine-suvistatud-nisiga-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge marmorimustriline plaatsein koos süvistatud nišiga.",
           "originaal": "300x200"
         },
@@ -568,6 +690,8 @@
           "fail": "vannitoa-seinaplaatide-paigaldus-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Marmorimustrilised seinaplaadid koos plaadiristide ja tasandussüsteemiga.",
           "originaal": "300x200"
         },
@@ -577,6 +701,8 @@
           "fail": "vaikese-vannitoa-renoveerimine-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Väike vannituba heledate plaatide ja musta dušikomplektiga, all katuseaken.",
           "originaal": "300x200"
         },
@@ -586,6 +712,8 @@
           "fail": "vannikasti-plaatimine-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge plaaditud vannikast ja vertikaalses laotuses seinaplaadid.",
           "originaal": "300x200"
         },
@@ -595,6 +723,8 @@
           "fail": "kitsa-vannitoa-renoveerimine-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kitsas vannituba pika valamu ja katuseaknaga.",
           "originaal": "300x200"
         },
@@ -604,6 +734,8 @@
           "fail": "vannitoa-renoveerimine-kaldlaega-ruumis-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Rippuv WC-pott kaldlaega vannitoas, põrandal hallid plaadid.",
           "originaal": "300x200"
         },
@@ -613,6 +745,8 @@
           "fail": "vannitoa-renoveerimine-valamukapiga-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vannitoa valamukapp peegli ja must-valge mosaiikpõrandaga.",
           "originaal": "300x200"
         },
@@ -622,6 +756,8 @@
           "fail": "vannitoa-renoveerimine-peegli-ja-valamukapiga-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Must valamukapp suure peegliga, all must-valge mustriline põrand.",
           "originaal": "300x200"
         },
@@ -631,6 +767,8 @@
           "fail": "vannitoa-renoveerimine-rohelise-plaadiga-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Rohelise mustriga plaatsein ja rippuv WC-pott, seinal kuldne liist.",
           "originaal": "300x200"
         },
@@ -640,6 +778,8 @@
           "fail": "dusiruumi-ehitus-kuldse-mosaiigiga-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kuldse mosaiigiga duširuum ja kuldne dušisüsteem.",
           "originaal": "300x200"
         },
@@ -649,6 +789,8 @@
           "fail": "vannitoa-plaatimine-heledate-plaatidega-21.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Heledad seinaplaadid kitsa akna kõrval, põrandal must-valge mosaiik.",
           "originaal": "300x200"
         },
@@ -658,6 +800,8 @@
           "fail": "vannitoa-plaatimine-22.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Heledad seinaplaadid vannitoa nurgas, taga aken ja ehitusjärgus ruum.",
           "originaal": "300x200"
         },
@@ -667,6 +811,8 @@
           "fail": "dusiruumi-ehitus-mosaiikporandaga-23.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Duširuum kuldse dušisüsteemi ja mosaiikpõrandaga.",
           "originaal": "300x200"
         },
@@ -676,6 +822,8 @@
           "fail": "vannitoa-renoveerimine-rohelise-plaatseinaga-24.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Rohelise mustriga plaatsein, rippuv WC-pott ja must-valge põrand.",
           "originaal": "300x200"
         },
@@ -685,6 +833,8 @@
           "fail": "vannitoa-mosaiikporand-25.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Must-valge mustriline mosaiikpõrand valminud vannitoas.",
           "originaal": "300x200"
         },
@@ -694,6 +844,8 @@
           "fail": "vannitoa-valamupinna-plaatimine-26.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Beež plaaditud valamupind ja tume uks vannitoas.",
           "originaal": "300x200"
         },
@@ -703,6 +855,8 @@
           "fail": "vannitoa-renoveerimine-too-kaigus-27.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vannituba ehitusjärgus, valamu paigaldatud ja põrandal ehitusprügi.",
           "originaal": "300x200"
         },
@@ -712,6 +866,8 @@
           "fail": "dusiruumi-ehitus-suureformaadiliste-plaatidega-28.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hallid suureformaadilised seinaplaadid ja süvistatud nišš duširuumis.",
           "originaal": "300x200"
         },
@@ -721,6 +877,8 @@
           "fail": "dusiruumi-plaatimine-beezide-plaatidega-29.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Beežid suureformaadilised plaadid duširuumi seinal ja põrandal.",
           "originaal": "300x200"
         },
@@ -730,6 +888,8 @@
           "fail": "dusiruumi-seinaplaatide-paigaldus-30.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Duširuumi seinaplaadid tasandussüsteemi kiiludega paigaldamisel.",
           "originaal": "300x200"
         },
@@ -739,6 +899,8 @@
           "fail": "vannitoa-plaatporanda-paigaldus-trapiga-31.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hall looduskivi imiteeriv plaatpõrand koos põrandatrapiga.",
           "originaal": "300x200"
         },
@@ -748,6 +910,8 @@
           "fail": "vannitoa-plaatimine-kalasabamustris-32.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valged kalasabamustris seinaplaadid ja hall plaatpõrand.",
           "originaal": "300x200"
         },
@@ -757,6 +921,8 @@
           "fail": "vannitoa-seinaplaatide-paigaldus-tasandusklambritega-33.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suureformaadilised valged plaadid tasandusklambritega seinal.",
           "originaal": "300x200"
         },
@@ -766,6 +932,8 @@
           "fail": "dusiruumi-ehitus-lohutud-kiviga-seinaga-34.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumehall lõhutud kiviga sein ja valged kalasabaplaadid duširuumis.",
           "originaal": "300x200"
         },
@@ -775,6 +943,8 @@
           "fail": "vannitoa-plaatporanda-paigaldus-35.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Plaatpõrand tasandussüsteemi ja plaadiristidega paigaldamisel.",
           "originaal": "300x200"
         },
@@ -784,6 +954,8 @@
           "fail": "dusiruumi-ehitus-retroplaatidega-36.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Mustriline retroplaat duširuumi seinal ja must dušisüsteem.",
           "originaal": "300x200"
         },
@@ -793,6 +965,8 @@
           "fail": "vana-vannitoa-porand-enne-remonti-37.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vana WC-pott mustriliste põrandaplaatide keskel enne remonti.",
           "originaal": "300x200"
         },
@@ -802,6 +976,8 @@
           "fail": "dusiruumi-lae-viimistlus-38.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puidutoonis lagi ja süvistatud valgustid duširuumi kohal.",
           "originaal": "300x200"
         },
@@ -811,6 +987,8 @@
           "fail": "vannitoa-valamu-paigaldus-39.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ümar valamu puidust plaadil ja plaaditud sein taga.",
           "originaal": "300x200"
         },
@@ -820,6 +998,8 @@
           "fail": "vannitoa-renoveerimine-helesinise-plaatseinaga-40.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Helesinine plaatsein ja rippuv WC-pott valminud vannitoas.",
           "originaal": "300x200"
         },
@@ -829,6 +1009,8 @@
           "fail": "vannitoa-renoveerimine-valgete-plaatidega-41.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge plaaditud vannituba loputuskasti nupu ja riiuliga.",
           "originaal": "300x200"
         },
@@ -838,6 +1020,8 @@
           "fail": "dusiruumi-ehitus-peidetud-segistiga-42.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Beežid suureformaadilised plaadid, nišš ja peidetud segisti duširuumis.",
           "originaal": "300x200"
         },
@@ -847,6 +1031,8 @@
           "fail": "dusiruumi-ehitus-lineaartrapiga-43.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hall plaaditud duširuum lineaartrapi ja dušisüsteemiga.",
           "originaal": "300x200"
         },
@@ -856,6 +1042,8 @@
           "fail": "saunadusiruumi-ehitus-44.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitseintega saunaduširuum kahe dušisegistiga.",
           "originaal": "300x200"
         },
@@ -865,6 +1053,8 @@
           "fail": "vannitoa-renoveerimine-valminud-toona-45.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vannitoa uks ja plaaditud sein valminud ruumis.",
           "originaal": "300x200"
         },
@@ -874,6 +1064,8 @@
           "fail": "vannitoa-lammutus-ja-torustik-46.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vannituba lammutusjärgus, seinas torustik ja hüdroisolatsiooniplaadid.",
           "originaal": "300x200"
         },
@@ -883,6 +1075,8 @@
           "fail": "dusiruumi-plaatimine-loppjargus-47.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumehall plaatpõrand ja sein duširuumis, paigaldus lõppjärgus.",
           "originaal": "300x200"
         },
@@ -892,6 +1086,8 @@
           "fail": "vannitoa-valamukapi-paigaldus-48.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge valamu tumedal kapil ja krohvitud sein taga.",
           "originaal": "300x200"
         },
@@ -901,6 +1097,8 @@
           "fail": "vannitoa-sein-enne-plaatimist-49.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Krohvitud sein vannitoas enne plaatimist.",
           "originaal": "300x200"
         },
@@ -910,6 +1108,8 @@
           "fail": "vana-vannitoa-lammutus-50.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vana vannituba lammutamisel, seinaplaadid osaliselt maha võetud.",
           "originaal": "300x200"
         }
@@ -926,6 +1126,8 @@
           "fail": "eramu-ehitus-ja-murukiviga-sissesoidutee-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hallilaudine eramu koos murukiviga sissesõiduteega.",
           "originaal": "300x200"
         },
@@ -935,6 +1137,8 @@
           "fail": "eramu-renoveerimine-elutoa-viimistlusel-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ehitusjärgus elutuba kollaseks viimistletud seina ja suure klaasseinaga.",
           "originaal": "300x200"
         },
@@ -944,6 +1148,8 @@
           "fail": "eramu-ehitus-ja-murukiviga-plats-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge laudisega eramu ja selle ees murukividega kaetud plats.",
           "originaal": "300x200"
         },
@@ -953,6 +1159,8 @@
           "fail": "eramu-renoveerimine-tellisseina-avamisel-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vana tellissein ja puittalad renoveerimise käigus avatuna.",
           "originaal": "300x200"
         },
@@ -962,6 +1170,8 @@
           "fail": "murukivide-paigaldus-eramu-juurde-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Murukivide paigaldus eramu kõrvale, kivid osaliselt paigas.",
           "originaal": "300x200"
         },
@@ -971,6 +1181,8 @@
           "fail": "terrassi-kandepostid-ja-murukiviplats-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Murukiviga plats eramu sissepääsu ees, püsti terrassi kandepostid.",
           "originaal": "300x200"
         },
@@ -980,6 +1192,8 @@
           "fail": "murukivide-aluspinna-ettevalmistus-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Aluspinna ettevalmistus murukivide paigalduseks, liiv tasandatud ja vibroplaat kohal.",
           "originaal": "300x200"
         },
@@ -989,6 +1203,8 @@
           "fail": "drenaazi-ja-killustiku-paigaldus-eramu-juures-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geotekstiil ja killustik aluspinnal.",
           "originaal": "300x200"
         },
@@ -998,6 +1214,8 @@
           "fail": "betoonplaadi-valu-eramu-sissepaasu-ette-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Eramu sissepääsu ette valatud betoonplaat.",
           "originaal": "300x200"
         },
@@ -1007,6 +1225,8 @@
           "fail": "eramu-ehitus-ja-puitterrass-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge eramu ja selle ees valminud puitterrass.",
           "originaal": "300x200"
         },
@@ -1016,6 +1236,8 @@
           "fail": "eramu-ehitus-halli-laudisega-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Hallilaudine eramu ja selle ees valminud puitterrass.",
           "originaal": "300x200"
         },
@@ -1025,6 +1247,8 @@
           "fail": "terrassi-aluskonstruktsiooni-ehitus-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Terrassilaudade aluskonstruktsioon paigaldamisel.",
           "originaal": "300x200"
         },
@@ -1034,6 +1258,8 @@
           "fail": "puitkarkassmaja-ehitus-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkarkassiga eramu püstitatud seinte ja katusefermidega.",
           "originaal": "300x200"
         },
@@ -1043,6 +1269,8 @@
           "fail": "eramu-karkassi-ja-soojustuse-paigaldus-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Metallkarkass ja kollane soojustus ehitusjärgus hoonel.",
           "originaal": "300x200"
         },
@@ -1052,6 +1280,8 @@
           "fail": "puitkarkassmaja-seinad-vundamendil-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkarkassmaja seinad ja katusefermid vundamendil.",
           "originaal": "300x200"
         },
@@ -1061,6 +1291,8 @@
           "fail": "puitkarkassi-pustitamine-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkarkassi püstitamine.",
           "originaal": "300x200"
         },
@@ -1070,6 +1302,8 @@
           "fail": "vundamendiplaat-ja-karkassi-nurk-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valatud vundamendiplaat ja püstitatud karkassi nurk.",
           "originaal": "300x200"
         },
@@ -1079,6 +1313,8 @@
           "fail": "puitkarkassi-seinad-enne-katust-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkarkassi seinad ehitusplatsil enne katuse paigaldust.",
           "originaal": "300x200"
         },
@@ -1088,6 +1324,8 @@
           "fail": "vundamendi-armatuur-enne-valu-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi armatuurvõrk enne valu.",
           "originaal": "300x200"
         },
@@ -1097,6 +1335,8 @@
           "fail": "vundamendiplaadi-valu-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Värskelt valatud vundamendiplaat ja selle kõrval pinnas.",
           "originaal": "300x200"
         },
@@ -1106,6 +1346,8 @@
           "fail": "vundamendi-armatuur-ja-torustik-21.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi armatuur ja torustik enne betoonivalu.",
           "originaal": "300x200"
         },
@@ -1115,6 +1357,8 @@
           "fail": "kuttetorud-vundamendi-soojustusel-22.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punased ja sinised küttetorud vundamendi soojustusel.",
           "originaal": "300x200"
         },
@@ -1124,6 +1368,8 @@
           "fail": "vundamendi-soojustuse-paigaldus-23.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi soojustusplaadid paigaldatud ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -1133,6 +1379,8 @@
           "fail": "vundamendi-soojustus-ja-servaprofiil-24.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi soojustusplaadid koos servaprofiiliga lähivaates.",
           "originaal": "300x200"
         },
@@ -1142,6 +1390,8 @@
           "fail": "ehitusplatsi-ettevalmistus-25.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ettevalmistatud ehitusplats enne vundamendi rajamist.",
           "originaal": "300x200"
         },
@@ -1151,6 +1401,8 @@
           "fail": "kaablikaitsetorude-paigaldus-kaevikusse-26.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaevikusse paigaldatud kollased kaablikaitsetorud.",
           "originaal": "300x200"
         },
@@ -1160,6 +1412,8 @@
           "fail": "aluspinna-ettevalmistus-geotekstiiliga-27.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geotekstiil ja liiv aluspinnal.",
           "originaal": "300x200"
         },
@@ -1169,6 +1423,8 @@
           "fail": "pinnasetood-eramu-ehitusplatsil-28.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kopplaadur pinnasetöödel ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -1178,6 +1434,8 @@
           "fail": "kaablikaitsetoru-paigaldus-29.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kollane kaablikaitsetoru kaevikus koos kaabliga.",
           "originaal": "300x200"
         },
@@ -1187,6 +1445,8 @@
           "fail": "pinnase-teisaldamine-ehitusplatsil-30.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Pinnase teisaldamine kopplaaduriga ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -1196,6 +1456,8 @@
           "fail": "ehitusplatsi-margistus-enne-kaevetoid-31.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ehitusplats vaiadega märgistatud enne kaevetöid.",
           "originaal": "300x200"
         },
@@ -1205,6 +1467,8 @@
           "fail": "krunt-enne-eramu-ehitust-32.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ettevalmistamata krunt enne ehitustööde algust.",
           "originaal": "300x200"
         },
@@ -1214,6 +1478,8 @@
           "fail": "eramu-katusekonstruktsioon-seestpoolt-33.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkarkassiga katusekonstruktsioon seestpoolt.",
           "originaal": "300x200"
         },
@@ -1223,6 +1489,8 @@
           "fail": "armatuurvork-raketises-34.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Armatuurvõrk raketises enne betoonivalu.",
           "originaal": "300x200"
         },
@@ -1232,6 +1500,8 @@
           "fail": "vahelae-raketis-ja-soojustus-35.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Raketis ja kollane soojustus vahelae valuks.",
           "originaal": "300x200"
         },
@@ -1241,6 +1511,8 @@
           "fail": "puittala-paigaldus-plokkmuurile-36.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Plokkmüürile paigaldatud puittala koos ankrutega.",
           "originaal": "300x200"
         },
@@ -1250,6 +1522,8 @@
           "fail": "puitfermide-paigaldus-37.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitfermid paigaldatud plokkmüürile.",
           "originaal": "300x200"
         },
@@ -1259,6 +1533,8 @@
           "fail": "katusefermide-paigaldus-38.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Katusefermid hoone kohal.",
           "originaal": "300x200"
         }
@@ -1275,6 +1551,8 @@
           "fail": "krohvitud-sisesein-enne-viimistlust-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Krohvitud sisesein enne viimistlust.",
           "originaal": "300x200"
         },
@@ -1284,6 +1562,8 @@
           "fail": "kivisillutise-paigaldus-hoone-ette-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suurte klaasakendega hoone välisilme, ees värskelt paigaldatud kivisillutis.",
           "originaal": "300x200"
         },
@@ -1293,6 +1573,8 @@
           "fail": "seinaplaatide-paigaldus-kuusnurksete-plaatidega-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Piklikud kuusnurksed seinaplaadid beežides ja hallides toonides.",
           "originaal": "300x200"
         },
@@ -1302,6 +1584,8 @@
           "fail": "graniidist-valistrepp-ja-kivisillutis-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Graniidist välistrepp ja selle kõrval kivisillutis.",
           "originaal": "300x200"
         },
@@ -1311,6 +1595,8 @@
           "fail": "letiesise-plaatimine-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaarjas letiesine plaatimisel valgete piklike plaatidega, all näha hüdroisolatsioon.",
           "originaal": "300x200"
         },
@@ -1320,6 +1606,8 @@
           "fail": "kivisillutise-paigaldus-klaasseina-ette-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Klaasseinaga hoone välisilme, ees kivisillutis ja armatuurivardad.",
           "originaal": "300x200"
         },
@@ -1329,6 +1617,8 @@
           "fail": "seinaplaatide-paigaldus-siseruumis-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Piklike kuusnurksete plaatidega kaetud sein siseruumis.",
           "originaal": "300x200"
         },
@@ -1338,6 +1628,8 @@
           "fail": "lavepaku-ja-profiili-paigaldus-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ukseava lävepaku ja profiili paigaldus betoonpõrandal, väljas kivisillutis.",
           "originaal": "300x200"
         },
@@ -1347,6 +1639,8 @@
           "fail": "kaarja-siseseina-krohvimine-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaarjas sisesein ehitusjärgus, pind krohvitud ja ootab viimistlust.",
           "originaal": "300x200"
         },
@@ -1356,6 +1650,8 @@
           "fail": "kivisillutise-paigaldus-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kivisillutis hoone ees, keskel tume kattega ala.",
           "originaal": "300x200"
         },
@@ -1365,6 +1661,8 @@
           "fail": "letiesise-plaatimine-kuusnurksete-plaatidega-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaarjas letiesine kaetud piklike kuusnurksete plaatidega.",
           "originaal": "300x200"
         },
@@ -1374,6 +1672,8 @@
           "fail": "sissepaasuala-plaatimine-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tume plaaditud sissepääsuala ja selle ümber kivisillutis.",
           "originaal": "300x200"
         },
@@ -1383,6 +1683,8 @@
           "fail": "kaarja-seinakonstruktsiooni-ehitus-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaarjas seinakonstruktsioon ehitusjärgus ruumis, põrandal märgistus.",
           "originaal": "300x200"
         },
@@ -1392,6 +1694,8 @@
           "fail": "tapeedi-paigaldus-siseseinale-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Mustriline tapeet paigaldamisel siseseinale.",
           "originaal": "300x200"
         },
@@ -1401,6 +1705,8 @@
           "fail": "seinaplaatide-paigaldus-ja-elektritood-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Rohelise plaadiga sein ja kollase teibiga märgistatud elektripaigaldus.",
           "originaal": "300x200"
         },
@@ -1410,6 +1716,8 @@
           "fail": "lohutud-kiviga-sein-ja-kalasabaplaat-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumeda lõhutud kiviga sein ja valge kalasabaplaat kõrvuti.",
           "originaal": "300x200"
         },
@@ -1419,6 +1727,8 @@
           "fail": "suureformaadiliste-seinaplaatide-paigaldus-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suureformaadiline hall plaat seinal ja tume tellissein taga.",
           "originaal": "300x200"
         },
@@ -1428,6 +1738,8 @@
           "fail": "puitplokkidest-dekoratiivsein-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitplokkidest laotud dekoratiivsein ruumis.",
           "originaal": "300x200"
         },
@@ -1437,6 +1749,8 @@
           "fail": "kaminaumbrise-viimistlus-elutoas-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valge kaminaümbris ja puitparkett valminud elutoas.",
           "originaal": "300x200"
         },
@@ -1446,6 +1760,8 @@
           "fail": "kaminaumbris-valminud-ruumis-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaminaümbris ja sile valge sein valminud ruumis.",
           "originaal": "300x200"
         }
@@ -1462,6 +1778,8 @@
           "fail": "kanalisatsioonitorustiku-kaeviku-ettevalmistus-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geotekstiiliga kaetud kaevik enne torustiku paigaldust.",
           "originaal": "300x200"
         },
@@ -1471,6 +1789,8 @@
           "fail": "kanalisatsioonimahuti-paigaldus-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Oranž kanalisatsioonimahuti paigaldatud kaevikusse.",
           "originaal": "300x200"
         },
@@ -1480,6 +1800,8 @@
           "fail": "kanalisatsioonitoru-paigaldus-kaevikusse-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kanalisatsioonitoru kaevikus, servad kaetud geotekstiiliga.",
           "originaal": "300x200"
         },
@@ -1489,6 +1811,8 @@
           "fail": "kanalisatsioonimahuti-paigaldus-ja-pinnase-tihendamine-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kanalisatsioonimahuti kaevikus, kõrval pinnase tihendamiseks vibroplaat.",
           "originaal": "300x200"
         },
@@ -1498,6 +1822,8 @@
           "fail": "kanalisatsioonitoru-paigaldus-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Oranž kanalisatsioonitoru paigaldatud kaevikusse.",
           "originaal": "300x200"
         },
@@ -1507,6 +1833,8 @@
           "fail": "kanalisatsioonimahuti-paigaldusvalmis-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Oranž mahuti rihmadega paigaldusvalmis, all liivapadi.",
           "originaal": "300x200"
         },
@@ -1516,6 +1844,8 @@
           "fail": "imbvaljaku-ehitus-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geotekstiiliga vooderdatud kaevik imbväljaku jaoks.",
           "originaal": "300x200"
         },
@@ -1525,6 +1855,8 @@
           "fail": "kanalisatsioonitorude-paigaldus-killustikku-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikuga täidetud kaevik ja selle servades kanalisatsioonitorud.",
           "originaal": "300x200"
         },
@@ -1534,6 +1866,8 @@
           "fail": "kaeviku-killustikpadi-ja-soojustus-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikpadi ja soojustusplaadid kaevikus.",
           "originaal": "300x200"
         },
@@ -1543,6 +1877,8 @@
           "fail": "vundamendi-soojustuse-paigaldus-liivapadjale-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi soojustusplaadid ja servaprofiil paigaldatud liivapadjale.",
           "originaal": "300x200"
         },
@@ -1552,6 +1888,8 @@
           "fail": "veetorustiku-uhendus-ja-sulgeventiil-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Veetorustiku ühendus ja sulgeventiil kaevikus.",
           "originaal": "300x200"
         },
@@ -1561,6 +1899,8 @@
           "fail": "torustiku-vahetus-porandaava-kaudu-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Avatud põrandaava torustiku vahetuseks, all seisev vesi.",
           "originaal": "300x200"
         },
@@ -1570,6 +1910,8 @@
           "fail": "kanalisatsiooni-pustiku-paigaldus-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kanalisatsioonitorud püstiku jaoks liivases aluspõrandas.",
           "originaal": "300x200"
         },
@@ -1579,6 +1921,8 @@
           "fail": "dusiruumi-lineaartrapp-valminud-toona-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Beežide plaatidega duširuum ja lineaartrapp valminud tööna.",
           "originaal": "300x200"
         },
@@ -1588,6 +1932,8 @@
           "fail": "sooja-vee-boileri-ja-torustiku-paigaldus-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sooja vee boiler ja torustik puitseintega tehnoruumis, põrand avatud.",
           "originaal": "300x200"
         },
@@ -1597,6 +1943,8 @@
           "fail": "torustiku-paigaldus-puitporanda-alla-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Avatud puitpõrand torustiku paigalduseks, all must isolatsioon.",
           "originaal": "300x200"
         },
@@ -1606,6 +1954,8 @@
           "fail": "boileri-ja-torustiku-paigaldus-vannitoas-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Boiler ja torustik vanni kõrval puitseintega ruumis.",
           "originaal": "300x200"
         },
@@ -1615,6 +1965,8 @@
           "fail": "kanalisatsioonitorude-paigaldus-poranda-alla-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandalaudade alla paigaldatud kanalisatsioonitorud ja killustik.",
           "originaal": "300x200"
         }
@@ -1631,6 +1983,8 @@
           "fail": "veetorustiku-paigaldus-seina-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punased ja sinised veetorud paigaldatud seina enne kinnikatmist.",
           "originaal": "300x200"
         },
@@ -1640,6 +1994,8 @@
           "fail": "loputuskastide-ja-veetorude-paigaldus-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Peidetud loputuskastide raamid ja veetorud kipsseina taga.",
           "originaal": "300x200"
         },
@@ -1649,6 +2005,8 @@
           "fail": "sooja-vee-boileri-ja-jaotuskollektori-paigaldus-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sooja vee boiler ja siniste torudega jaotuskollektor tehnoruumis.",
           "originaal": "300x200"
         },
@@ -1658,6 +2016,8 @@
           "fail": "porandakutte-paigaldus-enne-porandavalu-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik paigaldatud ruumides enne põrandavalu.",
           "originaal": "300x200"
         },
@@ -1667,6 +2027,8 @@
           "fail": "porandakutte-torustiku-paigaldus-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik ruumide vahel enne tasandusvalu.",
           "originaal": "300x200"
         },
@@ -1676,6 +2038,8 @@
           "fail": "porandakutte-jaotuskollektori-paigaldus-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte jaotuskollektor tehnoruumi seinal.",
           "originaal": "300x200"
         },
@@ -1685,6 +2049,8 @@
           "fail": "porandakutte-paigaldus-vundamendi-soojustusele-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik paigaldatud eramu vundamendi soojustusele.",
           "originaal": "300x200"
         },
@@ -1694,6 +2060,8 @@
           "fail": "porandakutte-paigaldus-enne-betoonivalu-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendile paigaldatud põrandakütte torustik enne betoonivalu.",
           "originaal": "300x200"
         },
@@ -1703,6 +2071,8 @@
           "fail": "porandakutte-torustik-ja-soojustus-vundamendil-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik ja soojustus vundamendil enne valu.",
           "originaal": "300x200"
         },
@@ -1712,6 +2082,8 @@
           "fail": "kuttekollektori-paigaldus-manomeetriga-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Messingist küttekollektor manomeetri ja torude ühendustega.",
           "originaal": "300x200"
         },
@@ -1721,6 +2093,8 @@
           "fail": "porandakutte-kollektorikapp-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte kollektorikapp ehitusplatsil enne paigaldust.",
           "originaal": "300x200"
         },
@@ -1730,6 +2104,8 @@
           "fail": "porandakutte-jaotuskollektor-sulgeventiilidega-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte jaotuskollektor kapis koos sulgeventiilidega.",
           "originaal": "300x200"
         },
@@ -1739,6 +2115,8 @@
           "fail": "veetorude-paigaldus-labi-seina-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punased ja sinised veetorud tulemas läbi seina, kõrval puitraam.",
           "originaal": "300x200"
         },
@@ -1748,6 +2126,8 @@
           "fail": "vee-ja-kuttetorude-paigaldus-vundamendile-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vee- ja küttetorud paigaldatud soojustatud vundamendile.",
           "originaal": "300x200"
         },
@@ -1757,6 +2137,8 @@
           "fail": "kuttetorude-paigaldus-enne-tasandusvalu-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punased ja sinised torud betoonpõrandal enne tasandusvalu.",
           "originaal": "300x200"
         },
@@ -1766,6 +2148,8 @@
           "fail": "porandakutte-paigaldus-alumiiniumsoojustusele-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik alumiiniumkattega soojustusel.",
           "originaal": "300x200"
         },
@@ -1775,6 +2159,8 @@
           "fail": "porandakutte-torustik-ja-kollektor-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik ja jaotuskollektor ruumis enne valu.",
           "originaal": "300x200"
         },
@@ -1784,6 +2170,8 @@
           "fail": "porandakutte-torustiku-paigaldus-soojustusele-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik kaarena alumiiniumsoojustusel.",
           "originaal": "300x200"
         },
@@ -1793,6 +2181,8 @@
           "fail": "porandakutte-torustik-soojustusplaatidel-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tihedalt paigaldatud põrandakütte torustik soojustusplaatidel.",
           "originaal": "300x200"
         },
@@ -1802,6 +2192,8 @@
           "fail": "paisupaagi-ja-kuttekollektori-paigaldus-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Punane paisupaak ja küttekollektor puitseinal tehnoruumis.",
           "originaal": "300x200"
         },
@@ -1811,6 +2203,8 @@
           "fail": "veetorude-ja-ventiilide-paigaldus-21.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sinised veetorud ja ventiilid tehnoruumi seinal.",
           "originaal": "300x200"
         },
@@ -1820,6 +2214,8 @@
           "fail": "veefiltrite-ja-jaotuskollektori-paigaldus-22.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Veefiltrid ja jaotuskollektor kipsseinal paigaldatuna.",
           "originaal": "300x200"
         },
@@ -1829,6 +2225,8 @@
           "fail": "torustiku-paigaldus-betoonseinale-23.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Torustik betoonseinal enne ruumi viimistlust.",
           "originaal": "300x200"
         },
@@ -1838,6 +2236,8 @@
           "fail": "porandakutte-paigaldus-vundamendile-24.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Põrandakütte torustik vundamendil, ümber puitraketis.",
           "originaal": "300x200"
         },
@@ -1847,6 +2247,8 @@
           "fail": "paisupaagi-ja-veetorustiku-paigaldus-25.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Paisupaak ja veetorustik puitseintega tehnoruumis.",
           "originaal": "300x200"
         },
@@ -1856,6 +2258,8 @@
           "fail": "kuttesusteemi-kollektori-paigaldus-26.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Küttesüsteemi kollektor, paisupaak ja filtrid tehnoruumis.",
           "originaal": "300x200"
         },
@@ -1865,6 +2269,8 @@
           "fail": "kuttesusteemi-solme-paigaldus-27.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Küttesüsteemi sõlm koos manomeetrite ja filtritega seinal.",
           "originaal": "300x200"
         },
@@ -1874,6 +2280,8 @@
           "fail": "veefiltrite-ja-jaotustorustiku-paigaldus-28.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Veefiltrid ja jaotustorustik plokkseinal.",
           "originaal": "300x200"
         },
@@ -1883,6 +2291,8 @@
           "fail": "tehnoruumi-torustiku-paigaldus-29.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kitsas tehnoruum torustiku ja seadmetega, põrandas ava.",
           "originaal": "300x200"
         },
@@ -1892,6 +2302,8 @@
           "fail": "kuttesusteemi-torustiku-paigaldus-30.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Torustik ja seadmed viimistlemata seina ees.",
           "originaal": "300x200"
         }
@@ -1908,6 +2320,8 @@
           "fail": "terrassi-ehitus-metallpiirdega-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitterrass metallpiirdega ja puidust trepp eramu küljel.",
           "originaal": "300x200"
         },
@@ -1917,6 +2331,8 @@
           "fail": "varjualuse-ehitus-eramu-sissepaasu-ette-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Musta karkassiga varjualune eramu sissepääsu ees talvel.",
           "originaal": "300x200"
         },
@@ -1926,6 +2342,8 @@
           "fail": "terrassi-ehitus-tumeda-puiduga-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumedaks viimistletud puitterrass eramu ukse ees talvisel ajal.",
           "originaal": "300x200"
         },
@@ -1935,6 +2353,8 @@
           "fail": "terrassi-ribisirmi-ehitus-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Tumedatest laudadest ribisirm eramu terrassi varjeks.",
           "originaal": "300x200"
         }
@@ -1951,6 +2371,8 @@
           "fail": "betoonporanda-valu-01.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Värskelt valatud betoonpõrand hoone sees enne viimistlust.",
           "originaal": "300x200"
         },
@@ -1960,6 +2382,8 @@
           "fail": "vundamendimuuri-ladumine-02.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendiplokkidest müür kaevikus.",
           "originaal": "300x200"
         },
@@ -1969,6 +2393,8 @@
           "fail": "vundamendi-soojustuse-paigaldus-enne-valu-03.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendisoojustus paigaldatud ja märgistatud enne betoonivalu.",
           "originaal": "300x200"
         },
@@ -1978,6 +2404,8 @@
           "fail": "ehitusaia-paigaldus-04.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sinine ehitusaed vana tellishoone ees.",
           "originaal": "300x200"
         },
@@ -1987,6 +2415,8 @@
           "fail": "vundamendi-killustikpadi-ja-servaprofiil-05.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikpadi ja vundamendi servaprofiil enne valu.",
           "originaal": "300x200"
         },
@@ -1996,6 +2426,8 @@
           "fail": "sillutuskivide-paigaldus-06.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sillutuskivide paigaldus maja kõrval.",
           "originaal": "300x200"
         },
@@ -2005,6 +2437,8 @@
           "fail": "betoonporanda-valu-ja-silumine-07.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Silutud betoonpõrand siseruumis kohe pärast valu.",
           "originaal": "300x200"
         },
@@ -2014,6 +2448,8 @@
           "fail": "vundamendimuuri-ehitus-plokkidest-08.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Plokkidest vundamendimüür ja selle ümber killustik.",
           "originaal": "300x200"
         },
@@ -2023,6 +2459,8 @@
           "fail": "vundamendi-soojustus-ja-armatuur-09.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi soojustus ja armatuurivõrgu märgistus ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -2032,6 +2470,8 @@
           "fail": "aia-ehitus-ja-tanavakivi-10.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puidust aed ja selle ees tume kattega plats.",
           "originaal": "300x200"
         },
@@ -2041,6 +2481,8 @@
           "fail": "betoonplaadi-valu-maja-ette-11.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonplaat valatud maja ette.",
           "originaal": "300x200"
         },
@@ -2050,6 +2492,8 @@
           "fail": "betoonkivisillutise-paigaldus-12.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Suureformaadiline hall betoonkivisillutis paigaldatud.",
           "originaal": "300x200"
         },
@@ -2059,6 +2503,8 @@
           "fail": "betoonporanda-lihvimine-13.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonpõrand siseruumis pärast lihvimist.",
           "originaal": "300x200"
         },
@@ -2068,6 +2514,8 @@
           "fail": "vundamendiplokkide-paigaldus-14.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendiplokkide paigaldus kaevikusse.",
           "originaal": "300x200"
         },
@@ -2077,6 +2525,8 @@
           "fail": "betoonvalu-raketise-ettevalmistus-15.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonvalu raketise ettevalmistus öisel ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -2086,6 +2536,8 @@
           "fail": "killustikuga-platsi-rajamine-16.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikuga kaetud plats vana tellishoone ees.",
           "originaal": "300x200"
         },
@@ -2095,6 +2547,8 @@
           "fail": "aluspinna-ettevalmistus-geotekstiiliga-17.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Geotekstiil ja killustik aluspinna ettevalmistusel.",
           "originaal": "300x200"
         },
@@ -2104,6 +2558,8 @@
           "fail": "betoonporanda-varvimine-18.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Värvitud betoonpõrand ja sein siseruumis.",
           "originaal": "300x200"
         },
@@ -2113,6 +2569,8 @@
           "fail": "torustiku-ja-kaablikaitse-paigaldus-kaevikusse-19.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Torustik ja kaablikaitse kaevikus kivise pinnase sees.",
           "originaal": "300x200"
         },
@@ -2122,6 +2580,8 @@
           "fail": "puitkonstruktsiooni-ehitus-betoonalusel-20.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkonstruktsioon betoonalusel öisel ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -2131,6 +2591,8 @@
           "fail": "ehitusplatsi-margistus-21.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Ehitusplats postidega märgistatud.",
           "originaal": "300x200"
         },
@@ -2140,6 +2602,8 @@
           "fail": "geomembraani-paigaldus-aluspinnale-22.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Must geomembraan laotatud liivasele aluspinnale.",
           "originaal": "300x200"
         },
@@ -2149,6 +2613,8 @@
           "fail": "betoonporand-siseruumis-23.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaetud betoonpõrand siseruumis.",
           "originaal": "300x200"
         },
@@ -2158,6 +2624,8 @@
           "fail": "vundamendi-servaprofiili-paigaldus-24.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi servaprofiil ja soojustus kaevikus.",
           "originaal": "300x200"
         },
@@ -2167,6 +2635,8 @@
           "fail": "puitkonstruktsiooni-ehitus-25.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Puitkonstruktsioon ümmargusel alusel ehitusjärgus.",
           "originaal": "300x200"
         },
@@ -2176,6 +2646,8 @@
           "fail": "betoonelementide-ladustamine-ehitusplatsil-26.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Virnastatud betoonelemendid ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -2185,6 +2657,8 @@
           "fail": "betoonporanda-valu-porandatrapiga-27.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Silutud betoonpõrand siseruumis koos põrandatrapiga.",
           "originaal": "300x200"
         },
@@ -2194,6 +2668,8 @@
           "fail": "torustiku-ja-soojustuse-paigaldus-vundamendi-juures-28.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Torustik ja soojustus kaevikus vundamendi kõrval.",
           "originaal": "300x200"
         },
@@ -2203,6 +2679,8 @@
           "fail": "killustikuga-platsi-rajamine-aia-juurde-29.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikuga plats vana hoone ja puitaia vahel.",
           "originaal": "300x200"
         },
@@ -2212,6 +2690,8 @@
           "fail": "vundamendi-soojustusplaadi-paigaldus-30.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi soojustusplaat ja servaprofiil sügiseses pinnases.",
           "originaal": "300x200"
         },
@@ -2221,6 +2701,8 @@
           "fail": "vundamendivormi-paigaldus-31.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendivorm paigaldatud liivasele alusele.",
           "originaal": "300x200"
         },
@@ -2230,6 +2712,8 @@
           "fail": "vundamendi-soojustusplaatide-ladustamine-32.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Virnastatud soojustusplaadid kollase servaga ehitusplatsil.",
           "originaal": "300x200"
         },
@@ -2239,6 +2723,8 @@
           "fail": "betoonporanda-valu-siseruumis-33.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Värskelt valatud betoonpõrand siseruumis.",
           "originaal": "300x200"
         },
@@ -2248,6 +2734,8 @@
           "fail": "vundamendimuuri-ladumine-plokkidest-34.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Plokkidest vundamendimüür ja selle kõrval pinnas.",
           "originaal": "300x200"
         },
@@ -2257,6 +2745,8 @@
           "fail": "kaeviku-killustik-ja-servakivi-35.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Kaevik killustikuga ja betoonist servakiviga.",
           "originaal": "300x200"
         },
@@ -2266,6 +2756,8 @@
           "fail": "vundamendivormi-paigaldus-enne-valu-36.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendivorm liivasel alusel enne valu.",
           "originaal": "300x200"
         },
@@ -2275,6 +2767,8 @@
           "fail": "betoonporanda-lihvimine-siseruumis-37.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Sile betoonpõrand pärast lihvimist.",
           "originaal": "300x200"
         },
@@ -2284,6 +2778,8 @@
           "fail": "lihvitud-betoonporand-38.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Läikiv lihvitud betoonpõrand ruumis.",
           "originaal": "300x200"
         },
@@ -2293,6 +2789,8 @@
           "fail": "betoonporanda-deformatsioonivuugid-39.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonpõrand deformatsioonivuukidega suures ruumis.",
           "originaal": "300x200"
         },
@@ -2302,6 +2800,8 @@
           "fail": "lihvitud-betoonporand-suures-ruumis-40.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Lihvitud betoonpõrand suures ruumis.",
           "originaal": "300x200"
         },
@@ -2311,6 +2811,8 @@
           "fail": "betoonist-valistrepi-ehitus-41.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Betoonist välistrepp maja sissepääsu ees.",
           "originaal": "300x200"
         },
@@ -2320,6 +2822,8 @@
           "fail": "valistrepi-hudroisolatsioon-42.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Välistrepi hüdroisolatsioon ja märgistus enne viimistlust.",
           "originaal": "300x200"
         },
@@ -2329,6 +2833,8 @@
           "fail": "vundamendi-raketis-ja-soojustus-43.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi raketis ja soojustus valu ootel.",
           "originaal": "300x200"
         },
@@ -2338,6 +2844,8 @@
           "fail": "vundamendiplaadi-valu-ankrutega-44.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Värskelt valatud vundamendiplaat koos ankrutega.",
           "originaal": "300x200"
         },
@@ -2347,6 +2855,8 @@
           "fail": "geomembraani-ja-raketise-paigaldus-45.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Must geomembraan ja raketis vundamendiplaadi all.",
           "originaal": "300x200"
         },
@@ -2356,6 +2866,8 @@
           "fail": "vundamendi-raketise-paigaldus-46.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Vundamendi raketise paigaldus.",
           "originaal": "300x200"
         },
@@ -2365,6 +2877,8 @@
           "fail": "vundamendiala-killustikuga-taitmine-47.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustikuga täidetud vundamendiala ja tellingud.",
           "originaal": "300x200"
         },
@@ -2374,6 +2888,8 @@
           "fail": "metalltugede-paigaldus-seina-aarde-48.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Metalltoed ja killustik hoone seina ääres.",
           "originaal": "300x200"
         },
@@ -2383,6 +2899,8 @@
           "fail": "killustiku-tasandamine-vundamendi-jaoks-49.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Killustiku tasandamine kollase latiga vundamendi jaoks.",
           "originaal": "300x200"
         },
@@ -2392,6 +2910,8 @@
           "fail": "vundamendiplaadi-valu-50.webp",
           "laius": 300,
           "korgus": 200,
+          "pisiLaius": 300,
+          "pisiKorgus": 200,
           "alt": "Valatud vundamendiplaat rohelisel krundil.",
           "originaal": "300x200"
         }
