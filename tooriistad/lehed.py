@@ -37,13 +37,25 @@ MENUU = [
 ]
 
 # Avapildi teenused: silt, teenuse ankur, galerii kaust
+# Avapildil peavad olema laiad kaadrid. Lähikaader laguneb suurelt ära,
+# ruumivaade ja välipilt mitte.
 AVATEENUSED = [
-    ('Eramu ehitus', '/teenused#eramu-ehitus', 'eramu-ehitus', 1),
-    ('Vannitoad', '/teenused#vannitoad', 'vannitoad', 7),
-    ('Põrandad', '/teenused#porandakatted', 'porandatood', 33),
-    ('Vesi ja kanalisatsioon', '/teenused#vesi-kanalisatsioon', 'vesi-ja-kanalisatsioon', 14),
-    ('Küte ja ventilatsioon', '/teenused#kute-ventilatsioon', 'kute-ja-ventilatsioon', 19),
+    ('Eramu ehitus', '/teenused#eramu-ehitus', 'eramu-ehitus', 3),
+    ('Vannitoad', '/teenused#vannitoad', 'vannitoad', 3),
+    ('Põrandad', '/teenused#porandakatted', 'porandatood', 20),
+    ('Vesi ja kanalisatsioon', '/teenused#vesi-kanalisatsioon', 'vesi-ja-kanalisatsioon', 17),
+    ('Küte ja ventilatsioon', '/teenused#kute-ventilatsioon', 'kute-ja-ventilatsioon', 9),
     ('Terrassid ja saunad', '/teenused#puittood', 'puittood', 1),
+]
+
+# Teenuse ankur -> galerii kaust, galeriinupu jaoks teenuste lehel
+GALERII_SEOS = [
+    ('eramu-ehitus', 'eramu-ehitus'),
+    ('porandakatted', 'porandatood'),
+    ('vannitoad', 'vannitoad'),
+    ('vesi-kanalisatsioon', 'vesi-ja-kanalisatsioon'),
+    ('kute-ventilatsioon', 'kute-ja-ventilatsioon'),
+    ('puittood', 'puittood'),
 ]
 
 REKVISIIDID = """        <ul class="rekvisiidid">
@@ -104,7 +116,7 @@ def pea(leht):
 
 def pais(leht):
     """Päis. Avalehel algab see läbipaistvana avapildi peal."""
-    klass = 'pais pais--peal' if leht.get('avapilt') else 'pais'
+    klass = 'pais'
     read = []
     for tee, nimi in MENUU:
         praegune = ' aria-current="page"' if tee == leht['tee'] else ''
@@ -194,6 +206,14 @@ def ehita(leht):
     return pea(leht) + pais(leht) + '\n<main id="sisu">\n' + leht['sisu'] + '\n</main>\n' + jalus()
 
 
+def teenuste_ld():
+    """Teenuste lehe struktuurandmed. FAQPage on välja jäetud, sest korduvate
+    küsimuste sektsioon on lehelt maas."""
+    d = json.load(io.open(os.path.join(JUUR, 'tooriistad/sisu/teenused-ld.json'), encoding='utf-8'))
+    d['@graph'] = [x for x in d['@graph'] if x.get('@type') != 'FAQPage']
+    return d
+
+
 def osa(nimi):
     return io.open(os.path.join(JUUR, 'tooriistad/sisu', nimi), encoding='utf-8').read().rstrip()
 
@@ -264,35 +284,55 @@ def viited_loend():
 
 
 def avapilt():
-    esimene, esimene_alt = foto('eramu-ehitus', 1)
+    esimene, esimene_alt = foto('eramu-ehitus', 3)
     read = []
-    for i, (silt, tee, kaust, nr) in enumerate(AVATEENUSED):
+    for silt, tee, kaust, nr in AVATEENUSED:
         f, alt = foto(kaust, nr)
         read.append(
             f'          <li><a href="{tee}" data-foto="/{f}" data-alt="{alt}">{silt}</a></li>')
     return f"""
   <section class="avapilt">
-    <div class="avapilt__taust">
-      <img id="avapilt-foto" src="/{esimene}" width="600" height="450" fetchpriority="high" decoding="async" alt="{esimene_alt}" class="on-nahtav">
-    </div>
-    <div class="avapilt__kate"></div>
     <div class="kest">
-      <h1>Ehitame ja teeme korda eramuid</h1>
-      <p class="avapilt__jutt">
-        Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal.
-        Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi
-        meest otsima.
-      </p>
-      <div class="nupu-rida">
-        <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
-        <a class="nupp nupp--joon" href="/tood">Vaata tehtud töid</a>
+      <div class="avapilt__ylemine">
+        <div class="avapilt__tekst">
+          <p class="moot">Ehitus ja renoveerimine</p>
+          <h1>Ehitame ja teeme korda eramuid</h1>
+          <p class="avapilt__jutt">
+            Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal.
+            Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi
+            meest otsima.
+          </p>
+          <div class="nupu-rida">
+            <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
+            <a class="nupp nupp--joon" href="/tood">Vaata tehtud töid</a>
+          </div>
+        </div>
+
+        <div class="avapilt__raam">
+          <img id="avapilt-foto" src="/{esimene}" width="300" height="200" fetchpriority="high" decoding="async" alt="{esimene_alt}" class="on-nahtav">
+        </div>
       </div>
+
       <ul class="avateenused">
 {chr(10).join(read)}
       </ul>
     </div>
   </section>
 """
+
+
+def galeriinupud(html):
+    """Lisab iga teenuse nupurea juurde nupu galeriisse koos fotode arvuga."""
+    for ankur, kaust in GALERII_SEOS:
+        arv = len(KAT[kaust]['pildid'])
+        algus = html.index(f'<article class="teenus" id="{ankur}">')
+        lopp = html.index('</article>', algus)
+        marker = '</a>\n          </div>'
+        koht = html.rindex(marker, algus, lopp)
+        nupp = (f'</a>\n            <a class="nupp nupp--joon" href="/tood#{kaust}">'
+                f'Vaata fotosid ({arv})</a>\n          </div>')
+        html = html[:koht] + nupp + html[koht + len(marker):]
+    return html
 
 
 LEHED = []
@@ -468,7 +508,7 @@ LEHED.append({
     'title': 'Ehitusteenused eramutele Pärnumaal | Meryton Group',
     'kirjeldus': 'Eramu ehitus ja renoveerimine, vannitoad, parketi, vaiba ja LVT paigaldus, '
                  'torutööd, küte ning saunad. Vaata, mis iga teenuse sisse käib.',
-    'ld': json.load(io.open(os.path.join(JUUR, 'tooriistad/sisu/teenused-ld.json'), encoding='utf-8')),
+    'ld': teenuste_ld(),
     'sisu': leivapuru('Teenused') + f"""
   <section class="lehepais">
     <div class="kest">
@@ -484,24 +524,10 @@ LEHED.append({
 
   <section class="sektsioon">
     <div class="kest">
-{osa('teenused-artiklid.html')}
+{galeriinupud(osa('teenused-artiklid.html'))}
     </div>
   </section>
 
-  <section class="sektsioon sektsioon--pind" aria-labelledby="kkk-pealkiri">
-    <div class="kest">
-      <div class="jaotis-pais">
-        <p class="moot">Korduvad küsimused</p>
-        <h2 id="kkk-pealkiri">Mida kõige sagedamini küsitakse</h2>
-      </div>
-
-{osa('teenused-kkk.html')}
-
-      <div class="nupu-rida">
-        <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
-      </div>
-    </div>
-  </section>
 """
 })
 
