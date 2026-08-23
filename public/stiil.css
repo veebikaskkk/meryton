@@ -294,12 +294,14 @@ ul {
   color: var(--paber);
 }
 
-.sektsioon--tume .nupp--joon {
+.sektsioon--tume .nupp--joon,
+.avapilt .nupp--joon {
   border-color: rgba(255, 255, 255, 0.55);
   color: #fff;
 }
 
-.sektsioon--tume .nupp--joon:hover {
+.sektsioon--tume .nupp--joon:hover,
+.avapilt .nupp--joon:hover {
   background: #fff;
   color: var(--sysi);
 }
@@ -361,6 +363,39 @@ ul {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Avalehel algab päis läbipaistvana avapildi peal ja muutub kerimisel */
+.pais--peal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+.pais--peal .pais__nav a,
+.pais--peal .menuu-nupp {
+  color: #fff;
+}
+
+.pais--peal .pais__logo img {
+  filter: brightness(0) invert(1);
+}
+
+.pais--kinni {
+  background: rgba(246, 244, 239, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--serv);
+}
+
+.pais--kinni .pais__nav a,
+.pais--kinni .menuu-nupp {
+  color: var(--tint);
+}
+
+.pais--kinni .pais__logo img {
+  filter: none;
+}
+
 .pais__sisu {
   display: flex;
   align-items: center;
@@ -415,6 +450,13 @@ ul {
   box-shadow: inset 0 -2px 0 var(--kuld);
 }
 
+/* Foto peal peab aktiivne ja hõljutud menüüpunkt olema hele, muidu jääb
+   tume kuld pildi taustal loetamatuks. */
+.pais--peal .pais__nav a:hover,
+.pais--peal .pais__nav a[aria-current='page'] {
+  color: var(--kuld-hele);
+}
+
 .menuu-nupp {
   display: none;
   width: 48px;
@@ -458,71 +500,90 @@ ul {
 
 /* --- Avapilt ------------------------------------------------------------- */
 
-/* Foto on raamis, mitte üle terve ekraani. Lähtefail on 300 px lai ja
-   täislaiuses tähendaks see nelja- kuni viiekordset venitust. Raamis on
-   venitus alla kahekordse ja pilt püsib terav. */
 .avapilt {
-  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
-  background: var(--paber);
-}
-
-.avapilt__ylemine {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
-}
-
-.avapilt h1 {
-  max-width: 14ch;
-  margin-bottom: var(--v3);
-}
-
-.avapilt__jutt {
-  max-width: 48ch;
-  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
-  color: var(--tint-2);
-}
-
-.avapilt__raam {
   position: relative;
-  aspect-ratio: 4 / 3;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   overflow: hidden;
-  border-radius: var(--raadius);
-  background: var(--paber-2);
+  background: var(--sysi);
+  color: #fff;
 }
 
-.avapilt__raam img {
+.avapilt__taust {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.avapilt__taust img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Lähtefoto on väike, kerge pehmendus hoiab selle pikslid nähtamatuna.
+     Kui kliendi originaalid tulevad, saab blur nulli panna. */
+  filter: blur(2px) saturate(1.05);
+  transform: scale(1.06);
   opacity: 0;
-  transition: opacity 0.45s ease;
+  transition: opacity 0.7s ease;
 }
 
-.avapilt__raam img.on-nahtav {
+.avapilt__taust img.on-nahtav {
   opacity: 1;
 }
 
-/* Teenuste rida avapildi all */
+.avapilt__kate {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(to top, rgba(10, 10, 11, 0.9) 0%, rgba(10, 10, 11, 0.35) 45%, rgba(10, 10, 11, 0.55) 100%);
+}
+
+.avapilt > .kest {
+  position: relative;
+  z-index: 2;
+  padding-top: calc(var(--pais-korgus) + clamp(3rem, 12vw, 8rem));
+  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.avapilt h1 {
+  max-width: 15ch;
+  color: #fff;
+  margin-bottom: var(--v3);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.avapilt__jutt {
+  max-width: 52ch;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* Teenuste rida avapildi alaosas */
 .avateenused {
+  position: relative;
+  z-index: 2;
   list-style: none;
-  margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+  margin: clamp(2.5rem, 7vw, 5rem) 0 0;
   padding: var(--v3) 0 0;
-  border-top: 1px solid var(--serv);
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.3rem clamp(1.2rem, 3.2vw, 2.8rem);
+  gap: 0.4rem clamp(1.2rem, 3.4vw, 3rem);
 }
 
 .avateenused a {
   display: inline-block;
-  padding: 0.3rem 0;
+  padding: 0.35rem 0;
   font-family: var(--pealkiri);
-  font-size: clamp(1.05rem, 2vw, 1.6rem);
+  font-size: clamp(1.05rem, 2.1vw, 1.7rem);
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--tint-2);
+  color: rgba(255, 255, 255, 0.72);
   text-decoration: none;
   border-bottom: 2px solid transparent;
   transition: color 0.25s ease, border-color 0.25s ease;
@@ -531,42 +592,31 @@ ul {
 .avateenused a:hover,
 .avateenused a:focus-visible,
 .avateenused a[data-aktiivne] {
-  color: var(--tint);
+  color: #fff;
   border-bottom-color: var(--kuld);
 }
 
+/* Sisenemine: pealkiri, jutt ja teenused kerkivad järjest */
 @keyframes kerki {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: none; }
 }
 
-.avapilt__tekst > *,
-.avapilt__raam,
+.avapilt h1,
+.avapilt__jutt,
+.avapilt .nupu-rida,
 .avateenused li {
-  animation: kerki 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation: kerki 0.75s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.avapilt__tekst > *:nth-child(2) { animation-delay: 0.06s; }
-.avapilt__tekst > *:nth-child(3) { animation-delay: 0.12s; }
-.avapilt__tekst > *:nth-child(4) { animation-delay: 0.18s; }
-.avapilt__raam { animation-delay: 0.12s; }
-.avateenused li:nth-child(1) { animation-delay: 0.28s; }
-.avateenused li:nth-child(2) { animation-delay: 0.34s; }
-.avateenused li:nth-child(3) { animation-delay: 0.4s; }
-.avateenused li:nth-child(4) { animation-delay: 0.46s; }
-.avateenused li:nth-child(5) { animation-delay: 0.52s; }
-.avateenused li:nth-child(6) { animation-delay: 0.58s; }
-
-@media (max-width: 860px) {
-  .avapilt__ylemine {
-    grid-template-columns: 1fr;
-    gap: var(--v3);
-  }
-
-  .avapilt__raam {
-    order: -1;
-  }
-}
+.avapilt__jutt { animation-delay: 0.1s; }
+.avapilt .nupu-rida { animation-delay: 0.18s; }
+.avateenused li:nth-child(1) { animation-delay: 0.3s; }
+.avateenused li:nth-child(2) { animation-delay: 0.36s; }
+.avateenused li:nth-child(3) { animation-delay: 0.42s; }
+.avateenused li:nth-child(4) { animation-delay: 0.48s; }
+.avateenused li:nth-child(5) { animation-delay: 0.54s; }
+.avateenused li:nth-child(6) { animation-delay: 0.6s; }
 
 /* --- Lehe pealkirjaplokk alamlehtedel ------------------------------------ */
 
@@ -1333,6 +1383,7 @@ legend {
   }
 
   .pais__nav[data-avatud='jah'] { display: flex; }
+  .pais--peal .pais__nav[data-avatud='jah'] a { color: var(--tint); }
   .pais__nav ul { flex-direction: column; align-items: stretch; gap: 0; }
   .pais__nav li { border-bottom: 1px solid var(--serv); }
   .pais__nav a { min-height: 56px; font-size: 1.05rem; }
@@ -1356,6 +1407,7 @@ legend {
   .pildid:not([data-avatud='jah']) > .pilt:nth-of-type(3) { display: none; }
   .numbrid { gap: var(--v3); }
   .nupu-rida .nupp { width: 100%; }
+  .avapilt { min-height: 92svh; }
 }
 
 @media (max-width: 340px) {
@@ -1377,12 +1429,14 @@ legend {
 
   .pilt:hover img,
   .lint__kast:hover img { transform: none; }
+  .avapilt__taust img { transform: scale(1.02); }
 }
 
 /* --- Trükk --------------------------------------------------------------- */
 
 @media print {
   .pais,
-  .menuu-nupp { display: none; }
+  .menuu-nupp,
+  .avapilt__taust { display: none; }
   body { background: #fff; color: #000; }
 }

@@ -34,6 +34,22 @@
     });
   }
 
+  /* --- Päis avapildi peal ------------------------------------------------ */
+
+  // Avalehel algab päis läbipaistvana foto peal. Kui avapilt on kerinud
+  // suuremas osas ekraanilt välja, muutub päis heledaks ja loetavaks.
+  var pais = document.querySelector('.pais--peal');
+  var avapilt = document.querySelector('.avapilt');
+
+  if (pais && avapilt) {
+    var vaadeldav = new IntersectionObserver(function (kirjed) {
+      kirjed.forEach(function (k) {
+        pais.classList.toggle('pais--kinni', !k.isIntersecting);
+      });
+    }, { rootMargin: '-70% 0px 0px 0px' });
+    vaadeldav.observe(avapilt);
+  }
+
   /* --- Avapildi foto vahetub teenuse peale minnes ------------------------ */
 
   var avafoto = document.getElementById('avapilt-foto');

@@ -34,13 +34,10 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:a:1]
 > Liigu sisu juurde
 
-[index.html:p:1]
-> Ehitus ja renoveerimine
-
 [index.html:h1:1]
 > Ehitame ja teeme korda eramuid
 
-[index.html:p:2]
+[index.html:p:1]
 > Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal. Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi meest otsima.
 
 [index.html:a:2]
@@ -76,94 +73,94 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:li:9]
 > Turvaline PartnerEesti Võlausaldajate Liit
 
-[index.html:p:3]
+[index.html:p:2]
 > 01 Teenused
 
 [index.html:h2:1]
 > Millega me tegeleme
 
-[index.html:p:4]
+[index.html:p:3]
 > Teeme peamiselt eramaju ja väiksemaid arendusprojekte. Teenuste lehel on iga töö juures kirjas, mis selle sisse käib.
 
-[index.html:p:5]
+[index.html:p:4]
 > 01
 
 [index.html:h3:1]
 > Eramu ehitus ja renoveerimine
 
-[index.html:p:6]
+[index.html:p:5]
 > Ehitame uue maja valmis ja teeme vana korda. Võtame enda peale terve objekti või ainult selle osa, mille jaoks tellijal endal aega ei ole.
 
 [index.html:a:4]
 > Loe lähemalt
 
-[index.html:p:7]
+[index.html:p:6]
 > 02
 
 [index.html:h3:2]
 > Põrandakatete paigaldus
 
-[index.html:p:8]
+[index.html:p:7]
 > Vaip, LVT, parkett ja muud pinnakatted. Sama tööd oleme alltöövõtjana teinud kaubanduskeskustes ja restoranides.
 
 [index.html:a:5]
 > Loe lähemalt
 
-[index.html:p:9]
+[index.html:p:8]
 > 03
 
 [index.html:h3:3]
 > Vannitoa ehitus ja renoveerimine
 
-[index.html:p:10]
+[index.html:p:9]
 > Vana vannituba lammutusest valmis ruumini: torustik, hüdroisolatsioon, plaatimine ja sanitaartehnika paigaldus.
 
 [index.html:a:6]
 > Loe lähemalt
 
-[index.html:p:11]
+[index.html:p:10]
 > 04
 
 [index.html:h3:4]
 > Vesi ja kanalisatsioon
 
-[index.html:p:12]
+[index.html:p:11]
 > Eramute vee- ja kanalisatsioonitööd, nii uude majja kui ka vana torustiku väljavahetamiseks.
 
 [index.html:a:7]
 > Loe lähemalt
 
-[index.html:p:13]
+[index.html:p:12]
 > 05
 
 [index.html:h3:5]
 > Küte ja ventilatsioon
 
-[index.html:p:14]
+[index.html:p:13]
 > Kütte- ja ventilatsioonisüsteemide paigaldus eramutes vastavalt olemasolevale projektile.
 
 [index.html:a:8]
 > Loe lähemalt
 
-[index.html:p:15]
+[index.html:p:14]
 > 06
 
 [index.html:h3:6]
 > Saunad, terrassid ja varjualused
 
-[index.html:p:16]
+[index.html:p:15]
 > Saun, terrass ja varjualune ning muud puittööd maja juures. Enamasti tuleb mõõdud võtta kohapeal ja ehitada nende järgi.
 
 [index.html:a:9]
 > Loe lähemalt
 
-[index.html:p:17]
+[index.html:p:16]
 > 02 Tehtud tööd
 
 [index.html:h2:2]
 > Pildid tehtud töödest
 
-[index.html:p:18]
+[index.html:p:17]
 > Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi ja iga kategooria kausta saab täies mahus avada.
 
 [index.html:li:10]
@@ -193,19 +190,19 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:a:10]
 > Ava galerii
 
-[index.html:p:19]
+[index.html:p:18]
 > 03 Miks meid
 
 [index.html:h2:3]
 > Kes me oleme
 
-[index.html:p:20]
+[index.html:p:19]
 > Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb. Sellepärast räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
 
-[index.html:p:21]
+[index.html:p:20]
 > Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel.
 
-[index.html:p:22]
+[index.html:p:21]
 > Ettevõte on Eesti äriregistris registrikoodiga 16262305 ja käibemaksukohustuslane numbriga EE102721669. Tegevjuht Ain Uibokand vastab telefonile ise.
 
 [index.html:a:11]
@@ -214,16 +211,16 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:h3:7]
 > Turvaline Partner
 
-[index.html:p:23]
+[index.html:p:22]
 > Märgise annab Eesti Võlausaldajate Liit ja see puudutab ettevõtte maksekäitumist.
 
-[index.html:p:24]
+[index.html:p:23]
 > 04 Alltöövõtt
 
 [index.html:h2:4]
 > Pinnakatted suurtel objektidel
 
-[index.html:p:25]
+[index.html:p:24]
 > Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.
 
 [index.html:li:18]
@@ -250,13 +247,13 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 [index.html:li:25]
 > O'Learys, Riga Plaza
 
-[index.html:p:26]
+[index.html:p:25]
 > 05 Kontakt
 
 [index.html:h2:5]
 > Võta ühendust
 
-[index.html:p:27]
+[index.html:p:26]
 > Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Kui töö meile ei sobi või kui õigem oleks see teha teises järjekorras, ütleme seda kohe.
 
 [index.html:a:12]

@@ -116,7 +116,7 @@ def pea(leht):
 
 def pais(leht):
     """Päis. Avalehel algab see läbipaistvana avapildi peal."""
-    klass = 'pais'
+    klass = 'pais pais--peal' if leht.get('avapilt') else 'pais'
     read = []
     for tee, nimi in MENUU:
         praegune = ' aria-current="page"' if tee == leht['tee'] else ''
@@ -292,27 +292,21 @@ def avapilt():
             f'          <li><a href="{tee}" data-foto="/{f}" data-alt="{alt}">{silt}</a></li>')
     return f"""
   <section class="avapilt">
+    <div class="avapilt__taust">
+      <img id="avapilt-foto" src="/{esimene}" width="600" height="450" fetchpriority="high" decoding="async" alt="{esimene_alt}" class="on-nahtav">
+    </div>
+    <div class="avapilt__kate"></div>
     <div class="kest">
-      <div class="avapilt__ylemine">
-        <div class="avapilt__tekst">
-          <p class="moot">Ehitus ja renoveerimine</p>
-          <h1>Ehitame ja teeme korda eramuid</h1>
-          <p class="avapilt__jutt">
-            Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal.
-            Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi
-            meest otsima.
-          </p>
-          <div class="nupu-rida">
-            <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
-            <a class="nupp nupp--joon" href="/tood">Vaata tehtud töid</a>
-          </div>
-        </div>
-
-        <div class="avapilt__raam">
-          <img id="avapilt-foto" src="/{esimene}" width="300" height="200" fetchpriority="high" decoding="async" alt="{esimene_alt}" class="on-nahtav">
-        </div>
+      <h1>Ehitame ja teeme korda eramuid</h1>
+      <p class="avapilt__jutt">
+        Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal.
+        Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi
+        meest otsima.
+      </p>
+      <div class="nupu-rida">
+        <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
+        <a class="nupp nupp--joon" href="/tood">Vaata tehtud töid</a>
       </div>
-
       <ul class="avateenused">
 {chr(10).join(read)}
       </ul>
