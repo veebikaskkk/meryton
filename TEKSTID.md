@@ -35,231 +35,118 @@ Galerii piltide alt-tekstid ei ole siin. Need on failis
 > Liigu sisu juurde
 
 [index.html:h1:1]
-> Ehitame ja teeme korda eramuid
+> Me ei ehita lihtsalt hooneid. Me loome lahendusi, mis kestavad.
 
 [index.html:p:1]
-> Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal. Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi meest otsima.
+> Kaasaegne ehitus. Läbimõeldud lahendused. Kvaliteet, mis kestab.
 
 [index.html:a:2]
-> Küsi pakkumist
-
-[index.html:a:3]
 > Vaata tehtud töid
 
-[index.html:li:1]
-> Eramu ehitus
+[index.html:a:3]
+> Räägi oma projektist
 
-[index.html:li:2]
-> Vannitoad
+---
 
-[index.html:li:3]
-> Põrandad
+## Meist (meist.html)
 
-[index.html:li:4]
-> Vesi ja kanalisatsioon
+[meist.html:title]
+> Meist, ehitusettevõte Pärnumaal | Meryton Group
 
-[index.html:li:5]
-> Küte ja ventilatsioon
+[meist.html:description]
+> Meryton Group OÜ on üle 20 aasta kogemusega ehitusettevõte. Töötame Pärnumaal, Viljandimaal ja Harjumaal, fookuses eramud.
 
-[index.html:li:6]
-> Terrassid ja saunad
+[meist.html:a:1]
+> Liigu sisu juurde
 
-[index.html:li:7]
-> Kogemus: 20+ aastatkogemust ehituses
+[meist.html:p:1]
+> Meist
 
-[index.html:li:8]
-> 3 maakondakus töötame kõige rohkem
-
-[index.html:li:9]
-> Turvaline PartnerEesti Võlausaldajate Liit
-
-[index.html:p:2]
-> 01 Teenused
-
-[index.html:h2:1]
-> Millega me tegeleme
-
-[index.html:p:3]
-> Teeme peamiselt eramaju ja väiksemaid arendusprojekte. Teenuste lehel on iga töö juures kirjas, mis selle sisse käib.
-
-[index.html:p:4]
-> 01
-
-[index.html:h3:1]
-> Eramu ehitus ja renoveerimine
-
-[index.html:p:5]
-> Ehitame uue maja valmis ja teeme vana korda. Võtame enda peale terve objekti või ainult selle osa, mille jaoks tellijal endal aega ei ole.
-
-[index.html:a:4]
-> Loe lähemalt
-
-[index.html:p:6]
-> 02
-
-[index.html:h3:2]
-> Põrandakatete paigaldus
-
-[index.html:p:7]
-> Vaip, LVT, parkett ja muud pinnakatted. Sama tööd oleme alltöövõtjana teinud kaubanduskeskustes ja restoranides.
-
-[index.html:a:5]
-> Loe lähemalt
-
-[index.html:p:8]
-> 03
-
-[index.html:h3:3]
-> Vannitoa ehitus ja renoveerimine
-
-[index.html:p:9]
-> Vana vannituba lammutusest valmis ruumini: torustik, hüdroisolatsioon, plaatimine ja sanitaartehnika paigaldus.
-
-[index.html:a:6]
-> Loe lähemalt
-
-[index.html:p:10]
-> 04
-
-[index.html:h3:4]
-> Vesi ja kanalisatsioon
-
-[index.html:p:11]
-> Eramute vee- ja kanalisatsioonitööd, nii uude majja kui ka vana torustiku väljavahetamiseks.
-
-[index.html:a:7]
-> Loe lähemalt
-
-[index.html:p:12]
-> 05
-
-[index.html:h3:5]
-> Küte ja ventilatsioon
-
-[index.html:p:13]
-> Kütte- ja ventilatsioonisüsteemide paigaldus eramutes vastavalt olemasolevale projektile.
-
-[index.html:a:8]
-> Loe lähemalt
-
-[index.html:p:14]
-> 06
-
-[index.html:h3:6]
-> Saunad, terrassid ja varjualused
-
-[index.html:p:15]
-> Saun, terrass ja varjualune ning muud puittööd maja juures. Enamasti tuleb mõõdud võtta kohapeal ja ehitada nende järgi.
-
-[index.html:a:9]
-> Loe lähemalt
-
-[index.html:p:16]
-> 02 Tehtud tööd
-
-[index.html:h2:2]
-> Pildid tehtud töödest
-
-[index.html:p:17]
-> Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi ja iga kategooria kausta saab täies mahus avada.
-
-[index.html:li:10]
-> Põrandatööd 50 fotot
-
-[index.html:li:11]
-> Vannitoad 50 fotot
-
-[index.html:li:12]
-> Eramu ehitus ja renoveerimine 38 fotot
-
-[index.html:li:13]
-> Siseviimistlus ja plaatimine 20 fotot
-
-[index.html:li:14]
-> Vesi ja kanalisatsioon 18 fotot
-
-[index.html:li:15]
-> Küte ja ventilatsioon 30 fotot
-
-[index.html:li:16]
-> Terrassid ja varjualused 4 fotot
-
-[index.html:li:17]
-> Välitööd ja vundament 50 fotot
-
-[index.html:a:10]
-> Ava galerii
-
-[index.html:p:18]
-> 03 Miks meid
-
-[index.html:h2:3]
+[meist.html:h1:1]
 > Kes me oleme
 
-[index.html:p:19]
-> Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb. Sellepärast räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad.
+[meist.html:p:2]
+> Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil tavaliselt viltu läheb.
 
-[index.html:p:20]
-> Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel.
+[meist.html:li:1]
+> 20+ aastatkogemust ehituses
 
-[index.html:p:21]
+[meist.html:li:2]
+> 3 maakondakus töötame kõige rohkem
+
+[meist.html:li:3]
+> Turvaline PartnerEesti Võlausaldajate Liit
+
+[meist.html:p:3]
+> 01 Kuidas me töötame
+
+[meist.html:h2:1]
+> Professionaalsus, korrektsus ja aus suhtlus
+
+[meist.html:p:4]
+> Räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad käima peavad. Mõnikord tähendab see ka seda, et soovitame teha algsest plaanist vähem või teha asjad teises järjekorras.
+
+[meist.html:p:5]
+> Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel. Fookuses on erasektor, eelkõige eramajad ja väiksemad arendusprojektid.
+
+[meist.html:p:6]
 > Ettevõte on Eesti äriregistris registrikoodiga 16262305 ja käibemaksukohustuslane numbriga EE102721669. Tegevjuht Ain Uibokand vastab telefonile ise.
 
-[index.html:a:11]
-> Võta ühendust
+[meist.html:a:2]
+> Vaata, mida me teeme
 
-[index.html:h3:7]
+[meist.html:h3:1]
 > Turvaline Partner
 
-[index.html:p:22]
+[meist.html:p:7]
 > Märgise annab Eesti Võlausaldajate Liit ja see puudutab ettevõtte maksekäitumist.
 
-[index.html:p:23]
-> 04 Alltöövõtt
+[meist.html:p:8]
+> 02 Alltöövõtt
 
-[index.html:h2:4]
+[meist.html:h2:2]
 > Pinnakatted suurtel objektidel
 
-[index.html:p:24]
+[meist.html:p:9]
 > Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.
 
-[index.html:li:18]
+[meist.html:li:4]
 > Apollo kino, Ülemiste keskus
 
-[index.html:li:19]
+[meist.html:li:5]
 > Apollo kino, Panevėžys, Leedu
 
-[index.html:li:20]
+[meist.html:li:6]
 > Apollo kino, Riga Plaza, Läti
 
-[index.html:li:21]
+[meist.html:li:7]
 > Apollo raamatupood, Ülemiste keskus
 
-[index.html:li:22]
+[meist.html:li:8]
 > Restoran CHI
 
-[index.html:li:23]
+[meist.html:li:9]
 > Restoran Little India
 
-[index.html:li:24]
+[meist.html:li:10]
 > Babyback, Läti
 
-[index.html:li:25]
+[meist.html:li:11]
 > O'Learys, Riga Plaza
 
-[index.html:p:25]
-> 05 Kontakt
+[meist.html:p:10]
+> 03 Kontakt
 
-[index.html:h2:5]
-> Võta ühendust
+[meist.html:h2:3]
+> Räägi oma projektist
 
-[index.html:p:26]
+[meist.html:p:11]
 > Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Kui töö meile ei sobi või kui õigem oleks see teha teises järjekorras, ütleme seda kohe.
 
-[index.html:a:12]
+[meist.html:a:3]
 > Küsi pakkumist
 
-[index.html:a:13]
+[meist.html:a:4]
 > +372 5689 3723
 
 ---

@@ -1,68 +1,65 @@
 /*
- * Teeb logost kaks varianti.
+ * Teeb kliendi logost variandid, mida leht kasutab.
  *
- *   meryton-group-logo.webp        hele, tumedale taustale (jalus)
- *   meryton-group-logo-tume.webp   originaalvärvid, heledale taustale (päis)
+ * Lähtefail on Meryton_Group_Transparent.svg, mille sees on 3762x3762 PNG.
+ * See ei ole päris vektor, aga on kümme korda suurem kui vana Logo.png.
  *
- * Lähtefail on valgel taustal, seega valge tuleb läbipaistvaks võtta.
- * Heleda tausta variandi puhul piisab tavalisest valge eemaldamisest,
- * tumeda tausta variandi puhul tuleb tint heledamaks arvutada, muidu
- * kaovad hallid jooned musta sisse ära.
+ *   meryton-group-logo.webp        originaalvärvid, tumedale taustale
+ *   meryton-group-logo-tume.webp   neutraalid tumendatud, heledale taustale
+ *   meryton-group-mark.webp        ainult monogramm, ikoonide jaoks
  */
 const sharp = require('sharp');
+const fs = require('fs');
 const path = require('path');
 
 const JUUR = path.resolve(__dirname, '..');
-const ALLIKAS = path.join(JUUR, '..', 'Logo.png');
+const ALLIKAS_SVG = path.join(JUUR, '..', 'reveebilehepakkumine', 'Meryton_Group_Transparent.svg');
+const IKOON = path.join(JUUR, '..', 'reveebilehepakkumine', 'Meryton_Group_Icon_Transparent.png');
 const VALJUND = path.join(JUUR, 'public/pildid/ikoonid');
 
-async function tee(variant, valjundNimi) {
-  const { data, info } = await sharp(ALLIKAS).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-  const w = info.width, h = info.height, ch = info.channels;
-  const out = Buffer.alloc(w * h * 4);
+function svgSeest(tee) {
+  const s = fs.readFileSync(tee, 'utf8');
+  const m = s.match(/href="data:image\/png;base64,([^"]+)"/);
+  if (!m) throw new Error('SVG sees ei ole rasterpilti');
+  return Buffer.from(m[1], 'base64');
+}
 
-  for (let p = 0; p < w * h; p++) {
-    const i = p * ch;
-    const r = data[i], g = data[i + 1], b = data[i + 2];
-    const o = p * 4;
-
-    if (variant === 'hele') {
-      // tumedale taustale: tint täisheledusse, hoides värvi iseloomu
-      const L = (r + g + b) / 3 / 255;
-      const a = Math.pow(Math.min(1, Math.max(0, (1 - L) * 2.3)), 2.0);
-      const mx = Math.max(r, g, b) || 1, B = 238;
-      out[o] = Math.round(Math.min(255, r / mx * B));
-      out[o + 1] = Math.round(Math.min(255, g / mx * B));
-      out[o + 2] = Math.round(Math.min(255, b / mx * B));
-      out[o + 3] = Math.round(a * 255);
-    } else {
-      // heledale taustale: tavaline valge eemaldamine, värvid jäävad omaks
-      const mn = Math.min(r, g, b);
-      const a = 1 - mn / 255;
-      if (a < 0.004) {
-        out[o] = out[o + 1] = out[o + 2] = out[o + 3] = 0;
-      } else {
-        out[o] = Math.round(Math.max(0, Math.min(255, (r - 255 * (1 - a)) / a)));
-        out[o + 1] = Math.round(Math.max(0, Math.min(255, (g - 255 * (1 - a)) / a)));
-        out[o + 2] = Math.round(Math.max(0, Math.min(255, (b - 255 * (1 - a)) / a)));
-        out[o + 3] = Math.round(a * 255);
-      }
-    }
-  }
-
-  const trimmitud = await sharp(out, { raw: { width: w, height: h, channels: 4 } })
-    .png().trim({ threshold: 6 }).png().toBuffer();
-  const m = await sharp(trimmitud).metadata();
-
-  await sharp(trimmitud).webp({ quality: 92, alphaQuality: 100 })
-    .toFile(path.join(VALJUND, valjundNimi + '.webp'));
-  await sharp(trimmitud).png({ compressionLevel: 9 })
-    .toFile(path.join(VALJUND, valjundNimi + '.png'));
-
-  console.log(`  ${valjundNimi}: ${m.width}x${m.height}`);
+async function salvesta(buf, nimi, laius) {
+  const t = await sharp(buf).trim({ threshold: 4 }).resize({ width: laius }).toBuffer();
+  const m = await sharp(t).metadata();
+  await sharp(t).webp({ quality: 86 }).toFile(path.join(VALJUND, nimi + '.webp'));
+  await sharp(t).png({ compressionLevel: 9, palette: true, quality: 90 }).toFile(path.join(VALJUND, nimi + '.png'));
+  console.log(`  ${nimi}: ${m.width}x${m.height}`);
+  return m;
 }
 
 (async () => {
-  await tee('hele', 'meryton-group-logo');
-  await tee('tume', 'meryton-group-logo-tume');
+  const algne = svgSeest(ALLIKAS_SVG);
+
+  // 1. originaalvärvid, tumedale taustale
+  await salvesta(algne, 'meryton-group-logo', 500);
+
+  // 2. heledale taustale: hallid jooned tumedaks, kuld jääb kullaks
+  const { data, info } = await sharp(algne).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const out = Buffer.alloc(info.width * info.height * 4);
+  for (let p = 0; p < info.width * info.height; p++) {
+    const i = p * info.channels, o = p * 4;
+    const r = data[i], g = data[i + 1], b = data[i + 2], a = data[i + 3];
+    const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+    const kyllastus = mx === 0 ? 0 : (mx - mn) / mx;
+    if (kyllastus < 0.18) {
+      // neutraalne joon, pööra heledus ümber
+      out[o] = 255 - r; out[o + 1] = 255 - g; out[o + 2] = 255 - b;
+    } else {
+      // kuld, tumenda et heledal taustal loeks
+      out[o] = Math.round(r * 0.72); out[o + 1] = Math.round(g * 0.72); out[o + 2] = Math.round(b * 0.72);
+    }
+    out[o + 3] = a;
+  }
+  const tume = await sharp(out, { raw: { width: info.width, height: info.height, channels: 4 } })
+    .png().toBuffer();
+  await salvesta(tume, 'meryton-group-logo-tume', 500);
+
+  // 3. ainult monogramm
+  await salvesta(fs.readFileSync(IKOON), 'meryton-group-mark', 320);
 })();

@@ -31,8 +31,8 @@ def foto(kaust, nr):
 
 MENUU = [
     ('/', 'Avaleht'),
-    ('/teenused', 'Teenused'),
-    ('/tood', 'Tehtud tööd'),
+    ('/meist', 'Meist'),
+    ('/teenused', 'Teenused ja tehtud tööd'),
     ('/kontakt', 'Kontakt'),
 ]
 
@@ -121,11 +121,14 @@ def pais(leht):
     for tee, nimi in MENUU:
         praegune = ' aria-current="page"' if tee == leht['tee'] else ''
         read.append(f'        <li><a href="{tee}"{praegune}>{nimi}</a></li>')
+    # Avalehel on päis tumeda avapildi peal, seal käib kuldne logo.
+    # Heledatel lehtedel käib tumendatud variant.
+    logo = ('meryton-group-logo' if leht.get('avapilt') else 'meryton-group-logo-tume')
     return f"""
 <header class="{klass}">
   <div class="kest pais__sisu">
     <a class="pais__logo" href="/" aria-label="Meryton Group, avaleht">
-      <img src="/pildid/ikoonid/meryton-group-logo-tume.webp" width="283" height="195" alt="Meryton Group OÜ logo">
+      <img src="/pildid/ikoonid/{logo}.webp" width="500" height="517" alt="Meryton Group OÜ logo">
     </a>
     <button class="menuu-nupp" type="button" aria-expanded="false" aria-controls="peamenuu" aria-label="Ava menüü">
       <span></span>
@@ -151,7 +154,7 @@ def jalus():
   <div class="kest">
     <div class="jalus__ylemine">
       <div>
-        <img class="jalus__logo" src="/pildid/ikoonid/meryton-group-logo.webp" width="283" height="193" loading="lazy" alt="Meryton Group OÜ logo">
+        <img class="jalus__logo" src="/pildid/ikoonid/meryton-group-logo.webp" width="500" height="517" loading="lazy" alt="Meryton Group OÜ logo">
         <p>Ehitus ja renoveerimine Pärnumaal, Viljandimaal ja Harjumaal. Kokkuleppel üle Eesti.</p>
       </div>
 
@@ -284,32 +287,34 @@ def viited_loend():
 
 
 def avapilt():
-    esimene, esimene_alt = foto('eramu-ehitus', 3)
-    read = []
-    for silt, tee, kaust, nr in AVATEENUSED:
-        f, alt = foto(kaust, nr)
-        read.append(
-            f'          <li><a href="{tee}" data-foto="/{f}" data-alt="{alt}">{silt}</a></li>')
-    return f"""
+    """Kliendi kavandi järgi: tume taust, kaherealine pealkiri, millest teine
+    pool on kuldne, õhuke kuldne joon, alalause ja kaks nuppu.
+
+    Taust on montaaž kliendi enda kuuest fotost. Kolm 640 px fotot kõrvuti
+    annavad 1920 px laia pildi, ehk taustapilti ei ole vaja venitada."""
+    return """
   <section class="avapilt">
     <div class="avapilt__taust">
-      <img id="avapilt-foto" src="/{esimene}" width="600" height="450" fetchpriority="high" decoding="async" alt="{esimene_alt}" class="on-nahtav">
+      <img src="/pildid/avapilt/meryton-tehtud-tood-montaaz.webp"
+           srcset="/pildid/avapilt/meryton-tehtud-tood-montaaz-1000.webp 1000w, /pildid/avapilt/meryton-tehtud-tood-montaaz.webp 1920w"
+           sizes="100vw" width="1920" height="960" fetchpriority="high" decoding="async"
+           alt="Meryton Group OÜ tehtud tööd: vundament, karkass, tehnosüsteemid ja valmis eramu.">
     </div>
     <div class="avapilt__kate"></div>
-    <div class="kest">
-      <h1>Ehitame ja teeme korda eramuid</h1>
+
+    <div class="kest avapilt__sisu">
+      <h1>
+        <span class="avapilt__rida">Me ei ehita lihtsalt hooneid.</span>
+        <span class="avapilt__rida avapilt__rida--kuld">Me loome lahendusi, mis kestavad.</span>
+      </h1>
+      <p class="avapilt__joon" aria-hidden="true"></p>
       <p class="avapilt__jutt">
-        Meryton Group OÜ ehitab ja renoveerib eramuid Pärnumaal, Viljandimaal ja Harjumaal.
-        Teeme ära terve maja, vundamendist vannitoani, nii et sa ei pea igale tööle eraldi
-        meest otsima.
+        Kaasaegne ehitus. Läbimõeldud lahendused. Kvaliteet, mis kestab.
       </p>
       <div class="nupu-rida">
-        <a class="nupp nupp--kuld" href="/kontakt">Küsi pakkumist</a>
-        <a class="nupp nupp--joon" href="/tood">Vaata tehtud töid</a>
+        <a class="nupp nupp--kuld" href="/tood">Vaata tehtud töid</a>
+        <a class="nupp nupp--joon" href="/kontakt">Räägi oma projektist</a>
       </div>
-      <ul class="avateenused">
-{chr(10).join(read)}
-      </ul>
     </div>
   </section>
 """
@@ -340,12 +345,40 @@ LEHED.append({
     'kirjeldus': 'Eramu ehitus ja renoveerimine, vannitoad, põrandakatted, torutööd ja küte. '
                  'Üle 20 aasta kogemust Pärnumaal, Viljandimaal ja Harjumaal. Küsi pakkumist.',
     'ld': ETTEVOTE_LD,
-    'sisu': avapilt() + f"""
+    'sisu': avapilt()
+})
+
+# --- meist ----------------------------------------------------------------
+LEHED.append({
+    'fail': 'meist.html',
+    'tee': '/meist',
+    'title': 'Meist, ehitusettevõte Pärnumaal | Meryton Group',
+    'kirjeldus': 'Meryton Group OÜ on üle 20 aasta kogemusega ehitusettevõte. '
+                 'Töötame Pärnumaal, Viljandimaal ja Harjumaal, fookuses eramud.',
+    'ld': {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Avaleht', 'item': f'{SAIT}/'},
+            {'@type': 'ListItem', 'position': 2, 'name': 'Meist', 'item': f'{SAIT}/meist'}
+        ]
+    },
+    'sisu': leivapuru('Meist') + f"""
+  <section class="lehepais">
+    <div class="kest">
+      <p class="moot">Meist</p>
+      <h1>Kes me oleme</h1>
+      <p>
+        Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil
+        tavaliselt viltu läheb.
+      </p>
+    </div>
+  </section>
+
   <section class="sektsioon">
     <div class="kest">
       <ul class="numbrid">
         <li>
-          <span class="ainult-lugejale">Kogemus:</span>
           <div><strong>20+ aastat</strong><span>kogemust ehituses</span></div>
         </li>
         <li>
@@ -359,99 +392,31 @@ LEHED.append({
     </div>
   </section>
 
-  <section class="sektsioon sektsioon--pind" id="teenused" aria-labelledby="teenused-pealkiri">
+  <section class="sektsioon sektsioon--pind" aria-labelledby="miks-pealkiri">
     <div class="kest">
       <div class="jaotis-pais">
-        <p class="moot">01 <span>Teenused</span></p>
-        <h2 id="teenused-pealkiri">Millega me tegeleme</h2>
-        <p>
-          Teeme peamiselt eramaju ja väiksemaid arendusprojekte.
-          <a href="/teenused">Teenuste lehel</a> on iga töö juures kirjas, mis selle sisse käib.
-        </p>
-      </div>
-
-      <div class="ruudustik ruudustik--3">
-        <article class="kaart">
-          <p class="kaart__nr">01</p>
-          <h3>Eramu ehitus ja renoveerimine</h3>
-          <p>Ehitame uue maja valmis ja teeme vana korda. Võtame enda peale terve objekti või ainult selle osa, mille jaoks tellijal endal aega ei ole.</p>
-          <a class="kaart__link" href="/teenused#eramu-ehitus">Loe lähemalt</a>
-        </article>
-        <article class="kaart">
-          <p class="kaart__nr">02</p>
-          <h3>Põrandakatete paigaldus</h3>
-          <p>Vaip, LVT, parkett ja muud pinnakatted. Sama tööd oleme alltöövõtjana teinud kaubanduskeskustes ja restoranides.</p>
-          <a class="kaart__link" href="/teenused#porandakatted">Loe lähemalt</a>
-        </article>
-        <article class="kaart">
-          <p class="kaart__nr">03</p>
-          <h3>Vannitoa ehitus ja renoveerimine</h3>
-          <p>Vana vannituba lammutusest valmis ruumini: torustik, hüdroisolatsioon, plaatimine ja sanitaartehnika paigaldus.</p>
-          <a class="kaart__link" href="/teenused#vannitoad">Loe lähemalt</a>
-        </article>
-        <article class="kaart">
-          <p class="kaart__nr">04</p>
-          <h3>Vesi ja kanalisatsioon</h3>
-          <p>Eramute vee- ja kanalisatsioonitööd, nii uude majja kui ka vana torustiku väljavahetamiseks.</p>
-          <a class="kaart__link" href="/teenused#vesi-kanalisatsioon">Loe lähemalt</a>
-        </article>
-        <article class="kaart">
-          <p class="kaart__nr">05</p>
-          <h3>Küte ja ventilatsioon</h3>
-          <p>Kütte- ja ventilatsioonisüsteemide paigaldus eramutes vastavalt olemasolevale projektile.</p>
-          <a class="kaart__link" href="/teenused#kute-ventilatsioon">Loe lähemalt</a>
-        </article>
-        <article class="kaart">
-          <p class="kaart__nr">06</p>
-          <h3>Saunad, terrassid ja varjualused</h3>
-          <p>Saun, terrass ja varjualune ning muud puittööd maja juures. Enamasti tuleb mõõdud võtta kohapeal ja ehitada nende järgi.</p>
-          <a class="kaart__link" href="/teenused#puittood">Loe lähemalt</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="sektsioon" id="tood" aria-labelledby="tood-pealkiri">
-    <div class="kest">
-      <div class="jaotis-pais">
-        <p class="moot">02 <span>Tehtud tööd</span></p>
-        <h2 id="tood-pealkiri">Pildid tehtud töödest</h2>
-        <p>Kõik pildid on meie enda objektidelt. Galerii on jaotatud tööliigi järgi ja iga kategooria kausta saab täies mahus avada.</p>
-      </div>
-
-<!-- ESILEHE-PILDID:ALGUS -->
-<!-- ESILEHE-PILDID:LOPP -->
-
-      <div class="nupu-rida nupu-rida--tihe">
-        <a class="nupp nupp--joon" href="/tood">Ava galerii</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="sektsioon sektsioon--pind" id="miks-meid" aria-labelledby="miks-pealkiri">
-    <div class="kest">
-      <div class="jaotis-pais">
-        <p class="moot">03 <span>Miks meid</span></p>
-        <h2 id="miks-pealkiri">Kes me oleme</h2>
+        <p class="moot">01 <span>Kuidas me töötame</span></p>
+        <h2 id="miks-pealkiri">Professionaalsus, korrektsus ja aus suhtlus</h2>
       </div>
 
       <div class="usaldus">
         <div>
           <p>
-            Oleme ehituses üle kahekümne aasta ja selle ajaga on näha saanud, mis objektil
-            tavaliselt viltu läheb. Sellepärast räägime tellijaga otse: mis on tehtav, mis ei
-            ole ning mis järjekorras asjad käima peavad.
+            Räägime tellijaga otse: mis on tehtav, mis ei ole ning mis järjekorras asjad
+            käima peavad. Mõnikord tähendab see ka seda, et soovitame teha algsest plaanist
+            vähem või teha asjad teises järjekorras.
           </p>
           <p>
-            Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige rohkem
-            töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel.
+            Teeme tööd nii, et seda ei peaks paari aasta pärast uuesti lahti võtma. Kõige
+            rohkem töötame Pärnu-, Viljandi- ja Harjumaal, kaugemale tuleme kokkuleppel.
+            Fookuses on erasektor, eelkõige eramajad ja väiksemad arendusprojektid.
           </p>
           <p>
             Ettevõte on Eesti äriregistris registrikoodiga 16262305 ja käibemaksukohustuslane
             numbriga EE102721669. Tegevjuht Ain Uibokand vastab telefonile ise.
           </p>
           <div class="nupu-rida">
-            <a class="nupp nupp--joon" href="/kontakt">Võta ühendust</a>
+            <a class="nupp nupp--joon" href="/teenused">Vaata, mida me teeme</a>
           </div>
         </div>
 
@@ -466,10 +431,10 @@ LEHED.append({
     </div>
   </section>
 
-  <section class="sektsioon" id="alltoovott" aria-labelledby="alltoovott-pealkiri">
+  <section class="sektsioon" aria-labelledby="alltoovott-pealkiri">
     <div class="kest">
       <div class="jaotis-pais">
-        <p class="moot">04 <span>Alltöövõtt</span></p>
+        <p class="moot">02 <span>Alltöövõtt</span></p>
         <h2 id="alltoovott-pealkiri">Pinnakatted suurtel objektidel</h2>
         <p>Alltöövõtjana oleme pinnakatteid paigaldanud ka väljaspool eramuid. Need kohad on avalikud ja igaüks saab neid ise vaatamas käia.</p>
       </div>
@@ -479,11 +444,11 @@ LEHED.append({
     </div>
   </section>
 
-  <section class="sektsioon sektsioon--tume" id="kontakt-cta" aria-labelledby="cta-pealkiri">
+  <section class="sektsioon sektsioon--tume" aria-labelledby="cta-pealkiri">
     <div class="kest">
       <div class="jaotis-pais">
-        <p class="moot">05 <span>Kontakt</span></p>
-        <h2 id="cta-pealkiri">Võta ühendust</h2>
+        <p class="moot">03 <span>Kontakt</span></p>
+        <h2 id="cta-pealkiri">Räägi oma projektist</h2>
         <p>Kirjuta lühidalt, mis maja see on, mis tööd vaja ja mis ajaks. Kui töö meile ei sobi või kui õigem oleks see teha teises järjekorras, ütleme seda kohe.</p>
       </div>
       <div class="nupu-rida nupu-rida--tihe">

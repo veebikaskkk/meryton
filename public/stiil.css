@@ -71,7 +71,7 @@
   --valge: #f6f4ef;
   --hall-tumedal: #a9a9a5;
 
-  --pais-korgus: 86px;
+  --pais-korgus: 96px;
   --kest: 1240px;
   --raadius: 3px;
 
@@ -364,8 +364,11 @@ ul {
 }
 
 /* Avalehel algab päis läbipaistvana avapildi peal ja muutub kerimisel */
+/* Avalehel istub päis avapildi peal ja kerib koos sellega ära. Kinni
+   jäävat heledat olekut ei ole vaja, sest avalehel on ainult tume avapilt
+   ja tume jalus. */
 .pais--peal {
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   background: transparent;
@@ -375,25 +378,6 @@ ul {
 .pais--peal .pais__nav a,
 .pais--peal .menuu-nupp {
   color: #fff;
-}
-
-.pais--peal .pais__logo img {
-  filter: brightness(0) invert(1);
-}
-
-.pais--kinni {
-  background: rgba(246, 244, 239, 0.94);
-  backdrop-filter: blur(10px);
-  border-bottom-color: var(--serv);
-}
-
-.pais--kinni .pais__nav a,
-.pais--kinni .menuu-nupp {
-  color: var(--tint);
-}
-
-.pais--kinni .pais__logo img {
-  filter: none;
 }
 
 .pais__sisu {
@@ -412,7 +396,7 @@ ul {
 
 .pais__logo img {
   width: auto;
-  height: 62px;
+  height: 78px;
   transition: filter 0.3s ease;
 }
 
@@ -500,14 +484,16 @@ ul {
 
 /* --- Avapilt ------------------------------------------------------------- */
 
+/* Kliendi kavandi järgi. Taust on montaaž kliendi enda kuuest fotost,
+   1920 px lai, ehk seda ei venitata. Katte gradient hoiab teksti loetavana
+   ka siis, kui mõni foto on hele. */
 .avapilt {
   position: relative;
   min-height: 100svh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: center;
   overflow: hidden;
-  background: var(--sysi);
+  background: #1c1d1f;
   color: #fff;
 }
 
@@ -521,16 +507,7 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Lähtefoto on väike, kerge pehmendus hoiab selle pikslid nähtamatuna.
-     Kui kliendi originaalid tulevad, saab blur nulli panna. */
-  filter: blur(2px) saturate(1.05);
-  transform: scale(1.06);
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.avapilt__taust img.on-nahtav {
-  opacity: 1;
+  opacity: 0.55;
 }
 
 .avapilt__kate {
@@ -539,84 +516,78 @@ ul {
   z-index: 1;
   pointer-events: none;
   background:
-    linear-gradient(to top, rgba(10, 10, 11, 0.9) 0%, rgba(10, 10, 11, 0.35) 45%, rgba(10, 10, 11, 0.55) 100%);
+    linear-gradient(100deg, rgba(20, 20, 21, 0.94) 0%, rgba(20, 20, 21, 0.82) 42%, rgba(20, 20, 21, 0.45) 100%),
+    linear-gradient(to top, rgba(20, 20, 21, 0.7) 0%, transparent 45%);
 }
 
-.avapilt > .kest {
+.avapilt__sisu {
   position: relative;
   z-index: 2;
-  padding-top: calc(var(--pais-korgus) + clamp(3rem, 12vw, 8rem));
-  padding-bottom: clamp(2rem, 5vw, 3.5rem);
+  padding-top: calc(var(--pais-korgus) + clamp(2rem, 6vw, 4rem));
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }
 
 .avapilt h1 {
-  max-width: 15ch;
+  max-width: 18ch;
+  margin: 0 0 var(--v3);
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.avapilt__rida {
+  display: block;
   color: #fff;
-  margin-bottom: var(--v3);
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.avapilt__rida--kuld {
+  color: var(--kuld-hele);
+}
+
+/* Õhuke kuldne joon pealkirja ja alalause vahel */
+.avapilt__joon {
+  width: 76px;
+  height: 2px;
+  margin: 0 0 var(--v3);
+  background: var(--kuld);
+  border: 0;
 }
 
 .avapilt__jutt {
-  max-width: 52ch;
-  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.4);
+  max-width: 46ch;
+  margin-bottom: 0;
+  font-size: clamp(0.98rem, 1.3vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.86);
 }
 
-/* Teenuste rida avapildi alaosas */
-.avateenused {
-  position: relative;
-  z-index: 2;
-  list-style: none;
-  margin: clamp(2.5rem, 7vw, 5rem) 0 0;
-  padding: var(--v3) 0 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem clamp(1.2rem, 3.4vw, 3rem);
-}
-
-.avateenused a {
-  display: inline-block;
-  padding: 0.35rem 0;
-  font-family: var(--pealkiri);
-  font-size: clamp(1.05rem, 2.1vw, 1.7rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.72);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: color 0.25s ease, border-color 0.25s ease;
-}
-
-.avateenused a:hover,
-.avateenused a:focus-visible,
-.avateenused a[data-aktiivne] {
-  color: #fff;
-  border-bottom-color: var(--kuld);
-}
-
-/* Sisenemine: pealkiri, jutt ja teenused kerkivad järjest */
 @keyframes kerki {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: none; }
 }
 
 .avapilt h1,
+.avapilt__joon,
 .avapilt__jutt,
-.avapilt .nupu-rida,
-.avateenused li {
-  animation: kerki 0.75s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+.avapilt .nupu-rida {
+  animation: kerki 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
-.avapilt__jutt { animation-delay: 0.1s; }
-.avapilt .nupu-rida { animation-delay: 0.18s; }
-.avateenused li:nth-child(1) { animation-delay: 0.3s; }
-.avateenused li:nth-child(2) { animation-delay: 0.36s; }
-.avateenused li:nth-child(3) { animation-delay: 0.42s; }
-.avateenused li:nth-child(4) { animation-delay: 0.48s; }
-.avateenused li:nth-child(5) { animation-delay: 0.54s; }
-.avateenused li:nth-child(6) { animation-delay: 0.6s; }
+.avapilt__joon { animation-delay: 0.12s; }
+.avapilt__jutt { animation-delay: 0.2s; }
+.avapilt .nupu-rida { animation-delay: 0.3s; }
+
+@media (max-width: 720px) {
+  .avapilt__kate {
+    background:
+      linear-gradient(to top, rgba(20, 20, 21, 0.94) 30%, rgba(20, 20, 21, 0.72) 100%);
+  }
+
+  .avapilt h1 {
+    max-width: none;
+  }
+}
 
 /* --- Lehe pealkirjaplokk alamlehtedel ------------------------------------ */
 
@@ -1389,7 +1360,7 @@ legend {
   .pais__nav a { min-height: 56px; font-size: 1.05rem; }
   .pais__nav .nupp { margin-top: var(--v3); }
   .menuu-nupp { display: block; }
-  .pais__logo img { height: 52px; }
+  .pais__logo img { height: 58px; }
 }
 
 @media (max-width: 720px) {
@@ -1399,7 +1370,6 @@ legend {
   .jalus__ylemine { grid-template-columns: 1fr; }
   .sert-kaart { flex-direction: column; align-items: flex-start; }
   .lint { grid-template-columns: repeat(2, 1fr); }
-  .avateenused { gap: 0.2rem 1.2rem; }
 }
 
 @media (max-width: 520px) {

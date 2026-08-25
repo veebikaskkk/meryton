@@ -313,6 +313,7 @@ function sitemap() {
   const kuup = new Date().toISOString().slice(0, 10);
   const lehed = [
     ['/', '1.0'],
+    ['/meist', '0.7'],
     ['/teenused', '0.9'],
     ['/tood', '0.9'],
     ['/kontakt', '0.8'],
@@ -393,10 +394,11 @@ function sitemap() {
   const x = esi.indexOf(lA);
   const y = esi.indexOf(lB);
   if (x === -1 || y === -1) {
-    console.error('index.html failist ei leia märgiseid ESILEHE-PILDID:ALGUS ja ESILEHE-PILDID:LOPP');
-    process.exit(1);
+    // Avaleht on ainult avapilt, kategooriakaste seal ei ole. See ei ole viga.
+    console.log('avalehel pildiploki märgiseid ei ole, jätan vahele');
+  } else {
+    fs.writeFileSync(ESILEHT, esi.slice(0, x + lA.length) + '\n' + lindiMarkup() + '\n        ' + esi.slice(y));
   }
-  fs.writeFileSync(ESILEHT, esi.slice(0, x + lA.length) + '\n' + lindiMarkup() + '\n        ' + esi.slice(y));
 
   fs.writeFileSync(SITEMAP, sitemap());
 

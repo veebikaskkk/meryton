@@ -22,6 +22,7 @@ VALJUND = os.path.join(JUUR, 'TEKSTID.md')
 
 LEHED = [
     ('index.html', 'Avaleht'),
+    ('meist.html', 'Meist'),
     ('teenused.html', 'Teenused'),
     ('tood.html', 'Tehtud tööd'),
     ('kontakt.html', 'Kontakt'),

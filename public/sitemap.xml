@@ -3,17 +3,22 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.meryton.ee/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.meryton.ee/meist</loc>
+    <lastmod>2026-08-25</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.meryton.ee/teenused</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.meryton.ee/tood</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.meryton.ee/pildid/galerii/porandatood/porandaplaatide-paigaldus-eramu-tehnoruumis-01.webp</image:loc>
@@ -1318,12 +1323,12 @@
   </url>
   <url>
     <loc>https://www.meryton.ee/kontakt</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.meryton.ee/privaatsus</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-25</lastmod>
     <priority>0.2</priority>
   </url>
 </urlset>
