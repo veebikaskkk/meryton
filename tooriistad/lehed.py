@@ -286,19 +286,39 @@ def viited_loend():
     return '\n'.join(f'        <li>{v}</li>' for v in VIITED)
 
 
+# Avapildi taust. Kliendi kavandis oli betoonruumi pilt, montaaž tema enda
+# fotodest on alternatiiv, mille ta ise välja pakkus. Vaheta väärtust ja
+# jooksuta lehed.py uuesti.
+AVAPILDI_TAUST = 'betoon'          # 'betoon' või 'montaaz'
+
+TAUSTAD = {
+    'betoon': {
+        'src': '/pildid/avapilt/betoonruum-avapilt.webp',
+        'srcset': '',
+        'laius': 640, 'korgus': 342,
+        'alt': 'Betoonseintega ruum, mille pinnal joonistuvad puude varjud.',
+    },
+    'montaaz': {
+        'src': '/pildid/avapilt/meryton-tehtud-tood-montaaz.webp',
+        'srcset': '/pildid/avapilt/meryton-tehtud-tood-montaaz-1000.webp 1000w, '
+                  '/pildid/avapilt/meryton-tehtud-tood-montaaz.webp 1920w',
+        'laius': 1920, 'korgus': 960,
+        'alt': 'Meryton Group OÜ tehtud tööd: vundament, karkass, tehnosüsteemid ja valmis eramu.',
+    },
+}
+
+
 def avapilt():
     """Kliendi kavandi järgi: tume taust, kaherealine pealkiri, millest teine
-    pool on kuldne, õhuke kuldne joon, alalause ja kaks nuppu.
-
-    Taust on montaaž kliendi enda kuuest fotost. Kolm 640 px fotot kõrvuti
-    annavad 1920 px laia pildi, ehk taustapilti ei ole vaja venitada."""
-    return """
+    pool on kuldne, õhuke kuldne joon, alalause ja kaks nuppu."""
+    t = TAUSTAD[AVAPILDI_TAUST]
+    srcset = f'\n           srcset="{t["srcset"]}" sizes="100vw"' if t['srcset'] else ''
+    return f"""
   <section class="avapilt">
     <div class="avapilt__taust">
-      <img src="/pildid/avapilt/meryton-tehtud-tood-montaaz.webp"
-           srcset="/pildid/avapilt/meryton-tehtud-tood-montaaz-1000.webp 1000w, /pildid/avapilt/meryton-tehtud-tood-montaaz.webp 1920w"
-           sizes="100vw" width="1920" height="960" fetchpriority="high" decoding="async"
-           alt="Meryton Group OÜ tehtud tööd: vundament, karkass, tehnosüsteemid ja valmis eramu.">
+      <img src="{t['src']}"{srcset}
+           width="{t['laius']}" height="{t['korgus']}" fetchpriority="high" decoding="async"
+           alt="{t['alt']}">
     </div>
     <div class="avapilt__kate"></div>
 
